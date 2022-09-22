@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/loadingPage/loading.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/loadingPage/loading.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/styles/styles.dart';
+import 'package:taxidex_driver/translation/translation.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 import 'package:share_plus/share_plus.dart';
 
 class ReferralPage extends StatefulWidget {
@@ -54,9 +54,7 @@ class _ReferralPageState extends State<ReferralPage> {
           valueListenable: valueNotifierHome.value,
           builder: (context, value, child) {
             return Directionality(
-              textDirection: (languageDirection == 'rtl')
-                  ? TextDirection.rtl
-                  : TextDirection.ltr,
+              textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
               child: Stack(
                 alignment: Alignment.center,
                 children: [
@@ -71,19 +69,15 @@ class _ReferralPageState extends State<ReferralPage> {
                               Expanded(
                                 child: Column(
                                   children: [
-                                    SizedBox(
-                                        height:
-                                            MediaQuery.of(context).padding.top),
+                                    SizedBox(height: MediaQuery.of(context).padding.top),
                                     Stack(
                                       children: [
                                         Container(
-                                          padding: EdgeInsets.only(
-                                              bottom: media.width * 0.05),
+                                          padding: EdgeInsets.only(bottom: media.width * 0.05),
                                           width: media.width * 1,
                                           alignment: Alignment.center,
                                           child: Text(
-                                            languages[choosenLanguage]
-                                                ['text_enable_referal'],
+                                            languages[choosenLanguage]['text_enable_referal'],
                                             style: GoogleFonts.roboto(
                                                 fontSize: media.width * twenty,
                                                 fontWeight: FontWeight.w600,
@@ -96,8 +90,7 @@ class _ReferralPageState extends State<ReferralPage> {
                                                   // print(myReferralCode);
                                                   Navigator.pop(context);
                                                 },
-                                                child: const Icon(
-                                                    Icons.arrow_back)))
+                                                child: const Icon(Icons.arrow_back)))
                                       ],
                                     ),
                                     SizedBox(
@@ -115,8 +108,7 @@ class _ReferralPageState extends State<ReferralPage> {
                                       height: media.width * 0.1,
                                     ),
                                     Text(
-                                      myReferralCode[
-                                          'referral_comission_string'],
+                                      myReferralCode['referral_comission_string'],
                                       textAlign: TextAlign.center,
                                       style: GoogleFonts.roboto(
                                           fontSize: media.width * sixteen,
@@ -128,31 +120,25 @@ class _ReferralPageState extends State<ReferralPage> {
                                     ),
                                     Container(
                                         width: media.width * 0.9,
-                                        padding:
-                                            EdgeInsets.all(media.width * 0.05),
+                                        padding: EdgeInsets.all(media.width * 0.05),
                                         decoration: BoxDecoration(
-                                            border: Border.all(
-                                                color: borderLines, width: 1.2),
-                                            borderRadius:
-                                                BorderRadius.circular(12)),
+                                            border: Border.all(color: borderLines, width: 1.2),
+                                            borderRadius: BorderRadius.circular(12)),
                                         child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                           children: [
                                             Text(
                                               myReferralCode['refferal_code'],
                                               style: GoogleFonts.roboto(
-                                                  fontSize:
-                                                      media.width * sixteen,
+                                                  fontSize: media.width * sixteen,
                                                   color: textColor,
                                                   fontWeight: FontWeight.w600),
                                             ),
                                             InkWell(
                                                 onTap: () {
                                                   setState(() {
-                                                    Clipboard.setData(ClipboardData(
-                                                        text: myReferralCode[
-                                                            'refferal_code']));
+                                                    Clipboard.setData(
+                                                        ClipboardData(text: myReferralCode['refferal_code']));
                                                   });
                                                   //show toast for copy
                                                   showToast();
@@ -164,22 +150,16 @@ class _ReferralPageState extends State<ReferralPage> {
                                 ),
                               ),
                               Container(
-                                padding: EdgeInsets.only(
-                                    top: media.width * 0.05,
-                                    bottom: media.width * 0.05),
+                                padding: EdgeInsets.only(top: media.width * 0.05, bottom: media.width * 0.05),
                                 child: Button(
                                     onTap: () async {
-                                      await Share.share(
-                                          languages[choosenLanguage]
-                                                  ['text_invitation_1'] +
-                                              ' ' +
-                                              myReferralCode['refferal_code'] +
-                                              ' ' +
-                                              languages[choosenLanguage]
-                                                  ['text_invitation_2']);
+                                      await Share.share(languages[choosenLanguage]['text_invitation_1'] +
+                                          ' ' +
+                                          myReferralCode['refferal_code'] +
+                                          ' ' +
+                                          languages[choosenLanguage]['text_invitation_2']);
                                     },
-                                    text: languages[choosenLanguage]
-                                        ['text_invite']),
+                                    text: languages[choosenLanguage]['text_invite']),
                               )
                             ],
                           )
@@ -200,9 +180,7 @@ class _ReferralPageState extends State<ReferralPage> {
                       : Container(),
 
                   //loader
-                  (_isLoading == true)
-                      ? const Positioned(top: 0, child: Loading())
-                      : Container(),
+                  (_isLoading == true) ? const Positioned(top: 0, child: Loading()) : Container(),
 
                   //display toast
                   (_showToast == true)
@@ -211,13 +189,10 @@ class _ReferralPageState extends State<ReferralPage> {
                           child: Container(
                             padding: EdgeInsets.all(media.width * 0.025),
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Colors.transparent.withOpacity(0.6)),
+                                borderRadius: BorderRadius.circular(10), color: Colors.transparent.withOpacity(0.6)),
                             child: Text(
                               languages[choosenLanguage]['text_code_copied'],
-                              style: GoogleFonts.roboto(
-                                  fontSize: media.width * twelve,
-                                  color: Colors.white),
+                              style: GoogleFonts.roboto(fontSize: media.width * twelve, color: Colors.white),
                             ),
                           ))
                       : Container()

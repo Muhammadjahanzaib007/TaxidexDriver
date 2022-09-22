@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/pages/vehicleInformations/vehicle_type.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/pages/vehicleInformations/vehicle_type.dart';
+import 'package:taxidex_driver/translation/translation.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 import '../../functions/functions.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../loadingPage/loading.dart';
@@ -42,9 +42,7 @@ class _ServiceAreaState extends State<ServiceArea> {
     var media = MediaQuery.of(context).size;
     return Material(
       child: Directionality(
-        textDirection: (languageDirection == 'rtl')
-            ? TextDirection.rtl
-            : TextDirection.ltr,
+        textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
         child: Stack(
           children: [
             Container(
@@ -79,9 +77,7 @@ class _ServiceAreaState extends State<ServiceArea> {
                       child: Text(
                         languages[choosenLanguage]['text_service_location'],
                         style: GoogleFonts.roboto(
-                            fontSize: media.width * twenty,
-                            color: textColor,
-                            fontWeight: FontWeight.bold),
+                            fontSize: media.width * twenty, color: textColor, fontWeight: FontWeight.bold),
                       )),
                   const SizedBox(height: 10),
                   (_loaded != false && serviceLocations.isNotEmpty)
@@ -102,23 +98,18 @@ class _ServiceAreaState extends State<ServiceArea> {
                                       child: InkWell(
                                         onTap: () {
                                           setState(() {
-                                            myServiceId =
-                                                serviceLocations[i]['id'];
+                                            myServiceId = serviceLocations[i]['id'];
                                           });
                                         },
                                         child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                           children: [
                                             Text(
                                               serviceLocations[i]['name'],
-                                              style: GoogleFonts.roboto(
-                                                  fontSize:
-                                                      media.width * twenty,
-                                                  color: textColor),
+                                              style:
+                                                  GoogleFonts.roboto(fontSize: media.width * twenty, color: textColor),
                                             ),
-                                            (myServiceId ==
-                                                    serviceLocations[i]['id'])
+                                            (myServiceId == serviceLocations[i]['id'])
                                                 ? Icon(
                                                     Icons.done,
                                                     color: buttonColor,
@@ -138,11 +129,7 @@ class _ServiceAreaState extends State<ServiceArea> {
                           padding: const EdgeInsets.only(top: 10, bottom: 10),
                           child: Button(
                               onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const VehicleType()));
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => const VehicleType()));
                               },
                               text: languages[choosenLanguage]['text_next']),
                         )
@@ -165,9 +152,7 @@ class _ServiceAreaState extends State<ServiceArea> {
                 : Container(),
 
             //loader
-            (_loaded == false)
-                ? const Positioned(top: 0, child: Loading())
-                : Container()
+            (_loaded == false) ? const Positioned(top: 0, child: Loading()) : Container()
           ],
         ),
       ),

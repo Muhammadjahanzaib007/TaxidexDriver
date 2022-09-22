@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/NavigatorPages/walletpage.dart';
-import 'package:tagyourtaxi_driver/pages/loadingPage/loading.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/NavigatorPages/walletpage.dart';
+import 'package:taxidex_driver/pages/loadingPage/loading.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/styles/styles.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/translation/translation.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 
 class SelectWallet extends StatefulWidget {
   const SelectWallet({Key? key}) : super(key: key);
@@ -45,14 +45,11 @@ class _SelectWalletState extends State<SelectWallet> {
             valueListenable: valueNotifierHome.value,
             builder: (context, value, child) {
               return Directionality(
-                textDirection: (languageDirection == 'rtl')
-                    ? TextDirection.rtl
-                    : TextDirection.ltr,
+                textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
                 child: Stack(
                   children: [
                     Container(
-                      padding: EdgeInsets.fromLTRB(media.width * 0.05,
-                          media.width * 0.05, media.width * 0.05, 0),
+                      padding: EdgeInsets.fromLTRB(media.width * 0.05, media.width * 0.05, media.width * 0.05, 0),
                       height: media.height * 1,
                       width: media.width * 1,
                       color: page,
@@ -62,15 +59,13 @@ class _SelectWalletState extends State<SelectWallet> {
                           Stack(
                             children: [
                               Container(
-                                padding:
-                                    EdgeInsets.only(bottom: media.width * 0.05),
+                                padding: EdgeInsets.only(bottom: media.width * 0.05),
                                 width: media.width * 0.9,
                                 alignment: Alignment.center,
                                 child: Text(
                                   languages[choosenLanguage]['text_addmoney'],
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * sixteen,
-                                      fontWeight: FontWeight.bold),
+                                  style:
+                                      GoogleFonts.roboto(fontSize: media.width * sixteen, fontWeight: FontWeight.bold),
                                 ),
                               ),
                               Positioned(
@@ -102,26 +97,20 @@ class _SelectWalletState extends State<SelectWallet> {
                                 Button(
                                     width: media.width * 0.5,
                                     onTap: () async {
-                                      FocusManager.instance.primaryFocus
-                                          ?.unfocus();
+                                      FocusManager.instance.primaryFocus?.unfocus();
                                       setState(() {
                                         _isLoading = true;
                                       });
-                                      var val =
-                                          await getStripePayment(addMoney);
+                                      var val = await getStripePayment(addMoney);
                                       if (val == 'success') {
                                         dynamic val2;
                                         try {
-                                          val2 = await Stripe.instance
-                                              .confirmPayment(
+                                          val2 = await Stripe.instance.confirmPayment(
                                             stripeToken['client_token'],
                                             PaymentMethodParams.card(
-                                              paymentMethodData:
-                                                  PaymentMethodData(
+                                              paymentMethodData: PaymentMethodData(
                                                 billingDetails: BillingDetails(
-                                                    name: userDetails['name'],
-                                                    phone:
-                                                        userDetails['mobile']),
+                                                    name: userDetails['name'], phone: userDetails['mobile']),
                                               ),
                                             ),
                                           );
@@ -131,10 +120,8 @@ class _SelectWalletState extends State<SelectWallet> {
                                             _isLoading = false;
                                           });
                                         }
-                                        if (val2.status ==
-                                            PaymentIntentsStatus.Succeeded) {
-                                          var val3 = await addMoneyStripe(
-                                              addMoney, val2.id);
+                                        if (val2.status == PaymentIntentsStatus.Succeeded) {
+                                          var val3 = await addMoneyStripe(addMoney, val2.id);
                                           if (val3 == 'success') {
                                             setState(() {
                                               _success = true;
@@ -158,8 +145,7 @@ class _SelectWalletState extends State<SelectWallet> {
                                         _isLoading = false;
                                       });
                                     },
-                                    text: languages[choosenLanguage]
-                                        ['text_pay'])
+                                    text: languages[choosenLanguage]['text_pay'])
                               ],
                             ),
                           )
@@ -180,14 +166,11 @@ class _SelectWalletState extends State<SelectWallet> {
                                   Container(
                                     padding: EdgeInsets.all(media.width * 0.05),
                                     width: media.width * 0.9,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(12),
-                                        color: page),
+                                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: page),
                                     child: Column(
                                       children: [
                                         Text(
-                                          languages[choosenLanguage]
-                                              ['text_somethingwentwrong'],
+                                          languages[choosenLanguage]['text_somethingwentwrong'],
                                           textAlign: TextAlign.center,
                                           style: GoogleFonts.roboto(
                                               fontSize: media.width * sixteen,
@@ -203,8 +186,7 @@ class _SelectWalletState extends State<SelectWallet> {
                                                 _failed = false;
                                               });
                                             },
-                                            text: languages[choosenLanguage]
-                                                ['text_ok'])
+                                            text: languages[choosenLanguage]['text_ok'])
                                       ],
                                     ),
                                   )
@@ -227,14 +209,11 @@ class _SelectWalletState extends State<SelectWallet> {
                                   Container(
                                     padding: EdgeInsets.all(media.width * 0.05),
                                     width: media.width * 0.9,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(12),
-                                        color: page),
+                                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: page),
                                     child: Column(
                                       children: [
                                         Text(
-                                          languages[choosenLanguage]
-                                              ['text_paymentsuccess'],
+                                          languages[choosenLanguage]['text_paymentsuccess'],
                                           textAlign: TextAlign.center,
                                           style: GoogleFonts.roboto(
                                               fontSize: media.width * sixteen,
@@ -252,8 +231,7 @@ class _SelectWalletState extends State<SelectWallet> {
                                                 Navigator.pop(context, true);
                                               });
                                             },
-                                            text: languages[choosenLanguage]
-                                                ['text_ok'])
+                                            text: languages[choosenLanguage]['text_ok'])
                                       ],
                                     ),
                                   )
@@ -277,9 +255,7 @@ class _SelectWalletState extends State<SelectWallet> {
                         : Container(),
 
                     //loader
-                    (_isLoading == true)
-                        ? const Positioned(top: 0, child: Loading())
-                        : Container()
+                    (_isLoading == true) ? const Positioned(top: 0, child: Loading()) : Container()
                   ],
                 ),
               );

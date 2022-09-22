@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/login/login.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/login/login.dart';
+import 'package:taxidex_driver/styles/styles.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 
 import '../../translation/translation.dart';
 
@@ -27,9 +27,7 @@ class _SignupMethodState extends State<SignupMethod> {
     return Material(
       color: page,
       child: Directionality(
-        textDirection: (languageDirection == 'rtl')
-            ? TextDirection.rtl
-            : TextDirection.ltr,
+        textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
         child: Column(
           children: [
             Expanded(
@@ -49,8 +47,7 @@ class _SignupMethodState extends State<SignupMethod> {
 
                       decoration: BoxDecoration(
                         color: page,
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(20)),
+                        borderRadius: const BorderRadius.all(Radius.circular(20)),
                         boxShadow: const [
                           BoxShadow(
                             color: Colors.grey,
@@ -58,9 +55,7 @@ class _SignupMethodState extends State<SignupMethod> {
                             blurRadius: 5.0,
                           ),
                         ],
-                        border: ischeckownerordriver == 'driver'
-                            ? Border.all(color: buttonColor, width: 3)
-                            : null,
+                        border: ischeckownerordriver == 'driver' ? Border.all(color: buttonColor, width: 3) : null,
                       ),
                       // border: Border.all(color: Colors.blue, width: 3)),
                       child: Row(
@@ -74,9 +69,7 @@ class _SignupMethodState extends State<SignupMethod> {
                               color: page,
                               shape: BoxShape.circle,
                               image: const DecorationImage(
-                                  image:
-                                      AssetImage('assets/images/cardriver.png'),
-                                  fit: BoxFit.contain),
+                                  image: AssetImage('assets/images/cardriver.png'), fit: BoxFit.contain),
                               boxShadow: const [
                                 BoxShadow(
                                   color: Colors.grey,
@@ -95,9 +88,7 @@ class _SignupMethodState extends State<SignupMethod> {
                               maxLines: 2,
                               textAlign: TextAlign.center,
                               style: GoogleFonts.roboto(
-                                  fontSize: media.width * sixteen,
-                                  fontWeight: FontWeight.bold,
-                                  color: textColor),
+                                  fontSize: media.width * sixteen, fontWeight: FontWeight.bold, color: textColor),
                             ),
                           )
                         ],
@@ -119,8 +110,7 @@ class _SignupMethodState extends State<SignupMethod> {
                       padding: EdgeInsets.only(left: media.width * 0.02),
                       decoration: BoxDecoration(
                         color: page,
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(20)),
+                        borderRadius: const BorderRadius.all(Radius.circular(20)),
                         boxShadow: const [
                           BoxShadow(
                             color: Colors.grey,
@@ -128,9 +118,7 @@ class _SignupMethodState extends State<SignupMethod> {
                             blurRadius: 5.0,
                           ),
                         ],
-                        border: ischeckownerordriver == 'owner'
-                            ? Border.all(color: buttonColor, width: 3)
-                            : null,
+                        border: ischeckownerordriver == 'owner' ? Border.all(color: buttonColor, width: 3) : null,
                       ),
                       // border: Border.all(color: Colors.blue, width: 3)),
                       child: Row(
@@ -144,9 +132,7 @@ class _SignupMethodState extends State<SignupMethod> {
                               color: page,
                               shape: BoxShape.circle,
                               image: const DecorationImage(
-                                  image:
-                                      AssetImage('assets/images/carowner.png'),
-                                  fit: BoxFit.contain),
+                                  image: AssetImage('assets/images/carowner.png'), fit: BoxFit.contain),
                               boxShadow: const [
                                 BoxShadow(
                                   color: Colors.grey,
@@ -165,9 +151,7 @@ class _SignupMethodState extends State<SignupMethod> {
                               maxLines: 2,
                               textAlign: TextAlign.center,
                               style: GoogleFonts.roboto(
-                                  fontSize: media.width * sixteen,
-                                  fontWeight: FontWeight.bold,
-                                  color: textColor),
+                                  fontSize: media.width * sixteen, fontWeight: FontWeight.bold, color: textColor),
                             ),
                           )
                         ],
@@ -182,10 +166,7 @@ class _SignupMethodState extends State<SignupMethod> {
                     padding: EdgeInsets.all(media.width * 0.05),
                     child: Button(
                         onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const Login()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const Login()));
                         },
                         text: languages[choosenLanguage]['text_continue']),
                   )

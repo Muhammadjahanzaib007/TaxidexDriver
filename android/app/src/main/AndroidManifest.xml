@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="package name">
+    package="com.taxidex.driver">
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
    <application
-        android:label="product name"
+        android:label="Taxidex Driver"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -43,7 +43,7 @@
             
         </activity>
         <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="map key"/>
+               android:value="AIzaSyCWY5OkDhEfGsaxFWhRs5VB-qRGG0-bLmw"/>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data

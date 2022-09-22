@@ -3,13 +3,12 @@ Map<String, dynamic> languages = {
     "text_enter_social": "or Enter Social Media",
     "text_sign_up": "Sign Up",
     "text_track_location": "Tracking Taxi Location",
-    "text_keep_track":
-        "Remember to keep track of Ride professional accomplishments",
+    "text_keep_track": "Remember to keep track of Ride professional accomplishments",
     "text_skip": "skip",
     "text_next": "next",
     "text_your_ride": "Your ride, on demand",
     "text_login": "Login",
-    "text_phone_number": "phone number",
+    "text_phone_number": "Phone number",
     "text_get_started": "Let's Get Started!",
     "text_fill_form": "Fill the form to continue.",
     "text_signup_social": "Sign up with Social of fill the form to continue.",
@@ -19,8 +18,7 @@ Map<String, dynamic> languages = {
     "text_terms": "Terms of Service",
     "text_and": "and",
     "text_privacy": "Privacy Policy",
-    "text_fastest_way":
-        "Fastest way to book Taxi without the hassle of waiting & haggling of price",
+    "text_fastest_way": "Fastest way to book Taxi without the hassle of waiting & haggling of price",
     "text_phone_verify": "Phone Verification",
     "text_enter_otp": "Please enter the 6-digit code send to you at",
     "text_resend_code": "Resend Code",
@@ -60,8 +58,7 @@ Map<String, dynamic> languages = {
     "Text_enter_vehicle_color": "Enter Your Vehicle Color",
     "text_edit_docs": "Update Documents",
     "text_account_blocked": "Account Blocked",
-    "text_document_rejected":
-        "Your Account is blocked for the following reasons",
+    "text_document_rejected": "Your Account is blocked for the following reasons",
     "text_contact_admin": "Contact your Admin",
     "text_enable_location": "Please Enable Your Location",
     "text_ok": "Ok",
@@ -83,8 +80,7 @@ Map<String, dynamic> languages = {
     "text_startride": "Start Ride",
     "text_endtrip": "End Trip",
     "text_driver_otp": "Enter OTP",
-    "text_enterdriverotp":
-        "Enter the OTP displayed in Customer's mobile to start the ride",
+    "text_enterdriverotp": "Enter the OTP displayed in Customer's mobile to start the ride",
     "text_enable_history": "History",
     "text_enable_wallet": "Wallet",
     "text_enable_referal": "Referal",
@@ -109,8 +105,7 @@ Map<String, dynamic> languages = {
     "text_cash": "Cash",
     "text_trust_contact": "Trusted Contact",
     "text_trust_contact_1": "Share your trip status",
-    "text_trust_contact_2":
-        "You’ll be able to share your live location with one or more contacts during any trip",
+    "text_trust_contact_2": "You’ll be able to share your live location with one or more contacts during any trip",
     "text_trust_contact_3": "Set your emergency contacts",
     "text_trust_contact_4":
         "You can make a trusted contact an emergency contact. You can call them in case of emergency.",
@@ -147,8 +142,7 @@ Map<String, dynamic> languages = {
     "text_pickup_instruction": "Any Instructions for pick up",
     "text_shareride": "Share Ride",
     "text_ridecancel": "Are you sure to cancel ride",
-    "text_ridecancel_desc":
-        "Your ride will be cancelled and returned to main menu. This will lead to cancellation fee",
+    "text_ridecancel_desc": "Your ride will be cancelled and returned to main menu. This will lead to cancellation fee",
     "tex_dontcancel": "Don't Cancel",
     "text_cancelRideReason": "Reason for cancelling ride",
     "text_nodriver": "No Driver Found",
@@ -174,13 +168,11 @@ Map<String, dynamic> languages = {
     "text_entermessage": "Enter Message",
     "text_newmessagereceived": "New Message Received",
     "text_nointernet": "No Internet Connection",
-    "text_nointernetdesc":
-        "Please check your internet connection, try enabling wifi or try again later",
+    "text_nointernetdesc": "Please check your internet connection, try enabling wifi or try again later",
     "text_copyrights": "Copyrights",
     "text_termsandconditions": "Terms and Conditions",
     "text_yourTrustedContacts": "Your Trusted Contacts",
-    "text_removeSos":
-        "Are you sure to remove this contact from your trusted Contact",
+    "text_removeSos": "Are you sure to remove this contact from your trusted Contact",
     "text_noDataFound": "No Data Found",
     "text_removeFav": "Are you sure to remove this address from your favorites",
     "text_invite": "Invite",
@@ -252,13 +244,11 @@ Map<String, dynamic> languages = {
     "Spent For Trip Request": "Spent For Trip Request",
     "Withdrawn From Wallet": "Withdrawn From Wallet",
     "text_user_cancelled_request": "User Cancelled the Request",
-    "text_low_balance":
-        "Your wallet balance is low, please add some money to continue service",
+    "text_low_balance": "Your wallet balance is low, please add some money to continue service",
     "text_otp_error": "Please enter correct Otp or resend",
     "text_code_copied": "Referral Code Copied",
     "text_loc_permission_user": "Allow Location - To book a taxi",
-    "text_low_wallet_for_ride":
-        "Your Wallet Balance is too low to make this race",
+    "text_low_wallet_for_ride": "Your Wallet Balance is too low to make this race",
     "text_internal_server_error": "Internal Server Error",
     "text_supported_vehicles": "Supported Vehicles",
     "text_description": "Description",
@@ -269,10 +259,8 @@ Map<String, dynamic> languages = {
     "text_done": "Done",
     "text_open_contact_setting":
         "Contact access is needed to pick contact for SOS, pleable enable it in settings and tap done",
-    "text_open_camera_setting":
-        "Camera access is needed to capture image, please enable it in settings and tap done",
-    "text_open_photos_setting":
-        "Photos access is needed to pick image, please enable it in settings and tap done",
+    "text_open_camera_setting": "Camera access is needed to capture image, please enable it in settings and tap done",
+    "text_open_photos_setting": "Photos access is needed to pick image, please enable it in settings and tap done",
     "text_enter_otp_login": "Enter Otp",
     "text_add_by_card": "Add by Card",
     "text_add_by_kiosk": "Add by Kiosk",
@@ -354,8 +342,7 @@ Map<String, dynamic> languages = {
     "text_delete_confirmation": "Are you sure want to delete this driver ?",
     "text_yes": "Yes",
     "text_no": "No",
-    "text_fleet_diver_low_bal":
-        "Your owner wallet balance is low, please contact your owner",
+    "text_fleet_diver_low_bal": "Your owner wallet balance is low, please contact your owner",
     "text_add_vehicle": "Add Vehicle",
     "text_address": "Address",
     "text_add_driver": "Add Driver",
@@ -378,16 +365,14 @@ Map<String, dynamic> languages = {
     "text_phone_number": "फ़ोन नंबर",
     "text_get_started": "आएँ शुरू करें!",
     "text_fill_form": "जारी रखने के लिए फॉर्म भरें।",
-    "text_signup_social":
-        "जारी रखने के लिए फॉर्म भरने के सामाजिक के साथ साइन अप करें।",
+    "text_signup_social": "जारी रखने के लिए फॉर्म भरने के सामाजिक के साथ साइन अप करें।",
     "text_email": "ईमेल",
     "text_name": "नाम",
     "text_agree": "साइन अप करके, आप सहमत हैं",
     "text_terms": "सेवा की शर्तें",
     "text_and": "तथा",
     "text_privacy": "गोपनीयता नीति",
-    "text_fastest_way":
-        "वेटिंग एंड हेग्लिंग ऑफ प्राइस के बिना टैक्सी बुक करने का सबसे तेज़ तरीका",
+    "text_fastest_way": "वेटिंग एंड हेग्लिंग ऑफ प्राइस के बिना टैक्सी बुक करने का सबसे तेज़ तरीका",
     "text_phone_verify": "फ़ोन सत्यापन",
     "text_enter_otp": "कृपया आप पर भेजे गए 6-अंकीय कोड दर्ज करें",
     "text_resend_code": "पुन: कोड भेजे",
@@ -431,8 +416,7 @@ Map<String, dynamic> languages = {
     "text_contact_admin": "अपने व्यवस्थापक से संपर्क करें",
     "text_enable_location": "कृपया अपना स्थान सक्षम करें",
     "text_ok": "ठीक",
-    "text_loc_permission":
-        "हर समय स्थान की अनुमति दें - टैक्सी बुक करने के लिए",
+    "text_loc_permission": "हर समय स्थान की अनुमति दें - टैक्सी बुक करने के लिए",
     "text_off_duty": "काम पर",
     "text_on_duty": "काम के समय के बाद",
     "text_pickpoint": "पिक अप बिंदु",
@@ -450,8 +434,7 @@ Map<String, dynamic> languages = {
     "text_startride": "सवारी शुरू करें",
     "text_endtrip": "अंत यात्रा",
     "text_driver_otp": "OTP दर्ज करें",
-    "text_enterdriverotp":
-        "सवारी शुरू करने के लिए ग्राहक के मोबाइल में प्रदर्शित ओटीपी दर्ज करें",
+    "text_enterdriverotp": "सवारी शुरू करने के लिए ग्राहक के मोबाइल में प्रदर्शित ओटीपी दर्ज करें",
     "text_enable_history": "इतिहास",
     "text_enable_wallet": "बटुआ",
     "text_enable_referal": "रेफ़रल",
@@ -514,8 +497,7 @@ Map<String, dynamic> languages = {
     "text_pickup_instruction": "पिक अप के लिए कोई निर्देश",
     "text_shareride": "शेयर सवारी",
     "text_ridecancel": "क्या आप सवारी रद्द करना सुनिश्चित कर रहे हैं",
-    "text_ridecancel_desc":
-        "आपकी सवारी रद्द कर दी जाएगी और मुख्य मेनू में वापस आ जाएगी। इससे रद्द करने का शुल्क होगा",
+    "text_ridecancel_desc": "आपकी सवारी रद्द कर दी जाएगी और मुख्य मेनू में वापस आ जाएगी। इससे रद्द करने का शुल्क होगा",
     "tex_dontcancel": "रद्द न करें",
     "text_cancelRideReason": "सवारी रद्द करने का कारण",
     "text_nodriver": "कोई ड्राइवर नहीं मिला",
@@ -526,8 +508,7 @@ Map<String, dynamic> languages = {
     "text_work": "काम",
     "text_others": "अन्य",
     "text_enterfavname": "पसंदीदा नाम दर्ज करें",
-    "text_confirmridelater":
-        "क्या आप इस समय में सवारी चुनना सुनिश्चित कर रहे हैं",
+    "text_confirmridelater": "क्या आप इस समय में सवारी चुनना सुनिश्चित कर रहे हैं",
     "text_rideLaterSuccess": "सवारी की पुष्टि सफलतापूर्वक की जाती है",
     "text_saveaddressas": "पसंदीदा के रूप में सहेजें",
     "text_trustedtaxi": "सबसे विश्वसनीय टैक्सी बुकिंग ऐप",
@@ -547,14 +528,11 @@ Map<String, dynamic> languages = {
     "text_copyrights": "कॉपीराइट",
     "text_termsandconditions": "नियम और शर्तें",
     "text_yourTrustedContacts": "आपके विश्वसनीय संपर्क",
-    "text_removeSos":
-        "क्या आप इस संपर्क को अपने विश्वसनीय संपर्क से हटाना सुनिश्चित कर रहे हैं",
+    "text_removeSos": "क्या आप इस संपर्क को अपने विश्वसनीय संपर्क से हटाना सुनिश्चित कर रहे हैं",
     "text_noDataFound": "कोई डेटा नहीं मिला",
-    "text_removeFav":
-        "क्या आप इस पते को अपने पसंदीदा से हटाना सुनिश्चित करते हैं",
+    "text_removeFav": "क्या आप इस पते को अपने पसंदीदा से हटाना सुनिश्चित करते हैं",
     "text_invite": "आमंत्रित करना",
-    "text_invitation_1":
-        "मुझे Tagxi ​​पर शामिल करें! मेरे आमंत्रित कोड का उपयोग करना",
+    "text_invitation_1": "मुझे Tagxi ​​पर शामिल करें! मेरे आमंत्रित कोड का उपयोग करना",
     "text_invitation_2": "अपनी सवारी को आसान बनाने के लिए",
     "text_upcoming": "आगामी",
     "text_completed": "पूरा हुआ",
@@ -622,19 +600,16 @@ Map<String, dynamic> languages = {
     "Spent For Trip Request": "यात्रा अनुरोध के लिए खर्च किया",
     "Withdrawn From Wallet": "बटुए से वापस ले लिया गया",
     "text_user_cancelled_request": "उपयोगकर्ता ने अनुरोध रद्द कर दिया",
-    "text_low_balance":
-        "आपका बटुआ संतुलन कम है, कृपया सेवा जारी रखने के लिए कुछ पैसे जोड़ें",
+    "text_low_balance": "आपका बटुआ संतुलन कम है, कृपया सेवा जारी रखने के लिए कुछ पैसे जोड़ें",
     "text_otp_error": "कृपया सही OTP दर्ज करें या RESEND",
     "text_code_copied": "रेफरल कोड कॉपी किया गया",
     "text_loc_permission_user": "स्थान की अनुमति दें - टैक्सी बुक करने के लिए",
-    "text_low_wallet_for_ride":
-        "इस दौड़ को बनाने के लिए आपका बटुआ संतुलन बहुत कम है",
+    "text_low_wallet_for_ride": "इस दौड़ को बनाने के लिए आपका बटुआ संतुलन बहुत कम है",
     "text_internal_server_error": "आंतरिक सर्वर त्रुटि",
     "text_supported_vehicles": "समर्थित वाहन",
     "text_description": "विवरण",
     "text_estimated_amount": "अनुमानित राशि",
-    "text_open_loc_settings":
-        "ऐप चलाने के लिए स्थान का उपयोग आवश्यक है, कृपया इसे सेटिंग्स में सक्षम करें और टैप करें",
+    "text_open_loc_settings": "ऐप चलाने के लिए स्थान का उपयोग आवश्यक है, कृपया इसे सेटिंग्स में सक्षम करें और टैप करें",
     "text_open_settings": "खुली सेटिंग",
     "text_done": "पूर्ण",
     "text_open_contact_setting":
@@ -673,8 +648,7 @@ Map<String, dynamic> languages = {
     "text_thankyou": "धन्यवाद",
     "text_complaint_3": "न्यूनतम 10 वर्ण",
     "text_free_trail_1": "1 महीने के लिए नि: शुल्क परीक्षण का प्रयास करें",
-    "text_free_trail_2":
-        "क्या आप 1 महीने के लिए नि: शुल्क परीक्षण प्राप्त करना सुनिश्चित करते हैं",
+    "text_free_trail_2": "क्या आप 1 महीने के लिए नि: शुल्क परीक्षण प्राप्त करना सुनिश्चित करते हैं",
     "text_waiting_time": "इंतजार का समय",
     "text_mins": "मिनट",
     "text_waiting_time_1": "मुक्त प्रतीक्षा समय",
@@ -722,12 +696,10 @@ Map<String, dynamic> languages = {
     "text_login_owner": "एक मालिक के रूप में लॉगिन करें",
     "text_fleet_details": "बेड़े विवरण",
     "text_delete_driver": "ड्राइवर को हटा दें",
-    "text_delete_confirmation":
-        "क्या आप निश्चित रूप से इस ड्राइवर को हटाना चाहते हैं?",
+    "text_delete_confirmation": "क्या आप निश्चित रूप से इस ड्राइवर को हटाना चाहते हैं?",
     "text_yes": "हाँ",
     "text_no": "नहीं",
-    "text_fleet_diver_low_bal":
-        "आपका मालिक बटुआ संतुलन कम है, कृपया अपने मालिक से संपर्क करें",
+    "text_fleet_diver_low_bal": "आपका मालिक बटुआ संतुलन कम है, कृपया अपने मालिक से संपर्क करें",
     "text_add_vehicle": "वाहन जोड़ें",
     "text_address": "पता",
     "text_add_driver": "ड्राइवर जोड़ें",
@@ -757,8 +729,7 @@ Map<String, dynamic> languages = {
     "text_terms": "شروط الخدمة",
     "text_and": "و",
     "text_privacy": "سياسة الخصوصية",
-    "text_fastest_way":
-        "أسرع طريقة لحجز سيارة أجرة دون متاعب في الانتظار والمساومة للسعر",
+    "text_fastest_way": "أسرع طريقة لحجز سيارة أجرة دون متاعب في الانتظار والمساومة للسعر",
     "text_phone_verify": "التحقق من الهاتف",
     "text_enter_otp": "الرجاء إدخال الرمز المكون من 6 أرقام أرسل إليك على",
     "text_resend_code": "أعد إرسال الرمز",
@@ -845,11 +816,9 @@ Map<String, dynamic> languages = {
     "text_cash": "نقدي",
     "text_trust_contact": "اتصال موثوق به",
     "text_trust_contact_1": "شارك حالة رحلتك",
-    "text_trust_contact_2":
-        "ستتمكن من مشاركة موقعك المباشر مع واحد أو أكثر من جهات اتصال خلال أي رحلة",
+    "text_trust_contact_2": "ستتمكن من مشاركة موقعك المباشر مع واحد أو أكثر من جهات اتصال خلال أي رحلة",
     "text_trust_contact_3": "اضبط جهات اتصال الطوارئ الخاصة بك",
-    "text_trust_contact_4":
-        "يمكنك إجراء جهة اتصال موثوق بها في حالات الاتصال. يمكنك الاتصال بهم في حالة الطوارئ.",
+    "text_trust_contact_4": "يمكنك إجراء جهة اتصال موثوق بها في حالات الاتصال. يمكنك الاتصال بهم في حالة الطوارئ.",
     "text_add_trust_contact": "أضف جهة اتصال موثوق بها",
     "text_submit": "يُقدِّم",
     "text_feedback": "أعط ملاحظاتك",
@@ -878,13 +847,11 @@ Map<String, dynamic> languages = {
     "text_promoaccepted": " كوبون تطبيق",
     "text_promorejected": "رقم قسيمه غير صالح",
     "text_findingdriver": "تبحث عن السائقين القريبين",
-    "text_finddriverdesc":
-        "نحن نبحث عن السائقين القريبين لقبول رحلتك. بمجرد قبول يمكنك ركوب معنا! نحن نقدر صبرك!",
+    "text_finddriverdesc": "نحن نبحث عن السائقين القريبين لقبول رحلتك. بمجرد قبول يمكنك ركوب معنا! نحن نقدر صبرك!",
     "text_pickup_instruction": "أي تعليمات لالتقاط",
     "text_shareride": "مشاركة ركوب",
     "text_ridecancel": "هل أنت متأكد من إلغاء الركوب",
-    "text_ridecancel_desc":
-        "سيتم إلغاء رحلتك وإعادتها إلى القائمة الرئيسية. سيؤدي هذا إلى رسوم الإلغاء",
+    "text_ridecancel_desc": "سيتم إلغاء رحلتك وإعادتها إلى القائمة الرئيسية. سيؤدي هذا إلى رسوم الإلغاء",
     "tex_dontcancel": "لا تلغي",
     "text_cancelRideReason": "سبب لإلغاء الركوب",
     "text_nodriver": "لا يوجد برنامج تشغيل وجدت",
@@ -910,13 +877,11 @@ Map<String, dynamic> languages = {
     "text_entermessage": "أدخل رسالة",
     "text_newmessagereceived": "استلمت رسالة جديدة",
     "text_nointernet": "لا يوجد اتصال إنترنت",
-    "text_nointernetdesc":
-        "يرجى التحقق من اتصال الإنترنت الخاص بك ، ومحاولة تمكين wifi أو المحاولة مرة أخرى لاحقًا",
+    "text_nointernetdesc": "يرجى التحقق من اتصال الإنترنت الخاص بك ، ومحاولة تمكين wifi أو المحاولة مرة أخرى لاحقًا",
     "text_copyrights": "حقوق الطبع والنشر",
     "text_termsandconditions": "الأحكام والشروط",
     "text_yourTrustedContacts": "جهات الاتصال الموثوق بها",
-    "text_removeSos":
-        "هل أنت متأكد من إزالة جهة الاتصال هذه من جهة الاتصال الموثوق بها",
+    "text_removeSos": "هل أنت متأكد من إزالة جهة الاتصال هذه من جهة الاتصال الموثوق بها",
     "text_noDataFound": "لاتوجد بيانات",
     "text_removeFav": "هل أنت متأكد من إزالة هذا العنوان من مفضلاتك",
     "text_invite": "يدعو",
@@ -978,8 +943,7 @@ Map<String, dynamic> languages = {
     "text_wallet": "محفظة",
     "text_startridewithotp": "ابدأ بالركوب مع OTP",
     "text_loadingLocalization": "توطين التحميل",
-    "text_background_permission":
-        "تمكين موقع الخلفية - لمنحك طلب ركوب حتى لو كان تطبيقك في الخلفية",
+    "text_background_permission": "تمكين موقع الخلفية - لمنحك طلب ركوب حتى لو كان تطبيقك في الخلفية",
     "Admin Commission For Trip": "لجنة الإدارة للرحلة",
     "Trip Commission": "لجنة الرحلة",
     "Cancellation Fee": "رسوم الإلغاء",
@@ -988,13 +952,11 @@ Map<String, dynamic> languages = {
     "Spent For Trip Request": "قضاء في طلب الرحلة",
     "Withdrawn From Wallet": "انسحب من محفظة",
     "text_user_cancelled_request": "ألغى المستخدم الطلب",
-    "text_low_balance":
-        "رصيد محفظتك منخفض ، يرجى إضافة بعض المال لمتابعة الخدمة",
+    "text_low_balance": "رصيد محفظتك منخفض ، يرجى إضافة بعض المال لمتابعة الخدمة",
     "text_otp_error": "الرجاء إدخال OTP الصحيح أو إعادة الالتحاق",
     "text_code_copied": "تم نسخ رمز الإحالة",
     "text_loc_permission_user": "اسمح للموقع - لحجز سيارة أجرة",
-    "text_low_wallet_for_ride":
-        "توازن محفظتك منخفض للغاية بحيث لا يمكن جعل هذا السباق",
+    "text_low_wallet_for_ride": "توازن محفظتك منخفض للغاية بحيث لا يمكن جعل هذا السباق",
     "text_internal_server_error": "خطأ في الخادم الداخلي",
     "text_supported_vehicles": "المركبات المدعومة",
     "text_description": "وصف",
@@ -1039,8 +1001,7 @@ Map<String, dynamic> languages = {
     "text_thankyou": "شكرا لك",
     "text_complaint_3": "الحد الأدنى 10 أحرف",
     "text_free_trail_1": "جرب تجربة مجانية لمدة شهر واحد",
-    "text_free_trail_2":
-        "هل أنت متأكد من الحصول على نسخة تجريبية مجانية لمدة شهر واحد",
+    "text_free_trail_2": "هل أنت متأكد من الحصول على نسخة تجريبية مجانية لمدة شهر واحد",
     "text_waiting_time": "وقت الانتظار",
     "text_mins": "دقيقة",
     "text_waiting_time_1": "وقت انتظار مجاني",
@@ -1091,8 +1052,7 @@ Map<String, dynamic> languages = {
     "text_delete_confirmation": "هل أنت متأكد من حذف هذا السائق؟",
     "text_yes": "نعم",
     "text_no": "رقم",
-    "text_fleet_diver_low_bal":
-        "رصيد محفظة المالك الخاص بك منخفض ، يرجى الاتصال بمالكك",
+    "text_fleet_diver_low_bal": "رصيد محفظة المالك الخاص بك منخفض ، يرجى الاتصال بمالكك",
     "text_add_vehicle": "أضف السيارة",
     "text_address": "تبوك",
     "text_add_driver": "أضف سائق",
@@ -1107,8 +1067,7 @@ Map<String, dynamic> languages = {
     "text_enter_social": "ou entrez les médias sociaux",
     "text_sign_up": "S'inscrire",
     "text_track_location": "Emplacement de taxi de suivi",
-    "text_keep_track":
-        "N'oubliez pas de suivre les réalisations professionnelles de la conduite",
+    "text_keep_track": "N'oubliez pas de suivre les réalisations professionnelles de la conduite",
     "text_skip": "sauter",
     "text_next": "Suivant",
     "text_your_ride": "Votre balade, sur demande",
@@ -1116,19 +1075,16 @@ Map<String, dynamic> languages = {
     "text_phone_number": "numéro de téléphone",
     "text_get_started": "Commençons!",
     "text_fill_form": "Remplissez le formulaire pour continuer.",
-    "text_signup_social":
-        "Inscrivez-vous avec Social pour remplir le formulaire pour continuer.",
+    "text_signup_social": "Inscrivez-vous avec Social pour remplir le formulaire pour continuer.",
     "text_email": "E-mail",
     "text_name": "Nom",
     "text_agree": "En vous inscrivant, vous acceptez le",
     "text_terms": "Conditions d'utilisation",
     "text_and": "et",
     "text_privacy": "Politique de confidentialité",
-    "text_fastest_way":
-        "Moyen le plus rapide de réserver un taxi sans les tracas d'attendre et de marchandage du prix",
+    "text_fastest_way": "Moyen le plus rapide de réserver un taxi sans les tracas d'attendre et de marchandage du prix",
     "text_phone_verify": "Vérification du téléphone",
-    "text_enter_otp":
-        "Veuillez saisir le code à 6 chiffres qui vous est envoyé à",
+    "text_enter_otp": "Veuillez saisir le code à 6 chiffres qui vous est envoyé à",
     "text_resend_code": "Renvoyer le code",
     "text_verify": "Vérifiez maintenant",
     "text_pick_up_location": "Lieu de ramassage",
@@ -1143,8 +1099,7 @@ Map<String, dynamic> languages = {
     "text_vehicle_make": "Quelle marque de véhicule est-ce?",
     "text_continue": "Continuer",
     "text_vehicle_model": "De quel modèle de véhicule s'agit-il?",
-    "text_service_location":
-        "Quel emplacement de service souhaitez-vous vous inscrire?",
+    "text_service_location": "Quel emplacement de service souhaitez-vous vous inscrire?",
     "text_vehicle_type": "De quel type de véhicule s'agit-il?",
     "text_vehicle_color": "De quelle couleur de véhicule s'agit-il?",
     "text_license": "Numéro de véhicule",
@@ -1167,13 +1122,11 @@ Map<String, dynamic> languages = {
     "Text_enter_vehicle_color": "Entrez la couleur de votre véhicule",
     "text_edit_docs": "Mettre à jour les documents",
     "text_account_blocked": "Compte bloqué",
-    "text_document_rejected":
-        "Votre compte est bloqué pour les raisons suivantes",
+    "text_document_rejected": "Votre compte est bloqué pour les raisons suivantes",
     "text_contact_admin": "Contactez votre administrateur",
     "text_enable_location": "Veuillez activer votre emplacement",
     "text_ok": "D'accord",
-    "text_loc_permission":
-        "Autoriser l'emplacement tout le temps - pour réserver un taxi",
+    "text_loc_permission": "Autoriser l'emplacement tout le temps - pour réserver un taxi",
     "text_off_duty": "En service",
     "text_on_duty": "En congé",
     "text_pickpoint": "Point de ramassage",
@@ -1191,8 +1144,7 @@ Map<String, dynamic> languages = {
     "text_startride": "Commencer à rouler",
     "text_endtrip": "Voyage final",
     "text_driver_otp": "Entrez OTP",
-    "text_enterdriverotp":
-        "Entrez le OTP affiché dans le mobile du client pour commencer la conduite",
+    "text_enterdriverotp": "Entrez le OTP affiché dans le mobile du client pour commencer la conduite",
     "text_enable_history": "Histoire",
     "text_enable_wallet": "Porte monnaie",
     "text_enable_referal": "Référé",
@@ -1238,8 +1190,7 @@ Map<String, dynamic> languages = {
     "text_4lettersforautofill": "Entrez 4 lettres à la recherche",
     "text_availablerides": "Rides disponibles",
     "text_paymentmethod": "Mode de paiement",
-    "text_choose_paynoworlater":
-        "Choisissez votre paiement maintenant ou plus tard",
+    "text_choose_paynoworlater": "Choisissez votre paiement maintenant ou plus tard",
     "text_paycash": "Payer quand le voyage se termine",
     "text_paycard": "Pour sans couture et contactez moins de paiement",
     "text_payupi": "Pour un paiement plus rapide",
@@ -1273,8 +1224,7 @@ Map<String, dynamic> languages = {
     "text_saveaddressas": "Économisez comme favori",
     "text_trustedtaxi": "Application de réservation de taxi la plus fiable",
     "text_allowpermission1": "Pour profiter de votre expérience de conduite",
-    "text_allowpermission2":
-        "Veuillez nous permettre les autorisations suivantes",
+    "text_allowpermission2": "Veuillez nous permettre les autorisations suivantes",
     "text_allow": "Permettre",
     "text_drivercancelled": "Ride annulée par le conducteur",
     "text_cancelsuccess": "Ride annulée avec succès",
@@ -1289,13 +1239,11 @@ Map<String, dynamic> languages = {
     "text_copyrights": "Droits d'auteur",
     "text_termsandconditions": "Termes et conditions",
     "text_yourTrustedContacts": "Vos contacts de confiance",
-    "text_removeSos":
-        "Êtes-vous sûr de supprimer ce contact de votre contact de confiance",
+    "text_removeSos": "Êtes-vous sûr de supprimer ce contact de votre contact de confiance",
     "text_noDataFound": "Aucune donnée disponible",
     "text_removeFav": "Êtes-vous sûr de supprimer cette adresse de vos favoris",
     "text_invite": "Inviter",
-    "text_invitation_1":
-        "Rejoignez-moi sur Tagxi! en utilisant mon code d'invitation",
+    "text_invitation_1": "Rejoignez-moi sur Tagxi! en utilisant mon code d'invitation",
     "text_invitation_2": "Pour faciliter votre balade",
     "text_upcoming": "A venir",
     "text_completed": "Complété",
@@ -1367,10 +1315,8 @@ Map<String, dynamic> languages = {
         "Votre solde de portefeuille est faible, veuillez ajouter de l'argent pour continuer le service",
     "text_otp_error": "Veuillez saisir le OTP correct ou le renver",
     "text_code_copied": "Code de référence copié",
-    "text_loc_permission_user":
-        "Autoriser l'emplacement - pour réserver un taxi",
-    "text_low_wallet_for_ride":
-        "Votre équilibre de portefeuille est trop bas pour faire cette course",
+    "text_loc_permission_user": "Autoriser l'emplacement - pour réserver un taxi",
+    "text_low_wallet_for_ride": "Votre équilibre de portefeuille est trop bas pour faire cette course",
     "text_internal_server_error": "Erreur interne du serveur",
     "text_supported_vehicles": "Véhicules soutenus",
     "text_description": "La description",
@@ -1406,19 +1352,16 @@ Map<String, dynamic> languages = {
     "text_yearly_plan": "Plan annuel",
     "text_rideLaterTime": "Rouler prévu à",
     "text_cancel_ride": "Annuler",
-    "text_sub_ended_2":
-        "Abonnez-vous un plan pour continuer à faire des manèges",
+    "text_sub_ended_2": "Abonnez-vous un plan pour continuer à faire des manèges",
     "text_make_complaints": "Faire des plaintes",
     "text_complaint_1": "Cliquez ci-dessous pour choisir le type",
     "text_complaint_2": "Écrivez votre plainte ici",
-    "text_complaint_success":
-        "Nous avons réussi à obtenir votre préoccupation ...",
+    "text_complaint_success": "Nous avons réussi à obtenir votre préoccupation ...",
     "text_complaint_success_2": "Nous vous obtiendrons plus tôt",
     "text_thankyou": "Merci",
     "text_complaint_3": "Minimum 10 caractères",
     "text_free_trail_1": "Essayez l'essai gratuit pendant 1 mois",
-    "text_free_trail_2":
-        "Êtes-vous sûr d'obtenir un essai gratuit pendant 1 mois",
+    "text_free_trail_2": "Êtes-vous sûr d'obtenir un essai gratuit pendant 1 mois",
     "text_waiting_time": "Temps d'attente",
     "text_mins": "min",
     "text_waiting_time_1": "Temps d'attente gratuit",
@@ -1469,8 +1412,7 @@ Map<String, dynamic> languages = {
     "text_delete_confirmation": "Êtes-vous sûr de vouloir supprimer ce pilote?",
     "text_yes": "Oui",
     "text_no": "Non",
-    "text_fleet_diver_low_bal":
-        "Votre solde de portefeuille est faible, veuillez contacter votre propriétaire",
+    "text_fleet_diver_low_bal": "Votre solde de portefeuille est faible, veuillez contacter votre propriétaire",
     "text_add_vehicle": "Ajouter un véhicule",
     "text_address": "Adresse",
     "text_add_driver": "Ajouter le conducteur",
@@ -1500,8 +1442,7 @@ Map<String, dynamic> languages = {
     "text_terms": "Kullanım Şartları",
     "text_and": "ve",
     "text_privacy": "Gizlilik Politikası",
-    "text_fastest_way":
-        "Bekleme ve fiyat pazarlamasının zorluğu olmadan taksi rezervasyonu yapmanın en hızlı yolu",
+    "text_fastest_way": "Bekleme ve fiyat pazarlamasının zorluğu olmadan taksi rezervasyonu yapmanın en hızlı yolu",
     "text_phone_verify": "Telefon Doğrulaması",
     "text_enter_otp": "Lütfen size gönderilen 6 haneli kodu girin",
     "text_resend_code": "Yeniden gönderme kodu",
@@ -1563,8 +1504,7 @@ Map<String, dynamic> languages = {
     "text_startride": "Sürüşe Başla",
     "text_endtrip": "Son gezi",
     "text_driver_otp": "OTP girin",
-    "text_enterdriverotp":
-        "Sürüşe başlamak için müşterinin cep telefonunda görüntülenen OTP'yi girin",
+    "text_enterdriverotp": "Sürüşe başlamak için müşterinin cep telefonunda görüntülenen OTP'yi girin",
     "text_enable_history": "Tarih",
     "text_enable_wallet": "Cüzdan",
     "text_enable_referal": "Yönlendirme",
@@ -1627,8 +1567,7 @@ Map<String, dynamic> languages = {
     "text_pickup_instruction": "Pick up için herhangi bir talimat",
     "text_shareride": "Paylaşım Yolculuğu",
     "text_ridecancel": "Sürüşü iptal edeceğinden emin misin",
-    "text_ridecancel_desc":
-        "Sürüşünüz iptal edilecek ve ana menüye iade edilecektir. Bu iptal ücretine yol açacaktır",
+    "text_ridecancel_desc": "Sürüşünüz iptal edilecek ve ana menüye iade edilecektir. Bu iptal ücretine yol açacaktır",
     "tex_dontcancel": "İptal Etme",
     "text_cancelRideReason": "Sürüşü iptal etmenin nedeni",
     "text_nodriver": "Sürücü bulunamadı",
@@ -1659,11 +1598,9 @@ Map<String, dynamic> languages = {
     "text_copyrights": "Telif hakları",
     "text_termsandconditions": "Şartlar ve koşullar",
     "text_yourTrustedContacts": "Güvenilir Kişileriniz",
-    "text_removeSos":
-        "Bu kişiyi güvenilir iletişiminizden kaldıracağınızdan emin misiniz?",
+    "text_removeSos": "Bu kişiyi güvenilir iletişiminizden kaldıracağınızdan emin misiniz?",
     "text_noDataFound": "Veri bulunamadı",
-    "text_removeFav":
-        "Bu adresi favorilerinizden kaldıracağınızdan emin misiniz",
+    "text_removeFav": "Bu adresi favorilerinizden kaldıracağınızdan emin misiniz",
     "text_invite": "Davet etmek",
     "text_invitation_1": "Tagxi'de bana katılın! davet kodumu kullanarak",
     "text_invitation_2": "Sürüşünüzü kolaylaştırmak için",
@@ -1733,14 +1670,11 @@ Map<String, dynamic> languages = {
     "Spent For Trip Request": "Gezi isteği için harcandı",
     "Withdrawn From Wallet": "Cüzdandan çekildi",
     "text_user_cancelled_request": "Kullanıcı isteği iptal etti",
-    "text_low_balance":
-        "Cüzdan bakiyeniz düşük, lütfen hizmete devam etmek için biraz para ekleyin",
+    "text_low_balance": "Cüzdan bakiyeniz düşük, lütfen hizmete devam etmek için biraz para ekleyin",
     "text_otp_error": "Lütfen doğru OTP'yi girin veya yeniden ineği girin",
     "text_code_copied": "Tavsiye kodu kopyalandı",
-    "text_loc_permission_user":
-        "Konuma İzin Ver - Taksi rezervasyonu yapmak için",
-    "text_low_wallet_for_ride":
-        "Cüzdan bakiyeniz bu yarışı yapamayacak kadar düşük",
+    "text_loc_permission_user": "Konuma İzin Ver - Taksi rezervasyonu yapmak için",
+    "text_low_wallet_for_ride": "Cüzdan bakiyeniz bu yarışı yapamayacak kadar düşük",
     "text_internal_server_error": "İç Sunucu Hatası",
     "text_supported_vehicles": "Desteklenen Araçlar",
     "text_description": "Tanım",
@@ -1785,8 +1719,7 @@ Map<String, dynamic> languages = {
     "text_thankyou": "Teşekkürler",
     "text_complaint_3": "Minimum 10 karakter",
     "text_free_trail_1": "1 ay boyunca ücretsiz denemeyi deneyin",
-    "text_free_trail_2":
-        "1 ay boyunca ücretsiz deneme alacağınızdan emin misiniz",
+    "text_free_trail_2": "1 ay boyunca ücretsiz deneme alacağınızdan emin misiniz",
     "text_waiting_time": "Bekleme süresi",
     "text_mins": "dakikalar",
     "text_waiting_time_1": "Ücretsiz bekleme süresi",
@@ -1837,8 +1770,7 @@ Map<String, dynamic> languages = {
     "text_delete_confirmation": "Bu sürücüyü silmek istiyorsunuz?",
     "text_yes": "Evet",
     "text_no": "Numara",
-    "text_fleet_diver_low_bal":
-        "Sahibi cüzdan bakiyeniz düşüktür, lütfen sahibinizle iletişime geçin",
+    "text_fleet_diver_low_bal": "Sahibi cüzdan bakiyeniz düşüktür, lütfen sahibinizle iletişime geçin",
     "text_add_vehicle": "Araç ekle",
     "text_address": "Adres",
     "text_add_driver": "Sürücü Ekle",
@@ -1853,8 +1785,7 @@ Map<String, dynamic> languages = {
     "text_enter_social": "или войти в социальные сети",
     "text_sign_up": "Зарегистрироваться",
     "text_track_location": "Отслеживание расположения такси",
-    "text_keep_track":
-        "Не забудьте отслеживать профессиональные достижения Ride",
+    "text_keep_track": "Не забудьте отслеживать профессиональные достижения Ride",
     "text_skip": "пропускать",
     "text_next": "следующий",
     "text_your_ride": "Ваша поездка по требованию",
@@ -1862,16 +1793,14 @@ Map<String, dynamic> languages = {
     "text_phone_number": "номер телефона",
     "text_get_started": "Давайте начнем!",
     "text_fill_form": "Заполните форму, чтобы продолжить.",
-    "text_signup_social":
-        "Зарегистрируйтесь в Social, чтобы заполнить форму, чтобы продолжить.",
+    "text_signup_social": "Зарегистрируйтесь в Social, чтобы заполнить форму, чтобы продолжить.",
     "text_email": "Эл. адрес",
     "text_name": "Имя",
     "text_agree": "Подписавшись, вы соглашаетесь с",
     "text_terms": "условия обслуживания",
     "text_and": "а также",
     "text_privacy": "Политика конфиденциальности",
-    "text_fastest_way":
-        "Самый быстрый способ забронировать такси без хлопот ожидания и торга цены",
+    "text_fastest_way": "Самый быстрый способ забронировать такси без хлопот ожидания и торга цены",
     "text_phone_verify": "Проверка телефона",
     "text_enter_otp": "Пожалуйста, введите 6-значный код Отправить вам в",
     "text_resend_code": "Отправить код еще раз",
@@ -1888,8 +1817,7 @@ Map<String, dynamic> languages = {
     "text_vehicle_make": "Что это за автомобиль?",
     "text_continue": "Продолжать",
     "text_vehicle_model": "Какая это модель автомобиля?",
-    "text_service_location":
-        "Какое место обслуживания вы хотите зарегистрировать?",
+    "text_service_location": "Какое место обслуживания вы хотите зарегистрировать?",
     "text_vehicle_type": "Что это за транспортное средство?",
     "text_vehicle_color": "Какой это цвет автомобиля?",
     "text_license": "Номер автомобиля",
@@ -1908,18 +1836,15 @@ Map<String, dynamic> languages = {
         "Ваш документ все еще ожидает проверки. Как только все будет подтверждено, вы начинаете посещать поездки. Пожалуйста, сядьте",
     "text_upload_docs": "Загрузите документы",
     "text_choose_language": "Выберите язык",
-    "text_enter_vehicle_model_year":
-        "Введите модельный год вашего транспортного средства",
+    "text_enter_vehicle_model_year": "Введите модельный год вашего транспортного средства",
     "Text_enter_vehicle_color": "Введите цвет вашего автомобиля",
     "text_edit_docs": "Обновить документы",
     "text_account_blocked": "Счет заблокирован",
-    "text_document_rejected":
-        "Ваша учетная запись заблокирована по следующим причинам",
+    "text_document_rejected": "Ваша учетная запись заблокирована по следующим причинам",
     "text_contact_admin": "Свяжитесь с вашим администратором",
     "text_enable_location": "Пожалуйста, включите ваше местоположение",
     "text_ok": "Ok",
-    "text_loc_permission":
-        "Разрешить местоположение все время - забронировать такси",
+    "text_loc_permission": "Разрешить местоположение все время - забронировать такси",
     "text_off_duty": "На службе",
     "text_on_duty": "Вне службы",
     "text_pickpoint": "Место сбора",
@@ -1937,8 +1862,7 @@ Map<String, dynamic> languages = {
     "text_startride": "Начать поездку",
     "text_endtrip": "Конечная поездка",
     "text_driver_otp": "Введите OTP",
-    "text_enterdriverotp":
-        "Введите OTP, отображаемый в мобильном клиенте, чтобы начать езду",
+    "text_enterdriverotp": "Введите OTP, отображаемый в мобильном клиенте, чтобы начать езду",
     "text_enable_history": "История",
     "text_enable_wallet": "Бумажник",
     "text_enable_referal": "Реферал",
@@ -2001,8 +1925,7 @@ Map<String, dynamic> languages = {
     "text_pickup_instruction": "Любые инструкции по получению",
     "text_shareride": "Поделиться ездой",
     "text_ridecancel": "Вы обязательно отмените езду",
-    "text_ridecancel_desc":
-        "Ваша поездка будет отменена и возвращена в главное меню. Это приведет к оплате отмены",
+    "text_ridecancel_desc": "Ваша поездка будет отменена и возвращена в главное меню. Это приведет к оплате отмены",
     "tex_dontcancel": "Не отменяйся",
     "text_cancelRideReason": "Причина отмены поездки",
     "text_nodriver": "Водителя не найдено",
@@ -2033,13 +1956,11 @@ Map<String, dynamic> languages = {
     "text_copyrights": "Авторские права",
     "text_termsandconditions": "Условия и положения",
     "text_yourTrustedContacts": "Ваши надежные контакты",
-    "text_removeSos":
-        "Вы обязательно удалите этот контакт из вашего надежного контакта",
+    "text_removeSos": "Вы обязательно удалите этот контакт из вашего надежного контакта",
     "text_noDataFound": "Данные не найдены",
     "text_removeFav": "Вы обязательно удалите этот адрес из своих любимых",
     "text_invite": "Приглашать",
-    "text_invitation_1":
-        "Присоединяйтесь ко мне на Tagxi! Используя мой код приглашения",
+    "text_invitation_1": "Присоединяйтесь ко мне на Tagxi! Используя мой код приглашения",
     "text_invitation_2": "Чтобы упростить поездку",
     "text_upcoming": "Предстоящий",
     "text_completed": "Завершенный",
@@ -2107,14 +2028,11 @@ Map<String, dynamic> languages = {
     "Spent For Trip Request": "Потрачен на запрос на поездку",
     "Withdrawn From Wallet": "Отозван из кошелька",
     "text_user_cancelled_request": "Пользователь отменил запрос",
-    "text_low_balance":
-        "Ваш баланс кошелька низкий, добавьте немного денег, чтобы продолжить обслуживание",
+    "text_low_balance": "Ваш баланс кошелька низкий, добавьте немного денег, чтобы продолжить обслуживание",
     "text_otp_error": "Пожалуйста, введите правильный OTP или повторный",
     "text_code_copied": "Код реферального кода скопирован",
-    "text_loc_permission_user":
-        "Разрешить местоположение - забронировать такси",
-    "text_low_wallet_for_ride":
-        "Ваш баланс кошелька слишком низкий, чтобы сделать эту гонку",
+    "text_loc_permission_user": "Разрешить местоположение - забронировать такси",
+    "text_low_wallet_for_ride": "Ваш баланс кошелька слишком низкий, чтобы сделать эту гонку",
     "text_internal_server_error": "Внутренняя ошибка сервера",
     "text_supported_vehicles": "Поддерживаемые транспортные средства",
     "text_description": "Описание",
@@ -2159,8 +2077,7 @@ Map<String, dynamic> languages = {
     "text_thankyou": "Благодарю вас",
     "text_complaint_3": "Минимум 10 символов",
     "text_free_trail_1": "Попробуйте бесплатную пробную версию на 1 месяц",
-    "text_free_trail_2":
-        "Вы обязательно получите бесплатную пробную версию в течение 1 месяца",
+    "text_free_trail_2": "Вы обязательно получите бесплатную пробную версию в течение 1 месяца",
     "text_waiting_time": "Время ожидания",
     "text_mins": "мин",
     "text_waiting_time_1": "Бесплатное время ожидания",
@@ -2177,8 +2094,7 @@ Map<String, dynamic> languages = {
     "text_ride_type": "Имя пакета",
     "text_referral_code": "Пожалуйста, введите действительный реферальный код",
     "text_arrive_eta": "Водитель прибывает",
-    "text_email_validation":
-        "Пожалуйста, введите действующий адрес электронной почты",
+    "text_email_validation": "Пожалуйста, введите действующий адрес электронной почты",
     "text_delete_account": "Удалить аккаунт",
     "text_delete_confirm": "Вы уверены, что хотите удалить свою учетную запись",
     "text_add_cancel_reason": "Добавить причину отменить",
@@ -2212,8 +2128,7 @@ Map<String, dynamic> languages = {
     "text_delete_confirmation": "Вы уверены, что хотите удалить этот драйвер?",
     "text_yes": "Да",
     "text_no": "Нет",
-    "text_fleet_diver_low_bal":
-        "Ваша владельца баланса кошелька низкий, пожалуйста, свяжитесь с вашим владельцем",
+    "text_fleet_diver_low_bal": "Ваша владельца баланса кошелька низкий, пожалуйста, свяжитесь с вашим владельцем",
     "text_add_vehicle": "Добавить автомобиль",
     "text_address": "Адрес",
     "text_add_driver": "Добавить драйвер",
@@ -2236,8 +2151,7 @@ Map<String, dynamic> languages = {
     "text_phone_number": "numero di telefono",
     "text_get_started": "Iniziamo!",
     "text_fill_form": "Compilare il modulo per continuare.",
-    "text_signup_social":
-        "Iscriviti con il social di compilare il modulo per continuare.",
+    "text_signup_social": "Iscriviti con il social di compilare il modulo per continuare.",
     "text_email": "E-mail",
     "text_name": "Nome",
     "text_agree": "Iscrivendosi, accetti il",
@@ -2289,8 +2203,7 @@ Map<String, dynamic> languages = {
     "text_contact_admin": "Contatta il tuo amministratore",
     "text_enable_location": "Si prega di abilitare la tua posizione",
     "text_ok": "Ok",
-    "text_loc_permission":
-        "Consenti sempre la posizione - per prenotare un taxi",
+    "text_loc_permission": "Consenti sempre la posizione - per prenotare un taxi",
     "text_off_duty": "In servizio",
     "text_on_duty": "Fuori servizio",
     "text_pickpoint": "Punto di raccolta",
@@ -2308,8 +2221,7 @@ Map<String, dynamic> languages = {
     "text_startride": "Inizia a cavalcare",
     "text_endtrip": "Trip di fine",
     "text_driver_otp": "Immettere OTP",
-    "text_enterdriverotp":
-        "Immettere l'OTP visualizzato nel cellulare del cliente per iniziare il viaggio",
+    "text_enterdriverotp": "Immettere l'OTP visualizzato nel cellulare del cliente per iniziare il viaggio",
     "text_enable_history": "Storia",
     "text_enable_wallet": "Portafoglio",
     "text_enable_referal": "Referel",
@@ -2389,8 +2301,7 @@ Map<String, dynamic> languages = {
     "text_saveaddressas": "Salva come preferito",
     "text_trustedtaxi": "App di prenotazione dei taxi più fidata",
     "text_allowpermission1": "Per goderti la tua esperienza di viaggio",
-    "text_allowpermission2":
-        "Si prega di consentirci le seguenti autorizzazioni",
+    "text_allowpermission2": "Si prega di consentirci le seguenti autorizzazioni",
     "text_allow": "Permettere",
     "text_drivercancelled": "Cavalcare cancellato dall'autista",
     "text_cancelsuccess": "Cavalcare annullato con successo",
@@ -2400,19 +2311,15 @@ Map<String, dynamic> languages = {
     "text_entermessage": "Immettere il messaggio",
     "text_newmessagereceived": "Nuovo messaggio ricevuto",
     "text_nointernet": "Nessuna connessione internet",
-    "text_nointernetdesc":
-        "Controlla la tua connessione Internet, prova a abilitare il wifi o riprova più tardi",
+    "text_nointernetdesc": "Controlla la tua connessione Internet, prova a abilitare il wifi o riprova più tardi",
     "text_copyrights": "Diritti d'autore",
     "text_termsandconditions": "Termini e Condizioni",
     "text_yourTrustedContacts": "I tuoi contatti di fiducia",
-    "text_removeSos":
-        "Sei sicuro di rimuovere questo contatto dal contatto di fiducia",
+    "text_removeSos": "Sei sicuro di rimuovere questo contatto dal contatto di fiducia",
     "text_noDataFound": "Nessun dato trovato",
-    "text_removeFav":
-        "Sei sicuro di rimuovere questo indirizzo dai tuoi preferiti",
+    "text_removeFav": "Sei sicuro di rimuovere questo indirizzo dai tuoi preferiti",
     "text_invite": "Invitare",
-    "text_invitation_1":
-        "Unisciti a me su Tagxi! Usando il mio codice di invito",
+    "text_invitation_1": "Unisciti a me su Tagxi! Usando il mio codice di invito",
     "text_invitation_2": "Per rendere facile la tua corsa",
     "text_upcoming": "Imminente",
     "text_completed": "Completato",
@@ -2480,13 +2387,11 @@ Map<String, dynamic> languages = {
     "Spent For Trip Request": "Speso per la richiesta di viaggio",
     "Withdrawn From Wallet": "Ritirato dal portafoglio",
     "text_user_cancelled_request": "L'utente ha annullato la richiesta",
-    "text_low_balance":
-        "Il saldo del tuo portafoglio è basso, aggiungi un po 'di denaro per continuare il servizio",
+    "text_low_balance": "Il saldo del tuo portafoglio è basso, aggiungi un po 'di denaro per continuare il servizio",
     "text_otp_error": "Inserisci OTP corretto o Resend",
     "text_code_copied": "Codice di riferimento copiato",
     "text_loc_permission_user": "Consenti la posizione: prenotare un taxi",
-    "text_low_wallet_for_ride":
-        "Il tuo equilibrio del portafoglio è troppo basso per fare questa gara",
+    "text_low_wallet_for_ride": "Il tuo equilibrio del portafoglio è troppo basso per fare questa gara",
     "text_internal_server_error": "Errore interno del server",
     "text_supported_vehicles": "Veicoli supportati",
     "text_description": "Descrizione",
@@ -2526,8 +2431,7 @@ Map<String, dynamic> languages = {
     "text_make_complaints": "Fare lamentele",
     "text_complaint_1": "Fai clic di seguito per scegliere Digita",
     "text_complaint_2": "Scrivi la tua lamentela qui",
-    "text_complaint_success":
-        "Abbiamo ottenuto con successo la tua preoccupazione ...",
+    "text_complaint_success": "Abbiamo ottenuto con successo la tua preoccupazione ...",
     "text_complaint_success_2": "Ti prenderemo prima",
     "text_thankyou": "Grazie",
     "text_complaint_3": "minimo 10 caratteri",
@@ -2536,8 +2440,7 @@ Map<String, dynamic> languages = {
     "text_waiting_time": "Tempo di attesa",
     "text_mins": "Min",
     "text_waiting_time_1": "Tempo di attesa gratuito",
-    "text_waiting_time_2":
-        "Tempo di attesa gratuito prima dell'inizio del viaggio",
+    "text_waiting_time_2": "Tempo di attesa gratuito prima dell'inizio del viaggio",
     "text_waiting_time_3": "Tempo di attesa gratuito dopo il viaggio di inizio",
     "text_waiting_price": "Prezzo di attesa",
     "text_discount": "Sconto",
@@ -2584,8 +2487,7 @@ Map<String, dynamic> languages = {
     "text_delete_confirmation": "Sei sicuro di eliminare questo driver?",
     "text_yes": "sì",
     "text_no": "No",
-    "text_fleet_diver_low_bal":
-        "Il saldo del portafoglio del tuo proprietario è basso, contatta il proprietario",
+    "text_fleet_diver_low_bal": "Il saldo del portafoglio del tuo proprietario è basso, contatta il proprietario",
     "text_add_vehicle": "Aggiungi veicolo",
     "text_address": "Indirizzo",
     "text_add_driver": "Aggiungi driver",
@@ -2600,8 +2502,7 @@ Map<String, dynamic> languages = {
     "text_enter_social": "Oder betreten Sie soziale Medien",
     "text_sign_up": "Anmeldung",
     "text_track_location": "Taxisposition verfolgen",
-    "text_keep_track":
-        "Denken Sie daran, die professionellen Leistungen mit Fahrten im Auge zu behalten",
+    "text_keep_track": "Denken Sie daran, die professionellen Leistungen mit Fahrten im Auge zu behalten",
     "text_skip": "überspringen",
     "text_next": "nächste",
     "text_your_ride": "Ihre Fahrt auf Nachfrage",
@@ -2609,19 +2510,16 @@ Map<String, dynamic> languages = {
     "text_phone_number": "Telefonnummer",
     "text_get_started": "Lass uns anfangen!",
     "text_fill_form": "Füllen Sie das Formular aus, um fortzufahren.",
-    "text_signup_social":
-        "Melden Sie sich bei Social of Füllen Sie das Formular an, um fortzufahren.",
+    "text_signup_social": "Melden Sie sich bei Social of Füllen Sie das Formular an, um fortzufahren.",
     "text_email": "Email",
     "text_name": "Name",
     "text_agree": "Durch die Anmeldung stimmen Sie dem zu",
     "text_terms": "Nutzungsbedingungen",
     "text_and": "und",
     "text_privacy": "Datenschutz-Bestimmungen",
-    "text_fastest_way":
-        "Schnellster Weg, um Taxi zu buchen, ohne das Warten und das Feilschen von Preis",
+    "text_fastest_way": "Schnellster Weg, um Taxi zu buchen, ohne das Warten und das Feilschen von Preis",
     "text_phone_verify": "Telefonüberprüfung",
-    "text_enter_otp":
-        "Bitte geben Sie den 6-stelligen Code ein, der Ihnen unter Senden Sie Ihnen unter",
+    "text_enter_otp": "Bitte geben Sie den 6-stelligen Code ein, der Ihnen unter Senden Sie Ihnen unter",
     "text_resend_code": "Code wiedergeben",
     "text_verify": "Jetzt Prüfen",
     "text_pick_up_location": "Treffpunkt",
@@ -2636,8 +2534,7 @@ Map<String, dynamic> languages = {
     "text_vehicle_make": "Was ist das aus Fahrzeug?",
     "text_continue": "Fortsetzen",
     "text_vehicle_model": "Welches Modell des Fahrzeugs ist das?",
-    "text_service_location":
-        "Welchen Service -Standort möchten Sie sich registrieren?",
+    "text_service_location": "Welchen Service -Standort möchten Sie sich registrieren?",
     "text_vehicle_type": "Welche Art von Fahrzeug ist das?",
     "text_vehicle_color": "Welche Farbe des Fahrzeugs hat das?",
     "text_license": "Fahrzeugnummer",
@@ -2660,13 +2557,11 @@ Map<String, dynamic> languages = {
     "Text_enter_vehicle_color": "Geben Sie Ihre Fahrzeugfarbe ein",
     "text_edit_docs": "Dokumente aktualisieren",
     "text_account_blocked": "Konto gesperrt",
-    "text_document_rejected":
-        "Ihr Konto ist aus den folgenden Gründen blockiert",
+    "text_document_rejected": "Ihr Konto ist aus den folgenden Gründen blockiert",
     "text_contact_admin": "Wenden Sie sich an Ihren Administrator",
     "text_enable_location": "Bitte aktivieren Sie Ihren Standort",
     "text_ok": "OK",
-    "text_loc_permission":
-        "Lassen Sie die Standort ständig zulassen - ein Taxi buchen",
+    "text_loc_permission": "Lassen Sie die Standort ständig zulassen - ein Taxi buchen",
     "text_off_duty": "Im Dienst",
     "text_on_duty": "Aus Dienst außerhalb des Dienstes",
     "text_pickpoint": "Abholpunkt",
@@ -2731,8 +2626,7 @@ Map<String, dynamic> languages = {
     "text_4lettersforautofill": "Geben Sie 4 Buchstaben zur Suche ein",
     "text_availablerides": "Verfügbare Fahrten",
     "text_paymentmethod": "Zahlungsmethode",
-    "text_choose_paynoworlater":
-        "Wählen Sie Ihre Zahlung jetzt oder später aus",
+    "text_choose_paynoworlater": "Wählen Sie Ihre Zahlung jetzt oder später aus",
     "text_paycash": "Bezahlung, wenn die Reise endet",
     "text_paycard": "Für nahtlose und kontaktieren Sie weniger Zahlung",
     "text_payupi": "Für schnellere Zahlung",
@@ -2766,8 +2660,7 @@ Map<String, dynamic> languages = {
     "text_saveaddressas": "Speichern Sie als Favorit",
     "text_trustedtaxi": "Am meisten vertrauenswürdige Taxi -Buchungs -App",
     "text_allowpermission1": "So genießen Sie Ihr Fahrerlebnis",
-    "text_allowpermission2":
-        "Bitte erlauben Sie uns die folgenden Berechtigungen",
+    "text_allowpermission2": "Bitte erlauben Sie uns die folgenden Berechtigungen",
     "text_allow": "Erlauben",
     "text_drivercancelled": "Fahrt vom Fahrer abgesagt",
     "text_cancelsuccess": "Fahrt erfolgreich abgesagt",
@@ -2782,13 +2675,11 @@ Map<String, dynamic> languages = {
     "text_copyrights": "Urheberrechte",
     "text_termsandconditions": "Geschäftsbedingungen",
     "text_yourTrustedContacts": "Ihre vertrauenswürdigen Kontakte",
-    "text_removeSos":
-        "Entfernen Sie diesen Kontakt sicher von Ihrem vertrauenswürdigen Kontakt?",
+    "text_removeSos": "Entfernen Sie diesen Kontakt sicher von Ihrem vertrauenswürdigen Kontakt?",
     "text_noDataFound": "Keine Daten gefunden",
     "text_removeFav": "Entfernen Sie diese Adresse sicher von Ihren Favoriten?",
     "text_invite": "Einladen",
-    "text_invitation_1":
-        "Begleiten Sie mich auf Tagxi! Verwenden Sie meinen Einladungscode",
+    "text_invitation_1": "Begleiten Sie mich auf Tagxi! Verwenden Sie meinen Einladungscode",
     "text_invitation_2": "Um Ihre Fahrt einfach zu erleichtern",
     "text_upcoming": "Bevorstehende",
     "text_completed": "Abgeschlossen",
@@ -2858,12 +2749,10 @@ Map<String, dynamic> languages = {
     "text_user_cancelled_request": "Der Benutzer stornierte die Anfrage",
     "text_low_balance":
         "Ihre Brieftaschenbalance ist niedrig. Bitte fügen Sie etwas Geld hinzu, um den Service fortzusetzen",
-    "text_otp_error":
-        "Bitte geben Sie die korrekte OTP ein oder geben Sie sie erneut ab",
+    "text_otp_error": "Bitte geben Sie die korrekte OTP ein oder geben Sie sie erneut ab",
     "text_code_copied": "Empfehlungscode kopiert",
     "text_loc_permission_user": "Ort zulassen - ein Taxi buchen",
-    "text_low_wallet_for_ride":
-        "Ihre Brieftaschenbalance ist zu niedrig, um dieses Rennen zu machen",
+    "text_low_wallet_for_ride": "Ihre Brieftaschenbalance ist zu niedrig, um dieses Rennen zu machen",
     "text_internal_server_error": "interner Serverfehler",
     "text_supported_vehicles": "Unterstützte Fahrzeuge",
     "text_description": "Beschreibung",
@@ -2872,8 +2761,7 @@ Map<String, dynamic> languages = {
         "Der Standortzugriff ist für das Ausführen der App erforderlich. Aktivieren Sie sie bitte in Einstellungen und tippen Sie auf Fertig geben",
     "text_open_settings": "Einstellungen öffnen",
     "text_done": "Fertig",
-    "text_open_contact_setting":
-        "Der Kontaktzugriff ist erforderlich, um Kontakt für SOS auszuwählen.",
+    "text_open_contact_setting": "Der Kontaktzugriff ist erforderlich, um Kontakt für SOS auszuwählen.",
     "text_open_camera_setting":
         "Der Kamerazugriff ist erforderlich, um das Bild zu erfassen, bitte aktivieren Sie es in Einstellungen und tippen Sie auf Fertig geben",
     "text_open_photos_setting":
@@ -2899,20 +2787,16 @@ Map<String, dynamic> languages = {
     "text_yearly_plan": "Jährlicher Plan",
     "text_rideLaterTime": "Fahrt geplant bei",
     "text_cancel_ride": "Fahrt abbrechen",
-    "text_sub_ended_2":
-        "Abonnieren Sie einen Plan, um weiterhin Fahrten zu erhalten",
+    "text_sub_ended_2": "Abonnieren Sie einen Plan, um weiterhin Fahrten zu erhalten",
     "text_make_complaints": "Beschwerden machen",
     "text_complaint_1": "Klicken Sie unten, um den Typ auszuwählen",
     "text_complaint_2": "Schreiben Sie hier Ihre Beschwerde",
-    "text_complaint_success":
-        "Wir haben erfolgreich Ihre Besorgnis bekommen ...",
+    "text_complaint_success": "Wir haben erfolgreich Ihre Besorgnis bekommen ...",
     "text_complaint_success_2": "Wir werden Sie früher besorgen",
     "text_thankyou": "Danke",
     "text_complaint_3": "Mindestens 10 Zeichen",
-    "text_free_trail_1":
-        "Versuchen Sie eine kostenlose Testversion für 1 Monat",
-    "text_free_trail_2":
-        "Erhalten Sie mit Sicherheit eine kostenlose Testversion für 1 Monat?",
+    "text_free_trail_1": "Versuchen Sie eine kostenlose Testversion für 1 Monat",
+    "text_free_trail_2": "Erhalten Sie mit Sicherheit eine kostenlose Testversion für 1 Monat?",
     "text_waiting_time": "Wartezeit",
     "text_mins": "mins",
     "text_waiting_time_1": "Kostenlose Wartezeit",
@@ -3026,8 +2910,7 @@ Map<String, dynamic> languages = {
     "text_uploaded": "업로드",
     "text_upload": "업로드",
     "text_approval_waiting": "검증 보류",
-    "text_send_approval":
-        "귀하의 문서는 여전히 확인을 위해 보류 중입니다. 모든 것이 확인되면 타기를 시작합니다. 꽉 앉으세요",
+    "text_send_approval": "귀하의 문서는 여전히 확인을 위해 보류 중입니다. 모든 것이 확인되면 타기를 시작합니다. 꽉 앉으세요",
     "text_upload_docs": "문서를 업로드하십시오",
     "text_choose_language": "언어를 선택하십시오",
     "text_enter_vehicle_model_year": "차량 모델을 입력하십시오",
@@ -3083,8 +2966,7 @@ Map<String, dynamic> languages = {
     "text_trust_contact_1": "여행 상태를 공유하십시오",
     "text_trust_contact_2": "여행 중에 살아있는 위치를 하나 이상의 연락처와 공유 할 수 있습니다.",
     "text_trust_contact_3": "비상 연락처를 설정하십시오",
-    "text_trust_contact_4":
-        "신뢰할 수있는 연락처를 비상 연락처로 만들 수 있습니다. 응급 상황에 따라 전화 할 수 있습니다.",
+    "text_trust_contact_4": "신뢰할 수있는 연락처를 비상 연락처로 만들 수 있습니다. 응급 상황에 따라 전화 할 수 있습니다.",
     "text_add_trust_contact": "신뢰할 수있는 연락처를 추가하십시오",
     "text_submit": "제출하다",
     "text_feedback": "피드백을 제공하십시오",
@@ -3113,8 +2995,7 @@ Map<String, dynamic> languages = {
     "text_promoaccepted": " 쿠폰 적용",
     "text_promorejected": "잘못된 쿠폰 코드",
     "text_findingdriver": "근처 운전자를 찾고 있습니다",
-    "text_finddriverdesc":
-        "우리는 당신의 승차를 받아 들일 근처 운전자를 찾고 있습니다. 일단 받아 들일 수 있습니다. 당신은 우리와 함께 탈 수 있습니다! 인내심에 감사드립니다!",
+    "text_finddriverdesc": "우리는 당신의 승차를 받아 들일 근처 운전자를 찾고 있습니다. 일단 받아 들일 수 있습니다. 당신은 우리와 함께 탈 수 있습니다! 인내심에 감사드립니다!",
     "text_pickup_instruction": "픽업에 대한 지침",
     "text_shareride": "공유 라이드",
     "text_ridecancel": "타기를 취소 하시겠습니까?",
@@ -3232,10 +3113,8 @@ Map<String, dynamic> languages = {
     "text_open_settings": "열기 설정",
     "text_done": "완료",
     "text_open_contact_setting": "SOS의 연락처를 선택하려면 연락처 액세스가 필요합니다.",
-    "text_open_camera_setting":
-        "이미지를 캡처하려면 카메라 액세스가 필요합니다. 설정에서 활성화하고 완료 한 탭하십시오.",
-    "text_open_photos_setting":
-        "이미지를 선택하려면 사진 액세스가 필요합니다. 설정에서 활성화하고 완료 한 탭하십시오.",
+    "text_open_camera_setting": "이미지를 캡처하려면 카메라 액세스가 필요합니다. 설정에서 활성화하고 완료 한 탭하십시오.",
+    "text_open_photos_setting": "이미지를 선택하려면 사진 액세스가 필요합니다. 설정에서 활성화하고 완료 한 탭하십시오.",
     "text_enter_otp_login": "OTP를 입력하십시오",
     "text_add_by_card": "카드로 추가하십시오",
     "text_add_by_kiosk": "키오스크에 추가하십시오",
@@ -3680,8 +3559,7 @@ Map<String, dynamic> languages = {
     "text_enter_social": "o entrar en las redes sociales",
     "text_sign_up": "Inscribirse",
     "text_track_location": "Seguimiento de la ubicación del taxi",
-    "text_keep_track":
-        "Recuerde realizar un seguimiento de los logros profesionales de conducción",
+    "text_keep_track": "Recuerde realizar un seguimiento de los logros profesionales de conducción",
     "text_skip": "saltar",
     "text_next": "Siguiente",
     "text_your_ride": "Tu viaje, a pedido",
@@ -3689,16 +3567,14 @@ Map<String, dynamic> languages = {
     "text_phone_number": "número de teléfono",
     "text_get_started": "¡Empecemos!",
     "text_fill_form": "Llene el formulario para continuar.",
-    "text_signup_social":
-        "Regístrese con social de llenar el formulario para continuar.",
+    "text_signup_social": "Regístrese con social de llenar el formulario para continuar.",
     "text_email": "Correo electrónico",
     "text_name": "Nombre",
     "text_agree": "Al registrarse, usted acepta el",
     "text_terms": "Términos de servicio",
     "text_and": "y",
     "text_privacy": "Política de privacidad",
-    "text_fastest_way":
-        "La forma más rápida de reservar taxi sin la molestia de esperar y regatear de precio",
+    "text_fastest_way": "La forma más rápida de reservar taxi sin la molestia de esperar y regatear de precio",
     "text_phone_verify": "Verificación telefónica",
     "text_enter_otp": "Ingrese el código de 6 dígitos envíe a usted al",
     "text_resend_code": "Reenviar codigo",
@@ -3738,13 +3614,11 @@ Map<String, dynamic> languages = {
     "Text_enter_vehicle_color": "Ingrese el color de su vehículo",
     "text_edit_docs": "Actualizar documentos",
     "text_account_blocked": "Cuenta bloqueada",
-    "text_document_rejected":
-        "Su cuenta está bloqueada por las siguientes razones",
+    "text_document_rejected": "Su cuenta está bloqueada por las siguientes razones",
     "text_contact_admin": "Póngase en contacto con su administrador",
     "text_enable_location": "Por favor, habilite su ubicación",
     "text_ok": "OK",
-    "text_loc_permission":
-        "Permitir ubicación todo el tiempo - para reservar un taxi",
+    "text_loc_permission": "Permitir ubicación todo el tiempo - para reservar un taxi",
     "text_off_duty": "De servicio",
     "text_on_duty": "Fuera de servicio",
     "text_pickpoint": "Punto de recogida",
@@ -3762,8 +3636,7 @@ Map<String, dynamic> languages = {
     "text_startride": "Empezar",
     "text_endtrip": "Viaje final",
     "text_driver_otp": "Ingrese OTP",
-    "text_enterdriverotp":
-        "Ingrese el OTP que se muestra en el móvil del cliente para comenzar el viaje",
+    "text_enterdriverotp": "Ingrese el OTP que se muestra en el móvil del cliente para comenzar el viaje",
     "text_enable_history": "Historia",
     "text_enable_wallet": "Cartera",
     "text_enable_referal": "Referencia",
@@ -3788,8 +3661,7 @@ Map<String, dynamic> languages = {
     "text_cash": "Dinero",
     "text_trust_contact": "Contacto de confianza",
     "text_trust_contact_1": "Comparte el estado de tu viaje",
-    "text_trust_contact_2":
-        "Podrá compartir su ubicación en vivo con uno o más contactos durante cualquier viaje",
+    "text_trust_contact_2": "Podrá compartir su ubicación en vivo con uno o más contactos durante cualquier viaje",
     "text_trust_contact_3": "Establezca sus contactos de emergencia",
     "text_trust_contact_4":
         "Puede hacer que un contacto de confianza sea un contacto de emergencia. Puede llamarlos en caso de emergencia.",
@@ -3853,16 +3725,13 @@ Map<String, dynamic> languages = {
     "text_entermessage": "Ingrese el mensaje",
     "text_newmessagereceived": "Nuevo mensaje recibido",
     "text_nointernet": "Sin conexión a Internet",
-    "text_nointernetdesc":
-        "Consulte su conexión a Internet, intente habilitar WiFi o vuelva a intentarlo más tarde",
+    "text_nointernetdesc": "Consulte su conexión a Internet, intente habilitar WiFi o vuelva a intentarlo más tarde",
     "text_copyrights": "Derechos de autor",
     "text_termsandconditions": "Términos y condiciones",
     "text_yourTrustedContacts": "Tus contactos de confianza",
-    "text_removeSos":
-        "¿Está seguro de eliminar este contacto de su contacto de confianza?",
+    "text_removeSos": "¿Está seguro de eliminar este contacto de su contacto de confianza?",
     "text_noDataFound": "Datos no encontrados",
-    "text_removeFav":
-        "¿Está seguro de eliminar esta dirección de sus favoritos?",
+    "text_removeFav": "¿Está seguro de eliminar esta dirección de sus favoritos?",
     "text_invite": "Invitar",
     "text_invitation_1": "¡Únete a mí en Tagxi! Usando mi código de invitación",
     "text_invitation_2": "Para facilitar tu viaje",
@@ -3932,13 +3801,11 @@ Map<String, dynamic> languages = {
     "Spent For Trip Request": "Gastado para la solicitud de viaje",
     "Withdrawn From Wallet": "Retirado de la billetera",
     "text_user_cancelled_request": "El usuario canceló la solicitud",
-    "text_low_balance":
-        "Su saldo de billetera es bajo, agregue algo de dinero para continuar con el servicio",
+    "text_low_balance": "Su saldo de billetera es bajo, agregue algo de dinero para continuar con el servicio",
     "text_otp_error": "Por favor ingrese OTP correcto o reinvierta",
     "text_code_copied": "Código de referencia copiado",
     "text_loc_permission_user": "Permitir la ubicación: reservar un taxi",
-    "text_low_wallet_for_ride":
-        "Su equilibrio de billetera es demasiado bajo para hacer esta carrera",
+    "text_low_wallet_for_ride": "Su equilibrio de billetera es demasiado bajo para hacer esta carrera",
     "text_internal_server_error": "error de servidor interno",
     "text_supported_vehicles": "Vehículos compatibles",
     "text_description": "Descripción",
@@ -3983,8 +3850,7 @@ Map<String, dynamic> languages = {
     "text_thankyou": "Gracias",
     "text_complaint_3": "Mínimo 10 caracteres",
     "text_free_trail_1": "Pruebe la prueba gratuita por 1 mes",
-    "text_free_trail_2":
-        "¿Estás seguro de recibir una prueba gratuita por 1 mes?",
+    "text_free_trail_2": "¿Estás seguro de recibir una prueba gratuita por 1 mes?",
     "text_waiting_time": "Tiempo de espera",
     "text_mins": "mínimos",
     "text_waiting_time_1": "Tiempo de espera gratis",
@@ -4001,8 +3867,7 @@ Map<String, dynamic> languages = {
     "text_ride_type": "Nombre del paquete",
     "text_referral_code": "Ingrese el código de referencia válido",
     "text_arrive_eta": "El conductor llega a",
-    "text_email_validation":
-        "Por favor ingrese una dirección de correo electrónico válida",
+    "text_email_validation": "Por favor ingrese una dirección de correo electrónico válida",
     "text_delete_account": "Borrar cuenta",
     "text_delete_confirm": "¿Está seguro de que desea eliminar su cuenta?",
     "text_add_cancel_reason": "Agregar motivo de cancelación",
@@ -4033,12 +3898,10 @@ Map<String, dynamic> languages = {
     "text_login_owner": "Iniciar sesión como propietario",
     "text_fleet_details": "Detalles de la flota",
     "text_delete_driver": "Eliminar el controlador",
-    "text_delete_confirmation":
-        "¿Estás seguro de que quieres eliminar este controlador?",
+    "text_delete_confirmation": "¿Estás seguro de que quieres eliminar este controlador?",
     "text_yes": "Sí",
     "text_no": "No",
-    "text_fleet_diver_low_bal":
-        "El saldo de su billetera de su propietario es bajo, comuníquese con su propietario",
+    "text_fleet_diver_low_bal": "El saldo de su billetera de su propietario es bajo, comuníquese con su propietario",
     "text_add_vehicle": "Agregar vehículo",
     "text_address": "Dirección",
     "text_add_driver": "Agregar controlador",
@@ -4068,8 +3931,7 @@ Map<String, dynamic> languages = {
     "text_terms": "תנאי השירות",
     "text_and": "ו",
     "text_privacy": "מדיניות פרטיות",
-    "text_fastest_way":
-        "הדרך המהירה ביותר להזמין מונית ללא הטרחה של המתנה ומתמקחת במחיר",
+    "text_fastest_way": "הדרך המהירה ביותר להזמין מונית ללא הטרחה של המתנה ומתמקחת במחיר",
     "text_phone_verify": "אימות טלפון",
     "text_enter_otp": "אנא הכנס את הקוד בן 6 הספרות שלח אליך בטלפון",
     "text_resend_code": "שלח קוד שוב",
@@ -4101,8 +3963,7 @@ Map<String, dynamic> languages = {
     "text_uploaded": "הועלה",
     "text_upload": "העלה",
     "text_approval_waiting": "אימות תלוי ועומד",
-    "text_send_approval":
-        "המסמך שלך עדיין ממתין לאימות. ברגע שהכל מאומת אתה מתחיל לקבל רכיבות. אנא שב חזק",
+    "text_send_approval": "המסמך שלך עדיין ממתין לאימות. ברגע שהכל מאומת אתה מתחיל לקבל רכיבות. אנא שב חזק",
     "text_upload_docs": "העלה מסמכים",
     "text_choose_language": "בחר שפה",
     "text_enter_vehicle_model_year": "הזן את שנת דגם הרכב שלך",
@@ -4131,8 +3992,7 @@ Map<String, dynamic> languages = {
     "text_startride": "התחל לרכוב",
     "text_endtrip": "מסע סיום",
     "text_driver_otp": "הזן את OTP",
-    "text_enterdriverotp":
-        "הזן את ה- OTP המוצג בנייד של הלקוח כדי להתחיל את הרכיבה",
+    "text_enterdriverotp": "הזן את ה- OTP המוצג בנייד של הלקוח כדי להתחיל את הרכיבה",
     "text_enable_history": "הִיסטוֹרִיָה",
     "text_enable_wallet": "ארנק",
     "text_enable_referal": "הפניה",
@@ -4157,11 +4017,9 @@ Map<String, dynamic> languages = {
     "text_cash": "כסף מזומן",
     "text_trust_contact": "איש קשר מהימן",
     "text_trust_contact_1": "שתף את סטטוס הטיול שלך",
-    "text_trust_contact_2":
-        "תוכל לשתף את המיקום החי שלך עם אנשי קשר אחד או יותר בכל טיול",
+    "text_trust_contact_2": "תוכל לשתף את המיקום החי שלך עם אנשי קשר אחד או יותר בכל טיול",
     "text_trust_contact_3": "הגדר את אנשי הקשר לחירום שלך",
-    "text_trust_contact_4":
-        "אתה יכול ליצור קשר מהימן ליצירת קשר חירום. אתה יכול להתקשר אליהם במקרה חירום.",
+    "text_trust_contact_4": "אתה יכול ליצור קשר מהימן ליצירת קשר חירום. אתה יכול להתקשר אליהם במקרה חירום.",
     "text_add_trust_contact": "הוסף איש קשר מהימן",
     "text_submit": "שלח",
     "text_feedback": "תן את המשוב שלך",
@@ -4195,8 +4053,7 @@ Map<String, dynamic> languages = {
     "text_pickup_instruction": "כל הוראות לאיסוף",
     "text_shareride": "שתף נסיעה",
     "text_ridecancel": "האם אתה בטוח לבטל את הרכיבה",
-    "text_ridecancel_desc":
-        "הנסיעה שלך תבוטל ותוחזר לתפריט הראשי. זה יוביל לדמי ביטול",
+    "text_ridecancel_desc": "הנסיעה שלך תבוטל ותוחזר לתפריט הראשי. זה יוביל לדמי ביטול",
     "tex_dontcancel": "אל תבטל",
     "text_cancelRideReason": "סיבה לביטול נסיעה",
     "text_nodriver": "לא נמצא נהג",
@@ -4222,8 +4079,7 @@ Map<String, dynamic> languages = {
     "text_entermessage": "הזן הודעה",
     "text_newmessagereceived": "הודעה חדשה שהתקבלה",
     "text_nointernet": "אין חיבור אינטרנט",
-    "text_nointernetdesc":
-        "אנא בדוק את חיבור האינטרנט שלך, נסה להפעיל WiFi או נסה שוב מאוחר יותר",
+    "text_nointernetdesc": "אנא בדוק את חיבור האינטרנט שלך, נסה להפעיל WiFi או נסה שוב מאוחר יותר",
     "text_copyrights": "זכויות יוצרים",
     "text_termsandconditions": "תנאים",
     "text_yourTrustedContacts": "אנשי הקשר המהימנים שלך",
@@ -4289,8 +4145,7 @@ Map<String, dynamic> languages = {
     "text_wallet": "ארנק",
     "text_startridewithotp": "התחל לרכוב עם OTP",
     "text_loadingLocalization": "טוען לוקליזציה",
-    "text_background_permission":
-        "אפשר מיקום רקע - לתת לך בקשת רכיבה גם אם האפליקציה שלך ברקע",
+    "text_background_permission": "אפשר מיקום רקע - לתת לך בקשת רכיבה גם אם האפליקציה שלך ברקע",
     "Admin Commission For Trip": "ועדת מנהל לטיול",
     "Trip Commission": "ועדת טיול",
     "Cancellation Fee": "דמי ביטול",
@@ -4308,16 +4163,12 @@ Map<String, dynamic> languages = {
     "text_supported_vehicles": "רכבים נתמכים",
     "text_description": "תיאור",
     "text_estimated_amount": "סכום משוער",
-    "text_open_loc_settings":
-        "יש צורך בגישה למיקום להפעלת האפליקציה, אנא הפעל אותה בהגדרות ולברז על ביצוע",
+    "text_open_loc_settings": "יש צורך בגישה למיקום להפעלת האפליקציה, אנא הפעל אותה בהגדרות ולברז על ביצוע",
     "text_open_settings": "פתח הגדרות",
     "text_done": "בוצע",
-    "text_open_contact_setting":
-        "יש צורך בגישה ליצירת קשר כדי לבחור איש קשר ל- SOS, מאפשר זאת בהגדרות ולהקיש על בוצע",
-    "text_open_camera_setting":
-        "יש צורך בגישה למצלמה כדי ללכוד תמונה, אנא הפעל אותה בהגדרות והקיש על בוצע",
-    "text_open_photos_setting":
-        "יש צורך בגישה לתמונות כדי לבחור תמונה, אנא הפעל אותה בהגדרות והקיש על בוצע",
+    "text_open_contact_setting": "יש צורך בגישה ליצירת קשר כדי לבחור איש קשר ל- SOS, מאפשר זאת בהגדרות ולהקיש על בוצע",
+    "text_open_camera_setting": "יש צורך בגישה למצלמה כדי ללכוד תמונה, אנא הפעל אותה בהגדרות והקיש על בוצע",
+    "text_open_photos_setting": "יש צורך בגישה לתמונות כדי לבחור תמונה, אנא הפעל אותה בהגדרות והקיש על בוצע",
     "text_enter_otp_login": "הזן את OTP",
     "text_add_by_card": "הוסף באמצעות כרטיס",
     "text_add_by_kiosk": "הוסף על ידי קיוסק",
@@ -4399,8 +4250,7 @@ Map<String, dynamic> languages = {
     "text_delete_confirmation": "האם אתה בטוח רוצה למחוק את מנהל ההתקן הזה?",
     "text_yes": "כן",
     "text_no": "לא",
-    "text_fleet_diver_low_bal":
-        "יתרת הארנק של הבעלים שלך נמוכה, אנא צור קשר עם הבעלים שלך",
+    "text_fleet_diver_low_bal": "יתרת הארנק של הבעלים שלך נמוכה, אנא צור קשר עם הבעלים שלך",
     "text_add_vehicle": "הוסף רכב",
     "text_address": "כתובת",
     "text_add_driver": "הוסף את הנהג",
@@ -4430,8 +4280,7 @@ Map<String, dynamic> languages = {
     "text_terms": "সেবা পাবার শর্ত",
     "text_and": "এবং",
     "text_privacy": "গোপনীয়তা নীতি",
-    "text_fastest_way":
-        "ওয়েটিং ও হাগলিংয়ের ঝামেলা ছাড়াই ট্যাক্সি বুক করার দ্রুততম উপায়",
+    "text_fastest_way": "ওয়েটিং ও হাগলিংয়ের ঝামেলা ছাড়াই ট্যাক্সি বুক করার দ্রুততম উপায়",
     "text_phone_verify": "ফোন যাচাইকরণ",
     "text_enter_otp": "দয়া করে আপনাকে 6-অঙ্কের কোডটি প্রেরণ করুন",
     "text_resend_code": "পুনরায় পাঠানো কোড",
@@ -4475,8 +4324,7 @@ Map<String, dynamic> languages = {
     "text_contact_admin": "আপনার প্রশাসকের সাথে যোগাযোগ করুন",
     "text_enable_location": "আপনার অবস্থান সক্ষম করুন",
     "text_ok": "ঠিক আছে",
-    "text_loc_permission":
-        "ট্যাক্সি বুক করার জন্য - সারাক্ষণ অবস্থানকে অনুমতি দিন",
+    "text_loc_permission": "ট্যাক্সি বুক করার জন্য - সারাক্ষণ অবস্থানকে অনুমতি দিন",
     "text_off_duty": "কাজে আছি",
     "text_on_duty": "দায়িত্ব বন্ধ",
     "text_pickpoint": "সংগ্রহের স্থান",
@@ -4494,8 +4342,7 @@ Map<String, dynamic> languages = {
     "text_startride": "যাত্রা শুরু করুন",
     "text_endtrip": "শেষ ট্রিপ",
     "text_driver_otp": "ওটিপি প্রবেশ করান",
-    "text_enterdriverotp":
-        "যাত্রা শুরু করতে গ্রাহকের মোবাইলে প্রদর্শিত ওটিপি প্রবেশ করান",
+    "text_enterdriverotp": "যাত্রা শুরু করতে গ্রাহকের মোবাইলে প্রদর্শিত ওটিপি প্রবেশ করান",
     "text_enable_history": "ইতিহাস",
     "text_enable_wallet": "ওয়ালেট",
     "text_enable_referal": "রেফারেল",
@@ -4558,8 +4405,7 @@ Map<String, dynamic> languages = {
     "text_pickup_instruction": "বাছাইয়ের জন্য কোনও নির্দেশনা",
     "text_shareride": "শেয়ার রাইড",
     "text_ridecancel": "আপনি কি রাইড বাতিল করতে ভুলবেন না?",
-    "text_ridecancel_desc":
-        "আপনার যাত্রাটি বাতিল হয়ে যাবে এবং মেইন মেনুতে ফিরে আসবে। এটি বাতিল ফি বাড়ে",
+    "text_ridecancel_desc": "আপনার যাত্রাটি বাতিল হয়ে যাবে এবং মেইন মেনুতে ফিরে আসবে। এটি বাতিল ফি বাড়ে",
     "tex_dontcancel": "বাতিল করবেন না",
     "text_cancelRideReason": "যাত্রা বাতিল করার কারণ",
     "text_nodriver": "কোনও ড্রাইভার পাওয়া যায় নি",
@@ -4590,14 +4436,11 @@ Map<String, dynamic> languages = {
     "text_copyrights": "কপিরাইট",
     "text_termsandconditions": "শর্তাবলী",
     "text_yourTrustedContacts": "আপনার বিশ্বস্ত পরিচিতি",
-    "text_removeSos":
-        "আপনি কি আপনার বিশ্বস্ত যোগাযোগ থেকে এই যোগাযোগটি সরিয়ে ফেলতে ভুলবেন না?",
+    "text_removeSos": "আপনি কি আপনার বিশ্বস্ত যোগাযোগ থেকে এই যোগাযোগটি সরিয়ে ফেলতে ভুলবেন না?",
     "text_noDataFound": "কোনও ডেটা পাওয়া যায় নি",
-    "text_removeFav":
-        "আপনি কি আপনার পছন্দসই থেকে এই ঠিকানাটি সরিয়ে ফেলতে ভুলবেন না?",
+    "text_removeFav": "আপনি কি আপনার পছন্দসই থেকে এই ঠিকানাটি সরিয়ে ফেলতে ভুলবেন না?",
     "text_invite": "আমন্ত্রণ",
-    "text_invitation_1":
-        "আমার সাথে ট্যাগ্সিতে যোগ দিন! আমার আমন্ত্রণ কোড ব্যবহার করে",
+    "text_invitation_1": "আমার সাথে ট্যাগ্সিতে যোগ দিন! আমার আমন্ত্রণ কোড ব্যবহার করে",
     "text_invitation_2": "আপনার যাত্রা সহজ করতে",
     "text_upcoming": "আসন্ন",
     "text_completed": "সম্পূর্ণ",
@@ -4665,13 +4508,11 @@ Map<String, dynamic> languages = {
     "Spent For Trip Request": "ট্রিপ অনুরোধের জন্য ব্যয় করা",
     "Withdrawn From Wallet": "ওয়ালেট থেকে প্রত্যাহার",
     "text_user_cancelled_request": "ব্যবহারকারী অনুরোধ বাতিল করেছেন",
-    "text_low_balance":
-        "আপনার মানিব্যাগের ভারসাম্য কম, পরিষেবা চালিয়ে যাওয়ার জন্য দয়া করে কিছু অর্থ যুক্ত করুন",
+    "text_low_balance": "আপনার মানিব্যাগের ভারসাম্য কম, পরিষেবা চালিয়ে যাওয়ার জন্য দয়া করে কিছু অর্থ যুক্ত করুন",
     "text_otp_error": "দয়া করে সঠিক ওটিপি লিখুন বা পুনরুদ্ধার করুন",
     "text_code_copied": "রেফারেল কোড অনুলিপি করা হয়েছে",
     "text_loc_permission_user": "অবস্থানের অনুমতি দিন - একটি ট্যাক্সি বুক করতে",
-    "text_low_wallet_for_ride":
-        "আপনার ওয়ালেট ভারসাম্য এই রেসটি তৈরি করতে খুব কম",
+    "text_low_wallet_for_ride": "আপনার ওয়ালেট ভারসাম্য এই রেসটি তৈরি করতে খুব কম",
     "text_internal_server_error": "অভ্যন্তরীণ সার্ভার ত্রুটি",
     "text_supported_vehicles": "সমর্থিত যানবাহন",
     "text_description": "বর্ণনা",
@@ -4707,8 +4548,7 @@ Map<String, dynamic> languages = {
     "text_yearly_plan": "বার্ষিক পরিকল্পনা",
     "text_rideLaterTime": "রাইড নির্ধারিত",
     "text_cancel_ride": "যাত্রা বাতিল করুন",
-    "text_sub_ended_2":
-        "যাত্রা চালিয়ে যাওয়ার জন্য একটি পরিকল্পনা সাবস্ক্রাইব করুন",
+    "text_sub_ended_2": "যাত্রা চালিয়ে যাওয়ার জন্য একটি পরিকল্পনা সাবস্ক্রাইব করুন",
     "text_make_complaints": "অভিযোগ করুন",
     "text_complaint_1": "প্রকার চয়ন করতে নীচে ক্লিক করুন",
     "text_complaint_2": "আপনার অভিযোগ এখানে লিখুন",
@@ -4768,8 +4608,7 @@ Map<String, dynamic> languages = {
     "text_delete_confirmation": "আপনি কি নিশ্চিত যে এই ড্রাইভারটি মুছতে চান?",
     "text_yes": "হ্যাঁ",
     "text_no": "না",
-    "text_fleet_diver_low_bal":
-        "আপনার মালিকের মানিব্যাগের ভারসাম্য কম, দয়া করে আপনার মালিকের সাথে যোগাযোগ করুন",
+    "text_fleet_diver_low_bal": "আপনার মালিকের মানিব্যাগের ভারসাম্য কম, দয়া করে আপনার মালিকের সাথে যোগাযোগ করুন",
     "text_add_vehicle": "যানবাহন যোগ করুন",
     "text_address": "ঠিকানা",
     "text_add_driver": "ড্রাইভার যোগ করুন",

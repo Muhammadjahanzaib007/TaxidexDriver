@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/NavigatorPages/walletpage.dart';
-import 'package:tagyourtaxi_driver/pages/loadingPage/loading.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/NavigatorPages/walletpage.dart';
+import 'package:taxidex_driver/pages/loadingPage/loading.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/styles/styles.dart';
 // import 'package:flutter_paystack/flutter_paystack.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/translation/translation.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class PayStackPage extends StatefulWidget {
@@ -57,14 +57,11 @@ class _PayStackPageState extends State<PayStackPage> {
             valueListenable: valueNotifierHome.value,
             builder: (context, value, child) {
               return Directionality(
-                textDirection: (languageDirection == 'rtl')
-                    ? TextDirection.rtl
-                    : TextDirection.ltr,
+                textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
                 child: Stack(
                   children: [
                     Container(
-                      padding: EdgeInsets.fromLTRB(media.width * 0.05,
-                          media.width * 0.05, media.width * 0.05, 0),
+                      padding: EdgeInsets.fromLTRB(media.width * 0.05, media.width * 0.05, media.width * 0.05, 0),
                       height: media.height * 1,
                       width: media.width * 1,
                       color: page,
@@ -74,15 +71,13 @@ class _PayStackPageState extends State<PayStackPage> {
                           Stack(
                             children: [
                               Container(
-                                padding:
-                                    EdgeInsets.only(bottom: media.width * 0.05),
+                                padding: EdgeInsets.only(bottom: media.width * 0.05),
                                 width: media.width * 0.9,
                                 alignment: Alignment.center,
                                 child: Text(
                                   languages[choosenLanguage]['text_addmoney'],
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * sixteen,
-                                      fontWeight: FontWeight.bold),
+                                  style:
+                                      GoogleFonts.roboto(fontSize: media.width * sixteen, fontWeight: FontWeight.bold),
                                 ),
                               ),
                               Positioned(
@@ -97,11 +92,9 @@ class _PayStackPageState extends State<PayStackPage> {
                             height: media.width * 0.05,
                           ),
                           Expanded(
-                            child: (paystackCode['authorization_url'] != null &&
-                                    _error == '')
+                            child: (paystackCode['authorization_url'] != null && _error == '')
                                 ? WebView(
-                                    initialUrl:
-                                        paystackCode['authorization_url'],
+                                    initialUrl: paystackCode['authorization_url'],
                                     javascriptMode: JavascriptMode.unrestricted,
                                     userAgent: 'Flutter;Webview',
                                   )
@@ -124,9 +117,7 @@ class _PayStackPageState extends State<PayStackPage> {
                                   Container(
                                     padding: EdgeInsets.all(media.width * 0.05),
                                     width: media.width * 0.9,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(12),
-                                        color: page),
+                                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: page),
                                     child: Column(
                                       children: [
                                         SizedBox(
@@ -150,8 +141,7 @@ class _PayStackPageState extends State<PayStackPage> {
                                               });
                                               Navigator.pop(context, false);
                                             },
-                                            text: languages[choosenLanguage]
-                                                ['text_ok'])
+                                            text: languages[choosenLanguage]['text_ok'])
                                       ],
                                     ),
                                   )
@@ -174,14 +164,11 @@ class _PayStackPageState extends State<PayStackPage> {
                                   Container(
                                     padding: EdgeInsets.all(media.width * 0.05),
                                     width: media.width * 0.9,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(12),
-                                        color: page),
+                                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: page),
                                     child: Column(
                                       children: [
                                         Text(
-                                          languages[choosenLanguage]
-                                              ['text_paymentsuccess'],
+                                          languages[choosenLanguage]['text_paymentsuccess'],
                                           textAlign: TextAlign.center,
                                           style: GoogleFonts.roboto(
                                               fontSize: media.width * sixteen,
@@ -199,8 +186,7 @@ class _PayStackPageState extends State<PayStackPage> {
                                                 Navigator.pop(context, true);
                                               });
                                             },
-                                            text: languages[choosenLanguage]
-                                                ['text_ok'])
+                                            text: languages[choosenLanguage]['text_ok'])
                                       ],
                                     ),
                                   )
@@ -224,9 +210,7 @@ class _PayStackPageState extends State<PayStackPage> {
                         : Container(),
 
                     //loader
-                    (_isLoading == true)
-                        ? const Positioned(top: 0, child: Loading())
-                        : Container()
+                    (_isLoading == true) ? const Positioned(top: 0, child: Loading()) : Container()
                   ],
                 ),
               );

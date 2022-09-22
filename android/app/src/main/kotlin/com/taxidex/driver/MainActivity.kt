@@ -1,4 +1,4 @@
-package package name
+package com.taxidex.driver
 
 import androidx.annotation.NonNull
 import io.flutter.embedding.android.FlutterActivity

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/NavigatorPages/walletpage.dart';
-import 'package:tagyourtaxi_driver/pages/loadingPage/loading.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/NavigatorPages/walletpage.dart';
+import 'package:taxidex_driver/pages/loadingPage/loading.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/styles/styles.dart';
+import 'package:taxidex_driver/translation/translation.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 
 class RazorPayPage extends StatefulWidget {
@@ -68,10 +68,7 @@ class _RazorPayPageState extends State<RazorPayPage> {
       'amount': addMoney * 100,
       'name': userDetails['name'],
       'description': '',
-      'prefill': {
-        'contact': userDetails['mobile'],
-        'email': userDetails['email']
-      }
+      'prefill': {'contact': userDetails['mobile'], 'email': userDetails['email']}
     };
 
     await _razorpay.open(options);
@@ -89,14 +86,11 @@ class _RazorPayPageState extends State<RazorPayPage> {
             valueListenable: valueNotifierHome.value,
             builder: (context, value, child) {
               return Directionality(
-                textDirection: (languageDirection == 'rtl')
-                    ? TextDirection.rtl
-                    : TextDirection.ltr,
+                textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
                 child: Stack(
                   children: [
                     Container(
-                      padding: EdgeInsets.fromLTRB(media.width * 0.05,
-                          media.width * 0.05, media.width * 0.05, 0),
+                      padding: EdgeInsets.fromLTRB(media.width * 0.05, media.width * 0.05, media.width * 0.05, 0),
                       height: media.height * 1,
                       width: media.width * 1,
                       color: page,
@@ -106,15 +100,13 @@ class _RazorPayPageState extends State<RazorPayPage> {
                           Stack(
                             children: [
                               Container(
-                                padding:
-                                    EdgeInsets.only(bottom: media.width * 0.05),
+                                padding: EdgeInsets.only(bottom: media.width * 0.05),
                                 width: media.width * 0.9,
                                 alignment: Alignment.center,
                                 child: Text(
                                   languages[choosenLanguage]['text_addmoney'],
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * sixteen,
-                                      fontWeight: FontWeight.bold),
+                                  style:
+                                      GoogleFonts.roboto(fontSize: media.width * sixteen, fontWeight: FontWeight.bold),
                                 ),
                               ),
                               Positioned(
@@ -145,14 +137,11 @@ class _RazorPayPageState extends State<RazorPayPage> {
                                   Container(
                                     padding: EdgeInsets.all(media.width * 0.05),
                                     width: media.width * 0.9,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(12),
-                                        color: page),
+                                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: page),
                                     child: Column(
                                       children: [
                                         Text(
-                                          languages[choosenLanguage]
-                                              ['text_somethingwentwrong'],
+                                          languages[choosenLanguage]['text_somethingwentwrong'],
                                           textAlign: TextAlign.center,
                                           style: GoogleFonts.roboto(
                                               fontSize: media.width * sixteen,
@@ -169,8 +158,7 @@ class _RazorPayPageState extends State<RazorPayPage> {
                                               });
                                               Navigator.pop(context, true);
                                             },
-                                            text: languages[choosenLanguage]
-                                                ['text_ok'])
+                                            text: languages[choosenLanguage]['text_ok'])
                                       ],
                                     ),
                                   )
@@ -193,14 +181,11 @@ class _RazorPayPageState extends State<RazorPayPage> {
                                   Container(
                                     padding: EdgeInsets.all(media.width * 0.05),
                                     width: media.width * 0.9,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(12),
-                                        color: page),
+                                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: page),
                                     child: Column(
                                       children: [
                                         Text(
-                                          languages[choosenLanguage]
-                                              ['text_paymentsuccess'],
+                                          languages[choosenLanguage]['text_paymentsuccess'],
                                           textAlign: TextAlign.center,
                                           style: GoogleFonts.roboto(
                                               fontSize: media.width * sixteen,
@@ -218,8 +203,7 @@ class _RazorPayPageState extends State<RazorPayPage> {
                                                 Navigator.pop(context, true);
                                               });
                                             },
-                                            text: languages[choosenLanguage]
-                                                ['text_ok'])
+                                            text: languages[choosenLanguage]['text_ok'])
                                       ],
                                     ),
                                   )
@@ -243,9 +227,7 @@ class _RazorPayPageState extends State<RazorPayPage> {
                         : Container(),
 
                     //loader
-                    (_isLoading == true)
-                        ? const Positioned(top: 0, child: Loading())
-                        : Container()
+                    (_isLoading == true) ? const Positioned(top: 0, child: Loading()) : Container()
                   ],
                 ),
               );

@@ -2,15 +2,15 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/loadingPage/loading.dart';
-import 'package:tagyourtaxi_driver/pages/login/get_started.dart';
-import 'package:tagyourtaxi_driver/pages/login/login.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/pages/vehicleInformations/referral_code.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/loadingPage/loading.dart';
+import 'package:taxidex_driver/pages/login/get_started.dart';
+import 'package:taxidex_driver/pages/login/login.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/pages/vehicleInformations/referral_code.dart';
+import 'package:taxidex_driver/styles/styles.dart';
+import 'package:taxidex_driver/translation/translation.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -39,20 +39,13 @@ class _OwnersRegisterState extends State<OwnersRegister> {
   bool _pickImage = false;
   String _permission = '';
 
-  TextEditingController emailText =
-      TextEditingController(); //email textediting controller
-  TextEditingController nameText =
-      TextEditingController(); //name textediting controller
-  TextEditingController companyText =
-      TextEditingController(); //name textediting controller
-  TextEditingController addressText =
-      TextEditingController(); //name textediting controller
-  TextEditingController cityText =
-      TextEditingController(); //name textediting controller
-  TextEditingController postalText =
-      TextEditingController(); //name textediting controller
-  TextEditingController taxText =
-      TextEditingController(); //name textediting controller
+  TextEditingController emailText = TextEditingController(); //email textediting controller
+  TextEditingController nameText = TextEditingController(); //name textediting controller
+  TextEditingController companyText = TextEditingController(); //name textediting controller
+  TextEditingController addressText = TextEditingController(); //name textediting controller
+  TextEditingController cityText = TextEditingController(); //name textediting controller
+  TextEditingController postalText = TextEditingController(); //name textediting controller
+  TextEditingController taxText = TextEditingController(); //name textediting controller
 
   getLocations() async {
     await getServiceLocation();
@@ -97,10 +90,7 @@ class _OwnersRegisterState extends State<OwnersRegister> {
   //navigate
 
   navigate() {
-    Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(builder: (context) => const Referral()),
-        (route) => false);
+    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => const Referral()), (route) => false);
   }
 
 //pick image from camera
@@ -131,9 +121,7 @@ class _OwnersRegisterState extends State<OwnersRegister> {
     var media = MediaQuery.of(context).size;
     return Material(
       child: Directionality(
-        textDirection: (languageDirection == 'rtl')
-            ? TextDirection.rtl
-            : TextDirection.ltr,
+        textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
         child: Scaffold(
           body: Stack(
             children: [
@@ -141,8 +129,7 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                 padding: EdgeInsets.only(
                     left: media.width * 0.08,
                     right: media.width * 0.08,
-                    top:
-                        media.width * 0.05 + MediaQuery.of(context).padding.top,
+                    top: media.width * 0.05 + MediaQuery.of(context).padding.top,
                     bottom: media.width * 0.05),
                 height: media.height * 1,
                 width: media.width * 1,
@@ -181,8 +168,7 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Text(
-                                    languages[choosenLanguage]
-                                        ['text_get_started'],
+                                    languages[choosenLanguage]['text_get_started'],
                                     style: GoogleFonts.roboto(
                                         fontSize: media.width * twentyeight,
                                         fontWeight: FontWeight.bold,
@@ -197,8 +183,7 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                             Text(
                               languages[choosenLanguage]['text_fill_form'],
                               style: GoogleFonts.roboto(
-                                  fontSize: media.width * sixteen,
-                                  color: textColor.withOpacity(0.3)),
+                                  fontSize: media.width * sixteen, color: textColor.withOpacity(0.3)),
                             ),
                             SizedBox(height: media.height * 0.04),
 
@@ -217,9 +202,7 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                             shape: BoxShape.circle,
                                             color: backgroundColor,
                                             image: DecorationImage(
-                                                image: FileImage(
-                                                    File(proImageFile1)),
-                                                fit: BoxFit.cover)),
+                                                image: FileImage(File(proImageFile1)), fit: BoxFit.cover)),
                                       )
                                     : Container(
                                         alignment: Alignment.center,
@@ -230,11 +213,8 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                           color: backgroundColor,
                                         ),
                                         child: Text(
-                                          languages[choosenLanguage]
-                                              ['text_add_photo'],
-                                          style: GoogleFonts.roboto(
-                                              fontSize: media.width * fourteen,
-                                              color: textColor),
+                                          languages[choosenLanguage]['text_add_photo'],
+                                          style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor),
                                         ),
                                       ),
                               ),
@@ -265,21 +245,17 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                 });
                               },
                               textController: emailText,
-                              color:
-                                  (verifyEmailError == '') ? null : Colors.red,
+                              color: (verifyEmailError == '') ? null : Colors.red,
                             ),
                             //email already exist error
                             (verifyEmailError != '')
                                 ? Container(
-                                    margin: EdgeInsets.only(
-                                        top: media.height * 0.03),
+                                    margin: EdgeInsets.only(top: media.height * 0.03),
                                     alignment: Alignment.center,
                                     width: media.width * 0.8,
                                     child: Text(
                                       verifyEmailError,
-                                      style: GoogleFonts.roboto(
-                                          fontSize: media.width * sixteen,
-                                          color: Colors.red),
+                                      style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: Colors.red),
                                     ),
                                   )
                                 : Container(),
@@ -298,19 +274,14 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                               },
                               child: Container(
                                 height: 50,
-                                padding: EdgeInsets.only(
-                                    left: media.width * 0.035, right: 5),
-                                decoration: BoxDecoration(
-                                    border: Border(
-                                        bottom: BorderSide(color: underline))),
+                                padding: EdgeInsets.only(left: media.width * 0.035, right: 5),
+                                decoration: BoxDecoration(border: Border(bottom: BorderSide(color: underline))),
                                 child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Row(
                                       children: [
-                                        const Icon(
-                                            Icons.location_city_outlined),
+                                        const Icon(Icons.location_city_outlined),
                                         SizedBox(
                                           width: media.width * 0.05,
                                         ),
@@ -318,18 +289,13 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                           width: media.width * 0.5,
                                           child: Text(
                                             (ownerServiceLocation == '')
-                                                ? languages[choosenLanguage]
-                                                    ['text_choose_area']
+                                                ? languages[choosenLanguage]['text_choose_area']
                                                 : (serviceLocations.isNotEmpty)
                                                     ? serviceLocations.firstWhere(
-                                                            (element) =>
-                                                                element['id'] ==
-                                                                ownerServiceLocation)[
-                                                        'name']
+                                                        (element) => element['id'] == ownerServiceLocation)['name']
                                                     : '',
-                                            style: GoogleFonts.roboto(
-                                                fontSize: media.width * sixteen,
-                                                color: textColor),
+                                            style:
+                                                GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
                                             maxLines: 1,
                                           ),
                                         ),
@@ -344,13 +310,9 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                             ),
                             (_chooseLocation == true)
                                 ? Container(
-                                    margin:
-                                        EdgeInsets.all(media.height * 0.006),
+                                    margin: EdgeInsets.all(media.height * 0.006),
                                     decoration: BoxDecoration(boxShadow: [
-                                      BoxShadow(
-                                          blurRadius: 2,
-                                          spreadRadius: 2,
-                                          color: Colors.black.withOpacity(0.2))
+                                      BoxShadow(blurRadius: 2, spreadRadius: 2, color: Colors.black.withOpacity(0.2))
                                     ], color: page),
                                     height: media.width * 0.4,
                                     child: (serviceLocations.isNotEmpty)
@@ -363,32 +325,19 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                                         i,
                                                         InkWell(
                                                           onTap: () {
-                                                            ownerServiceLocation =
-                                                                serviceLocations[
-                                                                    i]['id'];
-                                                            _chooseLocation =
-                                                                false;
+                                                            ownerServiceLocation = serviceLocations[i]['id'];
+                                                            _chooseLocation = false;
                                                             setState(() {});
                                                           },
                                                           child: Container(
-                                                            padding: EdgeInsets
-                                                                .all(media
-                                                                        .width *
-                                                                    0.05),
-                                                            width: media.width *
-                                                                0.9,
+                                                            padding: EdgeInsets.all(media.width * 0.05),
+                                                            width: media.width * 0.9,
                                                             child: Text(
-                                                              serviceLocations[
-                                                                  i]['name'],
+                                                              serviceLocations[i]['name'],
                                                               style: GoogleFonts.roboto(
-                                                                  fontSize: media
-                                                                          .width *
-                                                                      fourteen,
-                                                                  color:
-                                                                      textColor,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w600),
+                                                                  fontSize: media.width * fourteen,
+                                                                  color: textColor,
+                                                                  fontWeight: FontWeight.w600),
                                                             ),
                                                           ),
                                                         ));
@@ -398,16 +347,13 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                             ),
                                           )
                                         : Container(
-                                            padding: EdgeInsets.all(
-                                                media.width * 0.05),
+                                            padding: EdgeInsets.all(media.width * 0.05),
                                             width: media.width * 0.9,
                                             child: Text(
-                                              languages[choosenLanguage]
-                                                  ['text_no_data_found'],
+                                              languages[choosenLanguage]['text_no_data_found'],
                                               textAlign: TextAlign.center,
                                               style: GoogleFonts.roboto(
-                                                  fontSize:
-                                                      media.width * fourteen,
+                                                  fontSize: media.width * fourteen,
                                                   color: textColor,
                                                   fontWeight: FontWeight.w600),
                                             ),
@@ -419,9 +365,7 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                             ),
 
                             Container(
-                              decoration: BoxDecoration(
-                                  border: Border(
-                                      bottom: BorderSide(color: underline))),
+                              decoration: BoxDecoration(border: Border(bottom: BorderSide(color: underline))),
                               padding: const EdgeInsets.only(left: 5, right: 5),
                               child: Row(
                                 children: [
@@ -429,14 +373,11 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                     height: 50,
                                     alignment: Alignment.center,
                                     child: Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
                                       children: [
                                         Text(
                                           countries[phcode]['dial_code'],
-                                          style: GoogleFonts.roboto(
-                                              fontSize: media.width * sixteen,
-                                              color: textColor),
+                                          style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
                                         ),
                                         const SizedBox(
                                           width: 2,
@@ -449,9 +390,7 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                   Text(
                                     phnumber,
                                     style: GoogleFonts.roboto(
-                                        fontSize: media.width * sixteen,
-                                        color: textColor,
-                                        letterSpacing: 2),
+                                        fontSize: media.width * sixteen, color: textColor, letterSpacing: 2),
                                   )
                                 ],
                               ),
@@ -463,8 +402,7 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                             // name input field
                             InputField(
                               icon: Icons.home_work_outlined,
-                              text: languages[choosenLanguage]
-                                  ['text_company_name'],
+                              text: languages[choosenLanguage]['text_company_name'],
                               onTap: (val) {
                                 setState(() {
                                   companyName = companyText.text;
@@ -507,8 +445,7 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                             InputField(
                               icon: Icons.post_add,
                               inputType: TextInputType.number,
-                              text: languages[choosenLanguage]
-                                  ['text_postal_code'],
+                              text: languages[choosenLanguage]['text_postal_code'],
                               onTap: (val) {
                                 setState(() {
                                   postalCode = postalText.text;
@@ -522,8 +459,7 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                             // name input field
                             InputField(
                               icon: Icons.document_scanner_outlined,
-                              text: languages[choosenLanguage]
-                                  ['text_tax_number'],
+                              text: languages[choosenLanguage]['text_tax_number'],
                               onTap: (val) {
                                 setState(() {
                                   taxNumber = taxText.text;
@@ -543,16 +479,12 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                     )),
                     (error != '')
                         ? Container(
-                            margin: EdgeInsets.only(
-                                top: media.height * 0.03,
-                                bottom: media.height * 0.03),
+                            margin: EdgeInsets.only(top: media.height * 0.03, bottom: media.height * 0.03),
                             alignment: Alignment.center,
                             width: media.width * 0.8,
                             child: Text(
                               error,
-                              style: GoogleFonts.roboto(
-                                  fontSize: media.width * sixteen,
-                                  color: Colors.red),
+                              style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: Colors.red),
                             ),
                           )
                         : Container(),
@@ -574,15 +506,13 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                       r"^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])*$";
                                   RegExp regex = RegExp(pattern);
                                   if (regex.hasMatch(emailText.text)) {
-                                    FocusManager.instance.primaryFocus
-                                        ?.unfocus();
+                                    FocusManager.instance.primaryFocus?.unfocus();
                                     setState(() {
                                       verifyEmailError = '';
                                       error = '';
                                       _loading = true;
                                     });
-                                    var result =
-                                        await validateEmail(ownerEmail);
+                                    var result = await validateEmail(ownerEmail);
 
                                     if (result == 'success') {
                                       setState(() {
@@ -606,9 +536,7 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                     });
                                   } else {
                                     setState(() {
-                                      verifyEmailError =
-                                          languages[choosenLanguage]
-                                              ['text_email_validation'];
+                                      verifyEmailError = languages[choosenLanguage]['text_email_validation'];
                                     });
                                   }
                                 },
@@ -641,8 +569,7 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                 width: media.width * 1,
                                 decoration: BoxDecoration(
                                     borderRadius: const BorderRadius.only(
-                                        topLeft: Radius.circular(25),
-                                        topRight: Radius.circular(25)),
+                                        topLeft: Radius.circular(25), topRight: Radius.circular(25)),
                                     border: Border.all(
                                       color: borderLines,
                                       width: 1.2,
@@ -654,8 +581,7 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                       height: media.width * 0.02,
                                       width: media.width * 0.15,
                                       decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(
-                                            media.width * 0.01),
+                                        borderRadius: BorderRadius.circular(media.width * 0.01),
                                         color: Colors.grey,
                                       ),
                                     ),
@@ -663,8 +589,7 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                       height: media.width * 0.05,
                                     ),
                                     Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
+                                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                       children: [
                                         Column(
                                           children: [
@@ -676,12 +601,8 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                                   height: media.width * 0.171,
                                                   width: media.width * 0.171,
                                                   decoration: BoxDecoration(
-                                                      border: Border.all(
-                                                          color: borderLines,
-                                                          width: 1.2),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              12)),
+                                                      border: Border.all(color: borderLines, width: 1.2),
+                                                      borderRadius: BorderRadius.circular(12)),
                                                   child: Icon(
                                                     Icons.camera_alt_outlined,
                                                     size: media.width * 0.064,
@@ -691,12 +612,9 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                               height: media.width * 0.01,
                                             ),
                                             Text(
-                                              languages[choosenLanguage]
-                                                  ['text_camera'],
+                                              languages[choosenLanguage]['text_camera'],
                                               style: GoogleFonts.roboto(
-                                                  fontSize: media.width * ten,
-                                                  color:
-                                                      const Color(0xff666666)),
+                                                  fontSize: media.width * ten, color: const Color(0xff666666)),
                                             )
                                           ],
                                         ),
@@ -710,12 +628,8 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                                   height: media.width * 0.171,
                                                   width: media.width * 0.171,
                                                   decoration: BoxDecoration(
-                                                      border: Border.all(
-                                                          color: borderLines,
-                                                          width: 1.2),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              12)),
+                                                      border: Border.all(color: borderLines, width: 1.2),
+                                                      borderRadius: BorderRadius.circular(12)),
                                                   child: Icon(
                                                     Icons.image_outlined,
                                                     size: media.width * 0.064,
@@ -725,12 +639,9 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                               height: media.width * 0.01,
                                             ),
                                             Text(
-                                              languages[choosenLanguage]
-                                                  ['text_gallery'],
+                                              languages[choosenLanguage]['text_gallery'],
                                               style: GoogleFonts.roboto(
-                                                  fontSize: media.width * ten,
-                                                  color:
-                                                      const Color(0xff666666)),
+                                                  fontSize: media.width * ten, color: const Color(0xff666666)),
                                             )
                                           ],
                                         ),
@@ -770,8 +681,7 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                   child: Container(
                                     height: media.width * 0.1,
                                     width: media.width * 0.1,
-                                    decoration: BoxDecoration(
-                                        shape: BoxShape.circle, color: page),
+                                    decoration: BoxDecoration(shape: BoxShape.circle, color: page),
                                     child: const Icon(Icons.cancel_outlined),
                                   ),
                                 ),
@@ -784,25 +694,17 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                           Container(
                             padding: EdgeInsets.all(media.width * 0.05),
                             width: media.width * 0.9,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                color: page,
-                                boxShadow: [
-                                  BoxShadow(
-                                      blurRadius: 2.0,
-                                      spreadRadius: 2.0,
-                                      color: Colors.black.withOpacity(0.2))
-                                ]),
+                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: page, boxShadow: [
+                              BoxShadow(blurRadius: 2.0, spreadRadius: 2.0, color: Colors.black.withOpacity(0.2))
+                            ]),
                             child: Column(
                               children: [
                                 SizedBox(
                                     width: media.width * 0.8,
                                     child: Text(
                                       (_permission == 'noPhotos')
-                                          ? languages[choosenLanguage]
-                                              ['text_open_photos_setting']
-                                          : languages[choosenLanguage]
-                                              ['text_open_camera_setting'],
+                                          ? languages[choosenLanguage]['text_open_photos_setting']
+                                          : languages[choosenLanguage]['text_open_camera_setting'],
                                       style: GoogleFonts.roboto(
                                           fontSize: media.width * sixteen,
                                           color: textColor,
@@ -810,16 +712,14 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                     )),
                                 SizedBox(height: media.width * 0.05),
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     InkWell(
                                         onTap: () async {
                                           await openAppSettings();
                                         },
                                         child: Text(
-                                          languages[choosenLanguage]
-                                              ['text_open_settings'],
+                                          languages[choosenLanguage]['text_open_settings'],
                                           style: GoogleFonts.roboto(
                                               fontSize: media.width * sixteen,
                                               color: buttonColor,
@@ -827,16 +727,13 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                                         )),
                                     InkWell(
                                         onTap: () async {
-                                          (_permission == 'noCamera')
-                                              ? pickImageFromCamera()
-                                              : pickImageFromGallery();
+                                          (_permission == 'noCamera') ? pickImageFromCamera() : pickImageFromGallery();
                                           setState(() {
                                             _permission = '';
                                           });
                                         },
                                         child: Text(
-                                          languages[choosenLanguage]
-                                              ['text_done'],
+                                          languages[choosenLanguage]['text_done'],
                                           style: GoogleFonts.roboto(
                                               fontSize: media.width * sixteen,
                                               color: buttonColor,
@@ -866,9 +763,7 @@ class _OwnersRegisterState extends State<OwnersRegister> {
                   : Container(),
 
               //loader
-              (_loading == true)
-                  ? const Positioned(top: 0, child: Loading())
-                  : Container()
+              (_loading == true) ? const Positioned(top: 0, child: Loading()) : Container()
             ],
           ),
         ),

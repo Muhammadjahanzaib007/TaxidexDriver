@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/NavigatorPages/cashfreepage.dart';
-import 'package:tagyourtaxi_driver/pages/NavigatorPages/flutterwavepayment.dart';
-import 'package:tagyourtaxi_driver/pages/NavigatorPages/paystackpayment.dart';
-import 'package:tagyourtaxi_driver/pages/NavigatorPages/razorpaypage.dart';
-import 'package:tagyourtaxi_driver/pages/NavigatorPages/selectwallet.dart';
-import 'package:tagyourtaxi_driver/pages/NavigatorPages/withdraw.dart';
-import 'package:tagyourtaxi_driver/pages/loadingPage/loading.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/NavigatorPages/cashfreepage.dart';
+import 'package:taxidex_driver/pages/NavigatorPages/flutterwavepayment.dart';
+import 'package:taxidex_driver/pages/NavigatorPages/paystackpayment.dart';
+import 'package:taxidex_driver/pages/NavigatorPages/razorpaypage.dart';
+import 'package:taxidex_driver/pages/NavigatorPages/selectwallet.dart';
+import 'package:taxidex_driver/pages/NavigatorPages/withdraw.dart';
+import 'package:taxidex_driver/pages/loadingPage/loading.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/styles/styles.dart';
+import 'package:taxidex_driver/translation/translation.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 
 class WalletPage extends StatefulWidget {
   const WalletPage({Key? key}) : super(key: key);
@@ -52,16 +52,13 @@ class _WalletPageState extends State<WalletPage> {
           valueListenable: valueNotifierHome.value,
           builder: (context, value, child) {
             return Directionality(
-              textDirection: (languageDirection == 'rtl')
-                  ? TextDirection.rtl
-                  : TextDirection.ltr,
+              textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
               child: Scaffold(
                 body: Stack(
                   alignment: Alignment.center,
                   children: [
                     Container(
-                      padding: EdgeInsets.fromLTRB(media.width * 0.05,
-                          media.width * 0.05, media.width * 0.05, 0),
+                      padding: EdgeInsets.fromLTRB(media.width * 0.05, media.width * 0.05, media.width * 0.05, 0),
                       height: media.height * 1,
                       width: media.width * 1,
                       color: page,
@@ -71,17 +68,13 @@ class _WalletPageState extends State<WalletPage> {
                           Stack(
                             children: [
                               Container(
-                                padding:
-                                    EdgeInsets.only(bottom: media.width * 0.05),
+                                padding: EdgeInsets.only(bottom: media.width * 0.05),
                                 width: media.width * 1,
                                 alignment: Alignment.center,
                                 child: Text(
-                                  languages[choosenLanguage]
-                                      ['text_enable_wallet'],
+                                  languages[choosenLanguage]['text_enable_wallet'],
                                   style: GoogleFonts.roboto(
-                                      fontSize: media.width * twenty,
-                                      fontWeight: FontWeight.w600,
-                                      color: textColor),
+                                      fontSize: media.width * twenty, fontWeight: FontWeight.w600, color: textColor),
                                 ),
                               ),
                               Positioned(
@@ -99,22 +92,16 @@ class _WalletPageState extends State<WalletPage> {
                               ? Column(
                                   children: [
                                     Text(
-                                      languages[choosenLanguage]
-                                          ['text_availablebalance'],
-                                      style: GoogleFonts.roboto(
-                                          fontSize: media.width * twelve,
-                                          color: textColor),
+                                      languages[choosenLanguage]['text_availablebalance'],
+                                      style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                                     ),
                                     SizedBox(
                                       height: media.width * 0.01,
                                     ),
                                     Text(
-                                      walletBalance['currency_symbol'] +
-                                          walletBalance['wallet_balance']
-                                              .toString(),
+                                      walletBalance['currency_symbol'] + walletBalance['wallet_balance'].toString(),
                                       style: GoogleFonts.roboto(
-                                          fontSize: media.width * fourty,
-                                          fontWeight: FontWeight.w600),
+                                          fontSize: media.width * fourty, fontWeight: FontWeight.w600),
                                     ),
                                     SizedBox(
                                       height: media.width * 0.05,
@@ -122,8 +109,7 @@ class _WalletPageState extends State<WalletPage> {
                                     SizedBox(
                                       width: media.width * 0.9,
                                       child: Text(
-                                        languages[choosenLanguage]
-                                            ['text_recenttransactions'],
+                                        languages[choosenLanguage]['text_recenttransactions'],
                                         style: GoogleFonts.roboto(
                                             fontSize: media.width * fourteen,
                                             color: textColor,
@@ -148,132 +134,70 @@ class _WalletPageState extends State<WalletPage> {
                                                   i,
                                                   Container(
                                                     margin: EdgeInsets.only(
-                                                        top: media.width * 0.02,
-                                                        bottom:
-                                                            media.width * 0.02),
+                                                        top: media.width * 0.02, bottom: media.width * 0.02),
                                                     width: media.width * 0.9,
-                                                    padding: EdgeInsets.all(
-                                                        media.width * 0.025),
+                                                    padding: EdgeInsets.all(media.width * 0.025),
                                                     decoration: BoxDecoration(
-                                                        border: Border.all(
-                                                            color: borderLines,
-                                                            width: 1.2),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(12),
+                                                        border: Border.all(color: borderLines, width: 1.2),
+                                                        borderRadius: BorderRadius.circular(12),
                                                         color: page),
                                                     child: Row(
                                                       children: [
                                                         Container(
-                                                          height: media.width *
-                                                              0.1067,
-                                                          width: media.width *
-                                                              0.1067,
+                                                          height: media.width * 0.1067,
+                                                          width: media.width * 0.1067,
                                                           decoration: BoxDecoration(
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          10),
-                                                              color: const Color(
-                                                                      0xff000000)
-                                                                  .withOpacity(
-                                                                      0.05)),
-                                                          alignment:
-                                                              Alignment.center,
+                                                              borderRadius: BorderRadius.circular(10),
+                                                              color: const Color(0xff000000).withOpacity(0.05)),
+                                                          alignment: Alignment.center,
                                                           child: Text(
-                                                            (walletHistory[i][
-                                                                        'is_credit'] ==
-                                                                    1)
-                                                                ? '+'
-                                                                : '-',
+                                                            (walletHistory[i]['is_credit'] == 1) ? '+' : '-',
                                                             style: GoogleFonts.roboto(
-                                                                fontSize: media
-                                                                        .width *
-                                                                    twentyfour,
-                                                                color:
-                                                                    textColor),
+                                                                fontSize: media.width * twentyfour, color: textColor),
                                                           ),
                                                         ),
                                                         SizedBox(
-                                                          width: media.width *
-                                                              0.025,
+                                                          width: media.width * 0.025,
                                                         ),
                                                         Column(
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .start,
+                                                          crossAxisAlignment: CrossAxisAlignment.start,
                                                           children: [
                                                             SizedBox(
-                                                              width:
-                                                                  media.width *
-                                                                      0.55,
+                                                              width: media.width * 0.55,
                                                               child: Text(
-                                                                languages[
-                                                                        choosenLanguage]
-                                                                    [
-                                                                    walletHistory[
-                                                                            i][
-                                                                        'remarks']],
+                                                                languages[choosenLanguage][walletHistory[i]['remarks']],
                                                                 style: GoogleFonts.roboto(
-                                                                    fontSize: media
-                                                                            .width *
-                                                                        fourteen,
-                                                                    color:
-                                                                        textColor,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w600),
+                                                                    fontSize: media.width * fourteen,
+                                                                    color: textColor,
+                                                                    fontWeight: FontWeight.w600),
                                                               ),
                                                             ),
                                                             SizedBox(
-                                                              height:
-                                                                  media.width *
-                                                                      0.01,
+                                                              height: media.width * 0.01,
                                                             ),
                                                             Text(
-                                                              walletHistory[i][
-                                                                      'created_at']
-                                                                  .toString(),
-                                                              style: GoogleFonts
-                                                                  .roboto(
-                                                                fontSize: media
-                                                                        .width *
-                                                                    ten,
-                                                                color:
-                                                                    hintColor,
+                                                              walletHistory[i]['created_at'].toString(),
+                                                              style: GoogleFonts.roboto(
+                                                                fontSize: media.width * ten,
+                                                                color: hintColor,
                                                               ),
                                                             )
                                                           ],
                                                         ),
                                                         Expanded(
                                                             child: Row(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .end,
+                                                          mainAxisAlignment: MainAxisAlignment.end,
                                                           children: [
                                                             Container(
-                                                              alignment: Alignment
-                                                                  .centerRight,
-                                                              width:
-                                                                  media.width *
-                                                                      0.15,
+                                                              alignment: Alignment.centerRight,
+                                                              width: media.width * 0.15,
                                                               child: Text(
-                                                                walletHistory[i]
-                                                                        [
-                                                                        'currency_symbol'] +
+                                                                walletHistory[i]['currency_symbol'] +
                                                                     ' ' +
-                                                                    walletHistory[i]
-                                                                            [
-                                                                            'amount']
-                                                                        .toString(),
-                                                                style:
-                                                                    GoogleFonts
-                                                                        .roboto(
-                                                                  fontSize: media
-                                                                          .width *
-                                                                      twelve,
-                                                                  color: const Color(
-                                                                      0xffE60000),
+                                                                    walletHistory[i]['amount'].toString(),
+                                                                style: GoogleFonts.roboto(
+                                                                  fontSize: media.width * twelve,
+                                                                  color: const Color(0xffE60000),
                                                                 ),
                                                               ),
                                                             )
@@ -288,8 +212,7 @@ class _WalletPageState extends State<WalletPage> {
                                       )
                                     : (_completed == true)
                                         ? Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
+                                            mainAxisAlignment: MainAxisAlignment.center,
                                             children: [
                                               SizedBox(
                                                 height: media.width * 0.05,
@@ -299,8 +222,7 @@ class _WalletPageState extends State<WalletPage> {
                                                 width: media.width * 0.7,
                                                 decoration: const BoxDecoration(
                                                     image: DecorationImage(
-                                                        image: AssetImage(
-                                                            'assets/images/nodatafound.gif'),
+                                                        image: AssetImage('assets/images/nodatafound.gif'),
                                                         fit: BoxFit.contain)),
                                               ),
                                               SizedBox(
@@ -309,13 +231,10 @@ class _WalletPageState extends State<WalletPage> {
                                               SizedBox(
                                                 width: media.width * 0.9,
                                                 child: Text(
-                                                  languages[choosenLanguage]
-                                                      ['text_noDataFound'],
+                                                  languages[choosenLanguage]['text_noDataFound'],
                                                   style: GoogleFonts.roboto(
-                                                      fontSize:
-                                                          media.width * sixteen,
-                                                      fontWeight:
-                                                          FontWeight.bold,
+                                                      fontSize: media.width * sixteen,
+                                                      fontWeight: FontWeight.bold,
                                                       color: textColor),
                                                   textAlign: TextAlign.center,
                                                 ),
@@ -324,42 +243,30 @@ class _WalletPageState extends State<WalletPage> {
                                           )
                                         : Container(),
                                 (walletPages.isNotEmpty)
-                                    ? (walletPages['current_page'] <
-                                            walletPages['total_pages'])
+                                    ? (walletPages['current_page'] < walletPages['total_pages'])
                                         ? InkWell(
                                             onTap: () async {
                                               setState(() {
                                                 _isLoading = true;
                                               });
 
-                                              await getWalletHistoryPage(
-                                                  (walletPages['current_page'] +
-                                                          1)
-                                                      .toString());
+                                              await getWalletHistoryPage((walletPages['current_page'] + 1).toString());
 
                                               setState(() {
                                                 _isLoading = false;
                                               });
                                             },
                                             child: Container(
-                                              padding: EdgeInsets.all(
-                                                  media.width * 0.025),
-                                              margin: EdgeInsets.only(
-                                                  bottom: media.width * 0.05),
+                                              padding: EdgeInsets.all(media.width * 0.025),
+                                              margin: EdgeInsets.only(bottom: media.width * 0.05),
                                               decoration: BoxDecoration(
-                                                  borderRadius:
-                                                      BorderRadius.circular(10),
+                                                  borderRadius: BorderRadius.circular(10),
                                                   color: page,
-                                                  border: Border.all(
-                                                      color: borderLines,
-                                                      width: 1.2)),
+                                                  border: Border.all(color: borderLines, width: 1.2)),
                                               child: Text(
-                                                languages[choosenLanguage]
-                                                    ['text_loadmore'],
+                                                languages[choosenLanguage]['text_loadmore'],
                                                 style: GoogleFonts.roboto(
-                                                    fontSize:
-                                                        media.width * sixteen,
-                                                    color: textColor),
+                                                    fontSize: media.width * sixteen, color: textColor),
                                               ),
                                             ),
                                           )
@@ -372,23 +279,16 @@ class _WalletPageState extends State<WalletPage> {
                           //withdraw money
                           (_addPayment == false)
                               ? Container(
-                                  padding: EdgeInsets.only(
-                                      top: media.width * 0.05,
-                                      bottom: media.width * 0.05),
+                                  padding: EdgeInsets.only(top: media.width * 0.05, bottom: media.width * 0.05),
                                   child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
                                       Button(
                                         onTap: () {
                                           Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const Withdraw()));
+                                              context, MaterialPageRoute(builder: (context) => const Withdraw()));
                                         },
-                                        text: languages[choosenLanguage]
-                                            ['text_withdraw'],
+                                        text: languages[choosenLanguage]['text_withdraw'],
                                         width: media.width * 0.4,
                                       ),
                                       Button(
@@ -399,8 +299,7 @@ class _WalletPageState extends State<WalletPage> {
                                             });
                                           }
                                         },
-                                        text: languages[choosenLanguage]
-                                            ['text_addmoney'],
+                                        text: languages[choosenLanguage]['text_addmoney'],
                                         width: media.width * 0.4,
                                       ),
                                     ],
@@ -422,24 +321,19 @@ class _WalletPageState extends State<WalletPage> {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Container(
-                                    margin: EdgeInsets.only(
-                                        bottom: media.width * 0.05),
+                                    margin: EdgeInsets.only(bottom: media.width * 0.05),
                                     width: media.width * 0.9,
-                                    padding:
-                                        EdgeInsets.all(media.width * 0.025),
+                                    padding: EdgeInsets.all(media.width * 0.025),
                                     decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(12),
-                                        border: Border.all(
-                                            color: borderLines, width: 1.2),
+                                        border: Border.all(color: borderLines, width: 1.2),
                                         color: page),
                                     child: Column(children: [
                                       Container(
                                         height: media.width * 0.128,
                                         decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(12),
-                                          border: Border.all(
-                                              color: borderLines, width: 1.2),
+                                          borderRadius: BorderRadius.circular(12),
+                                          border: Border.all(color: borderLines, width: 1.2),
                                         ),
                                         child: Row(
                                           children: [
@@ -447,41 +341,23 @@ class _WalletPageState extends State<WalletPage> {
                                                 width: media.width * 0.1,
                                                 height: media.width * 0.128,
                                                 decoration: BoxDecoration(
-                                                    borderRadius:
-                                                        (languageDirection ==
-                                                                'ltr')
-                                                            ? const BorderRadius
-                                                                .only(
-                                                                topLeft: Radius
-                                                                    .circular(
-                                                                        12),
-                                                                bottomLeft: Radius
-                                                                    .circular(
-                                                                        12),
-                                                              )
-                                                            : const BorderRadius
-                                                                .only(
-                                                                topRight: Radius
-                                                                    .circular(
-                                                                        12),
-                                                                bottomRight:
-                                                                    Radius
-                                                                        .circular(
-                                                                            12),
-                                                              ),
-                                                    color: const Color(
-                                                        0xffF0F0F0)),
+                                                    borderRadius: (languageDirection == 'ltr')
+                                                        ? const BorderRadius.only(
+                                                            topLeft: Radius.circular(12),
+                                                            bottomLeft: Radius.circular(12),
+                                                          )
+                                                        : const BorderRadius.only(
+                                                            topRight: Radius.circular(12),
+                                                            bottomRight: Radius.circular(12),
+                                                          ),
+                                                    color: const Color(0xffF0F0F0)),
                                                 alignment: Alignment.center,
                                                 child: Text(
-                                                  walletBalance[
-                                                          'currency_symbol']
-                                                      .toString(),
+                                                  walletBalance['currency_symbol'].toString(),
                                                   style: GoogleFonts.roboto(
-                                                      fontSize:
-                                                          media.width * fifteen,
+                                                      fontSize: media.width * fifteen,
                                                       color: textColor,
-                                                      fontWeight:
-                                                          FontWeight.w600),
+                                                      fontWeight: FontWeight.w600),
                                                 )),
                                             SizedBox(
                                               width: media.width * 0.05,
@@ -494,21 +370,15 @@ class _WalletPageState extends State<WalletPage> {
                                                 controller: addMoneyController,
                                                 onChanged: (val) {
                                                   setState(() {
-                                                    addMoney =
-                                                        double.parse(val);
+                                                    addMoney = double.parse(val);
                                                   });
                                                 },
-                                                keyboardType:
-                                                    TextInputType.number,
+                                                keyboardType: TextInputType.number,
                                                 decoration: InputDecoration(
                                                   border: InputBorder.none,
-                                                  hintText:
-                                                      languages[choosenLanguage]
-                                                          ['text_enteramount'],
+                                                  hintText: languages[choosenLanguage]['text_enteramount'],
                                                   hintStyle: GoogleFonts.roboto(
-                                                      fontSize:
-                                                          media.width * twelve,
-                                                      color: hintColor),
+                                                      fontSize: media.width * twelve, color: hintColor),
                                                 ),
                                                 maxLines: 1,
                                               ),
@@ -520,8 +390,7 @@ class _WalletPageState extends State<WalletPage> {
                                         height: media.width * 0.05,
                                       ),
                                       Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                        mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
                                           InkWell(
                                             onTap: () {
@@ -534,23 +403,16 @@ class _WalletPageState extends State<WalletPage> {
                                               height: media.width * 0.11,
                                               width: media.width * 0.17,
                                               decoration: BoxDecoration(
-                                                  border: Border.all(
-                                                      color: borderLines,
-                                                      width: 1.2),
+                                                  border: Border.all(color: borderLines, width: 1.2),
                                                   color: page,
-                                                  borderRadius:
-                                                      BorderRadius.circular(6)),
+                                                  borderRadius: BorderRadius.circular(6)),
                                               alignment: Alignment.center,
                                               child: Text(
-                                                walletBalance[
-                                                        'currency_symbol'] +
-                                                    '100',
+                                                walletBalance['currency_symbol'] + '100',
                                                 style: GoogleFonts.roboto(
-                                                    fontSize:
-                                                        media.width * twelve,
+                                                    fontSize: media.width * twelve,
                                                     color: textColor,
-                                                    fontWeight:
-                                                        FontWeight.w600),
+                                                    fontWeight: FontWeight.w600),
                                               ),
                                             ),
                                           ),
@@ -568,23 +430,16 @@ class _WalletPageState extends State<WalletPage> {
                                               height: media.width * 0.11,
                                               width: media.width * 0.17,
                                               decoration: BoxDecoration(
-                                                  border: Border.all(
-                                                      color: borderLines,
-                                                      width: 1.2),
+                                                  border: Border.all(color: borderLines, width: 1.2),
                                                   color: page,
-                                                  borderRadius:
-                                                      BorderRadius.circular(6)),
+                                                  borderRadius: BorderRadius.circular(6)),
                                               alignment: Alignment.center,
                                               child: Text(
-                                                walletBalance[
-                                                        'currency_symbol'] +
-                                                    '500',
+                                                walletBalance['currency_symbol'] + '500',
                                                 style: GoogleFonts.roboto(
-                                                    fontSize:
-                                                        media.width * twelve,
+                                                    fontSize: media.width * twelve,
                                                     color: textColor,
-                                                    fontWeight:
-                                                        FontWeight.w600),
+                                                    fontWeight: FontWeight.w600),
                                               ),
                                             ),
                                           ),
@@ -594,8 +449,7 @@ class _WalletPageState extends State<WalletPage> {
                                           InkWell(
                                             onTap: () {
                                               setState(() {
-                                                addMoneyController.text =
-                                                    '1000';
+                                                addMoneyController.text = '1000';
                                                 addMoney = 1000;
                                               });
                                             },
@@ -603,23 +457,16 @@ class _WalletPageState extends State<WalletPage> {
                                               height: media.width * 0.11,
                                               width: media.width * 0.17,
                                               decoration: BoxDecoration(
-                                                  border: Border.all(
-                                                      color: borderLines,
-                                                      width: 1.2),
+                                                  border: Border.all(color: borderLines, width: 1.2),
                                                   color: page,
-                                                  borderRadius:
-                                                      BorderRadius.circular(6)),
+                                                  borderRadius: BorderRadius.circular(6)),
                                               alignment: Alignment.center,
                                               child: Text(
-                                                walletBalance[
-                                                        'currency_symbol'] +
-                                                    '1000',
+                                                walletBalance['currency_symbol'] + '1000',
                                                 style: GoogleFonts.roboto(
-                                                    fontSize:
-                                                        media.width * twelve,
+                                                    fontSize: media.width * twelve,
                                                     color: textColor,
-                                                    fontWeight:
-                                                        FontWeight.w600),
+                                                    fontWeight: FontWeight.w600),
                                               ),
                                             ),
                                           )
@@ -629,38 +476,31 @@ class _WalletPageState extends State<WalletPage> {
                                         height: media.width * 0.1,
                                       ),
                                       Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
                                           Button(
                                             onTap: () async {
                                               setState(() {
                                                 _addPayment = false;
                                                 addMoney = null;
-                                                FocusManager
-                                                    .instance.primaryFocus
-                                                    ?.unfocus();
+                                                FocusManager.instance.primaryFocus?.unfocus();
                                                 addMoneyController.clear();
                                               });
                                             },
-                                            text: languages[choosenLanguage]
-                                                ['text_cancel'],
+                                            text: languages[choosenLanguage]['text_cancel'],
                                             width: media.width * 0.4,
                                           ),
                                           Button(
                                             onTap: () async {
-                                              FocusManager.instance.primaryFocus
-                                                  ?.unfocus();
-                                              if (addMoney != 0 &&
-                                                  addMoney != null) {
+                                              FocusManager.instance.primaryFocus?.unfocus();
+                                              if (addMoney != 0 && addMoney != null) {
                                                 setState(() {
                                                   _choosePayment = true;
                                                   _addPayment = false;
                                                 });
                                               }
                                             },
-                                            text: languages[choosenLanguage]
-                                                ['text_addmoney'],
+                                            text: languages[choosenLanguage]['text_addmoney'],
                                             width: media.width * 0.4,
                                           ),
                                         ],
@@ -689,8 +529,7 @@ class _WalletPageState extends State<WalletPage> {
                                     SizedBox(
                                       width: media.width * 0.8,
                                       child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
+                                        mainAxisAlignment: MainAxisAlignment.end,
                                         children: [
                                           InkWell(
                                             onTap: () {
@@ -706,8 +545,7 @@ class _WalletPageState extends State<WalletPage> {
                                                 color: page,
                                                 shape: BoxShape.circle,
                                               ),
-                                              child: Icon(Icons.cancel,
-                                                  color: buttonColor),
+                                              child: Icon(Icons.cancel, color: buttonColor),
                                             ),
                                           ),
                                         ],
@@ -715,277 +553,181 @@ class _WalletPageState extends State<WalletPage> {
                                     ),
                                     SizedBox(height: media.width * 0.025),
                                     Container(
-                                      padding:
-                                          EdgeInsets.all(media.width * 0.05),
+                                      padding: EdgeInsets.all(media.width * 0.05),
                                       width: media.width * 0.8,
                                       height: media.height * 0.6,
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(12),
-                                          color: page),
+                                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: page),
                                       child: Column(
                                         children: [
                                           SizedBox(
                                               width: media.width * 0.7,
                                               child: Text(
-                                                languages[choosenLanguage]
-                                                    ['text_choose_payment'],
+                                                languages[choosenLanguage]['text_choose_payment'],
                                                 style: GoogleFonts.roboto(
-                                                    fontSize:
-                                                        media.width * eighteen,
-                                                    fontWeight:
-                                                        FontWeight.w600),
+                                                    fontSize: media.width * eighteen, fontWeight: FontWeight.w600),
                                               )),
                                           SizedBox(
                                             height: media.width * 0.05,
                                           ),
                                           Expanded(
                                             child: SingleChildScrollView(
-                                              physics:
-                                                  const BouncingScrollPhysics(),
+                                              physics: const BouncingScrollPhysics(),
                                               child: Column(
                                                 children: [
-                                                  (walletBalance['stripe'] ==
-                                                          true)
+                                                  (walletBalance['stripe'] == true)
                                                       ? Container(
-                                                          margin: EdgeInsets.only(
-                                                              bottom:
-                                                                  media.width *
-                                                                      0.025),
-                                                          alignment:
-                                                              Alignment.center,
-                                                          width:
-                                                              media.width * 0.7,
+                                                          margin: EdgeInsets.only(bottom: media.width * 0.025),
+                                                          alignment: Alignment.center,
+                                                          width: media.width * 0.7,
                                                           child: InkWell(
                                                             onTap: () async {
                                                               var val = await Navigator.push(
                                                                   context,
                                                                   MaterialPageRoute(
-                                                                      builder:
-                                                                          (context) =>
-                                                                              const SelectWallet()));
+                                                                      builder: (context) => const SelectWallet()));
                                                               if (val) {
                                                                 setState(() {
-                                                                  _choosePayment =
-                                                                      false;
-                                                                  _addPayment =
-                                                                      false;
-                                                                  addMoney =
-                                                                      null;
-                                                                  addMoneyController
-                                                                      .clear();
+                                                                  _choosePayment = false;
+                                                                  _addPayment = false;
+                                                                  addMoney = null;
+                                                                  addMoneyController.clear();
                                                                 });
                                                               }
                                                             },
                                                             child: Container(
-                                                              width:
-                                                                  media.width *
-                                                                      0.25,
-                                                              height:
-                                                                  media.width *
-                                                                      0.125,
+                                                              width: media.width * 0.25,
+                                                              height: media.width * 0.125,
                                                               decoration: const BoxDecoration(
                                                                   image: DecorationImage(
-                                                                      image: AssetImage(
-                                                                          'assets/images/stripe-icon.png'),
-                                                                      fit: BoxFit
-                                                                          .contain)),
+                                                                      image:
+                                                                          AssetImage('assets/images/stripe-icon.png'),
+                                                                      fit: BoxFit.contain)),
                                                             ),
                                                           ))
                                                       : Container(),
-                                                  (walletBalance['paystack'] ==
-                                                          true)
+                                                  (walletBalance['paystack'] == true)
                                                       ? Container(
-                                                          alignment:
-                                                              Alignment.center,
-                                                          margin: EdgeInsets.only(
-                                                              bottom:
-                                                                  media.width *
-                                                                      0.025),
-                                                          width:
-                                                              media.width * 0.7,
+                                                          alignment: Alignment.center,
+                                                          margin: EdgeInsets.only(bottom: media.width * 0.025),
+                                                          width: media.width * 0.7,
                                                           child: InkWell(
                                                             onTap: () async {
                                                               var val = await Navigator.push(
                                                                   context,
                                                                   MaterialPageRoute(
-                                                                      builder:
-                                                                          (context) =>
-                                                                              const PayStackPage()));
+                                                                      builder: (context) => const PayStackPage()));
                                                               if (val) {
                                                                 setState(() {
-                                                                  _choosePayment =
-                                                                      false;
-                                                                  _addPayment =
-                                                                      false;
-                                                                  addMoney =
-                                                                      null;
-                                                                  addMoneyController
-                                                                      .clear();
-                                                                  _isLoading =
-                                                                      true;
+                                                                  _choosePayment = false;
+                                                                  _addPayment = false;
+                                                                  addMoney = null;
+                                                                  addMoneyController.clear();
+                                                                  _isLoading = true;
                                                                 });
                                                                 getWallet();
                                                               }
                                                             },
                                                             child: Container(
-                                                              width:
-                                                                  media.width *
-                                                                      0.25,
-                                                              height:
-                                                                  media.width *
-                                                                      0.125,
+                                                              width: media.width * 0.25,
+                                                              height: media.width * 0.125,
                                                               decoration: const BoxDecoration(
                                                                   image: DecorationImage(
-                                                                      image: AssetImage(
-                                                                          'assets/images/paystack-icon.png'),
-                                                                      fit: BoxFit
-                                                                          .contain)),
+                                                                      image:
+                                                                          AssetImage('assets/images/paystack-icon.png'),
+                                                                      fit: BoxFit.contain)),
                                                             ),
                                                           ))
                                                       : Container(),
-                                                  (walletBalance[
-                                                              'flutter_wave'] ==
-                                                          true)
+                                                  (walletBalance['flutter_wave'] == true)
                                                       ? Container(
-                                                          margin: EdgeInsets.only(
-                                                              bottom:
-                                                                  media.width *
-                                                                      0.025),
-                                                          alignment:
-                                                              Alignment.center,
-                                                          width:
-                                                              media.width * 0.7,
+                                                          margin: EdgeInsets.only(bottom: media.width * 0.025),
+                                                          alignment: Alignment.center,
+                                                          width: media.width * 0.7,
                                                           child: InkWell(
                                                             onTap: () async {
                                                               var val = await Navigator.push(
                                                                   context,
                                                                   MaterialPageRoute(
-                                                                      builder:
-                                                                          (context) =>
-                                                                              const FlutterWavePage()));
+                                                                      builder: (context) => const FlutterWavePage()));
                                                               if (val) {
                                                                 setState(() {
-                                                                  _choosePayment =
-                                                                      false;
-                                                                  _addPayment =
-                                                                      false;
-                                                                  addMoney =
-                                                                      null;
-                                                                  addMoneyController
-                                                                      .clear();
+                                                                  _choosePayment = false;
+                                                                  _addPayment = false;
+                                                                  addMoney = null;
+                                                                  addMoneyController.clear();
                                                                 });
                                                               }
                                                             },
                                                             child: Container(
-                                                              width:
-                                                                  media.width *
-                                                                      0.25,
-                                                              height:
-                                                                  media.width *
-                                                                      0.125,
+                                                              width: media.width * 0.25,
+                                                              height: media.width * 0.125,
                                                               decoration: const BoxDecoration(
                                                                   image: DecorationImage(
                                                                       image: AssetImage(
                                                                           'assets/images/flutterwave-icon.png'),
-                                                                      fit: BoxFit
-                                                                          .contain)),
+                                                                      fit: BoxFit.contain)),
                                                             ),
                                                           ))
                                                       : Container(),
-                                                  (walletBalance['razor_pay'] ==
-                                                          true)
+                                                  (walletBalance['razor_pay'] == true)
                                                       ? Container(
-                                                          margin: EdgeInsets.only(
-                                                              bottom:
-                                                                  media.width *
-                                                                      0.025),
-                                                          alignment:
-                                                              Alignment.center,
-                                                          width:
-                                                              media.width * 0.7,
+                                                          margin: EdgeInsets.only(bottom: media.width * 0.025),
+                                                          alignment: Alignment.center,
+                                                          width: media.width * 0.7,
                                                           child: InkWell(
                                                             onTap: () async {
                                                               var val = await Navigator.push(
                                                                   context,
                                                                   MaterialPageRoute(
-                                                                      builder:
-                                                                          (context) =>
-                                                                              const RazorPayPage()));
+                                                                      builder: (context) => const RazorPayPage()));
                                                               if (val) {
                                                                 setState(() {
-                                                                  _choosePayment =
-                                                                      false;
-                                                                  _addPayment =
-                                                                      false;
-                                                                  addMoney =
-                                                                      null;
-                                                                  addMoneyController
-                                                                      .clear();
+                                                                  _choosePayment = false;
+                                                                  _addPayment = false;
+                                                                  addMoney = null;
+                                                                  addMoneyController.clear();
                                                                 });
                                                               }
                                                             },
                                                             child: Container(
-                                                              width:
-                                                                  media.width *
-                                                                      0.25,
-                                                              height:
-                                                                  media.width *
-                                                                      0.125,
+                                                              width: media.width * 0.25,
+                                                              height: media.width * 0.125,
                                                               decoration: const BoxDecoration(
                                                                   image: DecorationImage(
                                                                       image: AssetImage(
                                                                           'assets/images/razorpay-icon.jpeg'),
-                                                                      fit: BoxFit
-                                                                          .contain)),
+                                                                      fit: BoxFit.contain)),
                                                             ),
                                                           ))
                                                       : Container(),
-                                                  (walletBalance['cash_free'] ==
-                                                          true)
+                                                  (walletBalance['cash_free'] == true)
                                                       ? Container(
-                                                          margin: EdgeInsets.only(
-                                                              bottom:
-                                                                  media.width *
-                                                                      0.025),
-                                                          alignment:
-                                                              Alignment.center,
-                                                          width:
-                                                              media.width * 0.7,
+                                                          margin: EdgeInsets.only(bottom: media.width * 0.025),
+                                                          alignment: Alignment.center,
+                                                          width: media.width * 0.7,
                                                           child: InkWell(
                                                             onTap: () async {
                                                               var val = await Navigator.push(
                                                                   context,
                                                                   MaterialPageRoute(
-                                                                      builder:
-                                                                          (context) =>
-                                                                              const CashFreePage()));
+                                                                      builder: (context) => const CashFreePage()));
                                                               if (val) {
                                                                 setState(() {
-                                                                  _choosePayment =
-                                                                      false;
-                                                                  _addPayment =
-                                                                      false;
-                                                                  addMoney =
-                                                                      null;
-                                                                  addMoneyController
-                                                                      .clear();
+                                                                  _choosePayment = false;
+                                                                  _addPayment = false;
+                                                                  addMoney = null;
+                                                                  addMoneyController.clear();
                                                                 });
                                                               }
                                                             },
                                                             child: Container(
-                                                              width:
-                                                                  media.width *
-                                                                      0.25,
-                                                              height:
-                                                                  media.width *
-                                                                      0.125,
+                                                              width: media.width * 0.25,
+                                                              height: media.width * 0.125,
                                                               decoration: const BoxDecoration(
                                                                   image: DecorationImage(
                                                                       image: AssetImage(
                                                                           'assets/images/cashfree-icon.jpeg'),
-                                                                      fit: BoxFit
-                                                                          .contain)),
+                                                                      fit: BoxFit.contain)),
                                                             ),
                                                           ))
                                                       : Container(),
@@ -1020,9 +762,7 @@ class _WalletPageState extends State<WalletPage> {
                         : Container(),
 
                     //loader
-                    (_isLoading == true)
-                        ? const Positioned(child: Loading())
-                        : Container()
+                    (_isLoading == true) ? const Positioned(child: Loading()) : Container()
                   ],
                 ),
               ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
+import 'package:taxidex_driver/styles/styles.dart';
 import 'dart:async';
 
 class Loading extends StatefulWidget {
@@ -44,7 +44,7 @@ class _LoadingState extends State<Loading> {
       alignment: Alignment.center,
       height: media.height * 1,
       width: media.width * 1,
-      color: Colors.transparent.withOpacity(0.6),
+      color: Colors.transparent.withOpacity(0.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -58,16 +58,14 @@ class _LoadingState extends State<Loading> {
                   duration: const Duration(milliseconds: 225),
                   height: _size1,
                   width: _size1,
-                  decoration:
-                      BoxDecoration(shape: BoxShape.circle, color: loaderColor),
+                  decoration: BoxDecoration(shape: BoxShape.circle, color: loaderColor),
                 ),
                 const SizedBox(width: 5),
                 AnimatedContainer(
                   duration: const Duration(milliseconds: 225),
                   height: _size2,
                   width: _size2,
-                  decoration:
-                      BoxDecoration(shape: BoxShape.circle, color: loaderColor),
+                  decoration: BoxDecoration(shape: BoxShape.circle, color: loaderColor),
                 ),
                 const SizedBox(
                   width: 5,
@@ -76,8 +74,7 @@ class _LoadingState extends State<Loading> {
                   duration: const Duration(milliseconds: 225),
                   height: _size3,
                   width: _size3,
-                  decoration:
-                      BoxDecoration(shape: BoxShape.circle, color: loaderColor),
+                  decoration: BoxDecoration(shape: BoxShape.circle, color: loaderColor),
                 )
               ],
             ),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/styles/styles.dart';
+import 'package:taxidex_driver/translation/translation.dart';
 
 class About extends StatefulWidget {
   const About({Key? key}) : super(key: key);
@@ -18,9 +18,7 @@ class _AboutState extends State<About> {
     var media = MediaQuery.of(context).size;
     return Material(
       child: Directionality(
-        textDirection: (languageDirection == 'rtl')
-            ? TextDirection.rtl
-            : TextDirection.ltr,
+        textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
         child: Stack(
           children: [
             Container(
@@ -38,16 +36,13 @@ class _AboutState extends State<About> {
                         Stack(
                           children: [
                             Container(
-                              padding:
-                                  EdgeInsets.only(bottom: media.width * 0.05),
+                              padding: EdgeInsets.only(bottom: media.width * 0.05),
                               width: media.width * 1,
                               alignment: Alignment.center,
                               child: Text(
                                 languages[choosenLanguage]['text_about'],
                                 style: GoogleFonts.roboto(
-                                    fontSize: media.width * twenty,
-                                    fontWeight: FontWeight.w600,
-                                    color: textColor),
+                                    fontSize: media.width * twenty, fontWeight: FontWeight.w600, color: textColor),
                               ),
                             ),
                             Positioned(
@@ -75,16 +70,12 @@ class _AboutState extends State<About> {
                         //terms and conditions
                         InkWell(
                           onTap: () {
-                            openBrowser(
-                                'terms and conditions url');
+                            openBrowser('terms and conditions url');
                           },
                           child: Text(
-                            languages[choosenLanguage]
-                                ['text_termsandconditions'],
+                            languages[choosenLanguage]['text_termsandconditions'],
                             style: GoogleFonts.roboto(
-                                fontSize: media.width * sixteen,
-                                fontWeight: FontWeight.w600,
-                                color: textColor),
+                                fontSize: media.width * sixteen, fontWeight: FontWeight.w600, color: textColor),
                           ),
                         ),
                         SizedBox(
@@ -93,15 +84,12 @@ class _AboutState extends State<About> {
                         //privacy policy
                         InkWell(
                           onTap: () {
-                            openBrowser(
-                                'privacy policy url');
+                            openBrowser('privacy policy url');
                           },
                           child: Text(
                             languages[choosenLanguage]['text_privacy'],
                             style: GoogleFonts.roboto(
-                                fontSize: media.width * sixteen,
-                                fontWeight: FontWeight.w600,
-                                color: textColor),
+                                fontSize: media.width * sixteen, fontWeight: FontWeight.w600, color: textColor),
                           ),
                         ),
                         SizedBox(
@@ -115,9 +103,7 @@ class _AboutState extends State<About> {
                           child: Text(
                             languages[choosenLanguage]['text_about'],
                             style: GoogleFonts.roboto(
-                                fontSize: media.width * sixteen,
-                                fontWeight: FontWeight.w600,
-                                color: textColor),
+                                fontSize: media.width * sixteen, fontWeight: FontWeight.w600, color: textColor),
                           ),
                         ),
                       ],

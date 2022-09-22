@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "634658773502",
+    "firebase_url": "https://taxidex-4a53e-default-rtdb.firebaseio.com",
+    "project_id": "taxidex-4a53e",
+    "storage_bucket": "taxidex-4a53e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634658773502:android:64527a5254eeca3a9d88af",
+        "android_client_info": {
+          "package_name": "com.taxidex.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "634658773502-2io259hg2o3fs8t3r6t1v0u99jmo17po.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCOz9Mft4sVvBIWaQpgkjt-FMwtJsdpAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "634658773502-2io259hg2o3fs8t3r6t1v0u99jmo17po.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "634658773502-be26hak5rnq0o5qqmg1m8l2behbf0sms.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.taxi"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634658773502:android:65229255b1d9afad9d88af",
+        "android_client_info": {
+          "package_name": "com.taxidex.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "634658773502-2io259hg2o3fs8t3r6t1v0u99jmo17po.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCOz9Mft4sVvBIWaQpgkjt-FMwtJsdpAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "634658773502-2io259hg2o3fs8t3r6t1v0u99jmo17po.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "634658773502-be26hak5rnq0o5qqmg1m8l2behbf0sms.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.taxi"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/onTripPage/map_page.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/pages/vehicleInformations/upload_docs.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/onTripPage/map_page.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/pages/vehicleInformations/upload_docs.dart';
+import 'package:taxidex_driver/styles/styles.dart';
+import 'package:taxidex_driver/translation/translation.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 
 class DocsProcess extends StatefulWidget {
   const DocsProcess({Key? key}) : super(key: key);
@@ -21,28 +21,20 @@ class _DocsProcessState extends State<DocsProcess> {
     var media = MediaQuery.of(context).size;
     return Material(
       child: Directionality(
-        textDirection: (languageDirection == 'rtl')
-            ? TextDirection.rtl
-            : TextDirection.ltr,
+        textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
         child: ValueListenableBuilder(
             valueListenable: valueNotifierHome.value,
             builder: (context, value, child) {
               if (userDetails['approve'] == true) {
                 Future.delayed(const Duration(milliseconds: 0), () {
                   Navigator.pushAndRemoveUntil(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Maps()),
-                      (route) => false);
+                      context, MaterialPageRoute(builder: (context) => const Maps()), (route) => false);
                 });
               }
               return Stack(
                 children: [
                   Container(
-                    padding: EdgeInsets.only(
-                        left: media.width * 0.08,
-                        right: media.width * 0.08,
-                        top: 20,
-                        bottom: 20),
+                    padding: EdgeInsets.only(left: media.width * 0.08, right: media.width * 0.08, top: 20, bottom: 20),
                     height: media.height * 1,
                     width: media.width * 1,
                     color: page,
@@ -50,23 +42,18 @@ class _DocsProcessState extends State<DocsProcess> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(),
-                        (userDetails['approve'] == false &&
-                                userDetails['declined_reason'] == null)
+                        (userDetails['approve'] == false && userDetails['declined_reason'] == null)
                             ? Column(
                                 children: [
                                   Container(
                                     height: media.width * 0.4,
                                     width: media.width * 0.4,
-                                    decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: verifyPendingBck),
+                                    decoration: BoxDecoration(shape: BoxShape.circle, color: verifyPendingBck),
                                     alignment: Alignment.center,
                                     child: Container(
                                       height: media.width * 0.3,
                                       width: media.width * 0.3,
-                                      decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: verifyPending),
+                                      decoration: BoxDecoration(shape: BoxShape.circle, color: verifyPending),
                                       child: Icon(
                                         Icons.access_time_rounded,
                                         color: buttonText,
@@ -76,17 +63,13 @@ class _DocsProcessState extends State<DocsProcess> {
                                   ),
                                   const SizedBox(height: 20),
                                   Text(
-                                    languages[choosenLanguage]
-                                        ['text_approval_waiting'],
+                                    languages[choosenLanguage]['text_approval_waiting'],
                                     style: GoogleFonts.roboto(
-                                        fontSize: media.width * twenty,
-                                        color: textColor,
-                                        fontWeight: FontWeight.bold),
+                                        fontSize: media.width * twenty, color: textColor, fontWeight: FontWeight.bold),
                                   ),
                                   SizedBox(height: media.height * 0.02),
                                   Text(
-                                    languages[choosenLanguage]
-                                        ['text_send_approval'],
+                                    languages[choosenLanguage]['text_send_approval'],
                                     style: GoogleFonts.roboto(
                                       fontSize: media.width * sixteen,
                                       color: textColor,
@@ -95,23 +78,18 @@ class _DocsProcessState extends State<DocsProcess> {
                                   ),
                                 ],
                               )
-                            : (userDetails['approve'] == false &&
-                                    userDetails['declined_reason'] != null)
+                            : (userDetails['approve'] == false && userDetails['declined_reason'] != null)
                                 ? Column(
                                     children: [
                                       Container(
                                         height: media.width * 0.4,
                                         width: media.width * 0.4,
-                                        decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: verifyPendingBck),
+                                        decoration: BoxDecoration(shape: BoxShape.circle, color: verifyPendingBck),
                                         alignment: Alignment.center,
                                         child: Container(
                                           height: media.width * 0.3,
                                           width: media.width * 0.3,
-                                          decoration: BoxDecoration(
-                                              shape: BoxShape.circle,
-                                              color: verifyDeclined),
+                                          decoration: BoxDecoration(shape: BoxShape.circle, color: verifyDeclined),
                                           child: Icon(
                                             Icons.access_time_rounded,
                                             color: buttonText,
@@ -121,8 +99,7 @@ class _DocsProcessState extends State<DocsProcess> {
                                       ),
                                       const SizedBox(height: 20),
                                       Text(
-                                        languages[choosenLanguage]
-                                            ['text_account_blocked'],
+                                        languages[choosenLanguage]['text_account_blocked'],
                                         style: GoogleFonts.roboto(
                                             fontSize: media.width * twenty,
                                             color: textColor,
@@ -130,22 +107,16 @@ class _DocsProcessState extends State<DocsProcess> {
                                       ),
                                       SizedBox(height: media.height * 0.02),
                                       Text(
-                                        languages[choosenLanguage]
-                                            ['text_document_rejected'],
-                                        style: GoogleFonts.roboto(
-                                            fontSize: media.width * sixteen,
-                                            color: textColor),
+                                        languages[choosenLanguage]['text_document_rejected'],
+                                        style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
                                         textAlign: TextAlign.center,
                                       ),
                                       SizedBox(height: media.height * 0.02),
                                       Text(
                                         (userDetails['declined_reason'] != null)
-                                            ? userDetails['declined_reason']
-                                                .toString()
+                                            ? userDetails['declined_reason'].toString()
                                             : '',
-                                        style: GoogleFonts.roboto(
-                                            fontSize: media.width * sixteen,
-                                            color: textColor),
+                                        style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
                                         textAlign: TextAlign.center,
                                       ),
                                     ],

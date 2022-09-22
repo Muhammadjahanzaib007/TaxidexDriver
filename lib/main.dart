@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/functions/notifications.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/functions/notifications.dart';
+import 'package:taxidex_driver/styles/styles.dart';
 import 'pages/loadingPage/loadingpage.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations(
-      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   await Firebase.initializeApp();
   checkInternetConnection();
   initMessaging();
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'product name',
-            theme: ThemeData(),
+            theme: ThemeData(primarySwatch: primarySwatch),
             home: const LoadingPage()));
   }
 }

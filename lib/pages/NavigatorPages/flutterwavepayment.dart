@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/NavigatorPages/walletpage.dart';
-import 'package:tagyourtaxi_driver/pages/loadingPage/loading.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/NavigatorPages/walletpage.dart';
+import 'package:taxidex_driver/pages/loadingPage/loading.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/styles/styles.dart';
+import 'package:taxidex_driver/translation/translation.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 import 'package:flutterwave_standard/flutterwave.dart';
 
 class FlutterWavePage extends StatefulWidget {
@@ -58,10 +58,8 @@ class _FlutterWavePageState extends State<FlutterWavePage> {
       ),
     );
 
-    final Customer customer = Customer(
-        name: userDetails['name'],
-        phoneNumber: userDetails['mobile'],
-        email: userDetails['email']);
+    final Customer customer =
+        Customer(name: userDetails['name'], phoneNumber: userDetails['mobile'], email: userDetails['email']);
 
     flutterwave = Flutterwave(
         context: context,
@@ -75,9 +73,7 @@ class _FlutterWavePageState extends State<FlutterWavePage> {
         customer: customer,
         paymentOptions: "ussd, card, barter, payattitude, account",
         customization: Customization(title: "Payment"),
-        isTestMode: (walletBalance['flutterwave_environment'] == 'test')
-            ? true
-            : false);
+        isTestMode: (walletBalance['flutterwave_environment'] == 'test') ? true : false);
 
     setState(() {
       _isLoading = false;
@@ -96,14 +92,11 @@ class _FlutterWavePageState extends State<FlutterWavePage> {
             valueListenable: valueNotifierHome.value,
             builder: (context, value, child) {
               return Directionality(
-                textDirection: (languageDirection == 'rtl')
-                    ? TextDirection.rtl
-                    : TextDirection.ltr,
+                textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
                 child: Stack(
                   children: [
                     Container(
-                      padding: EdgeInsets.fromLTRB(media.width * 0.05,
-                          media.width * 0.05, media.width * 0.05, 0),
+                      padding: EdgeInsets.fromLTRB(media.width * 0.05, media.width * 0.05, media.width * 0.05, 0),
                       height: media.height * 1,
                       width: media.width * 1,
                       color: page,
@@ -113,15 +106,13 @@ class _FlutterWavePageState extends State<FlutterWavePage> {
                           Stack(
                             children: [
                               Container(
-                                padding:
-                                    EdgeInsets.only(bottom: media.width * 0.05),
+                                padding: EdgeInsets.only(bottom: media.width * 0.05),
                                 width: media.width * 0.9,
                                 alignment: Alignment.center,
                                 child: Text(
                                   languages[choosenLanguage]['text_addmoney'],
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * sixteen,
-                                      fontWeight: FontWeight.bold),
+                                  style:
+                                      GoogleFonts.roboto(fontSize: media.width * sixteen, fontWeight: FontWeight.bold),
                                 ),
                               ),
                               Positioned(
@@ -136,28 +127,22 @@ class _FlutterWavePageState extends State<FlutterWavePage> {
                             height: media.width * 0.05,
                           ),
                           Text(
-                            walletBalance['currency_symbol'] +
-                                ' ' +
-                                addMoney.toString(),
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * twenty,
-                                fontWeight: FontWeight.w600),
+                            walletBalance['currency_symbol'] + ' ' + addMoney.toString(),
+                            style: GoogleFonts.roboto(fontSize: media.width * twenty, fontWeight: FontWeight.w600),
                           ),
                           SizedBox(
                             height: media.width * 0.05,
                           ),
                           Button(
                               onTap: () async {
-                                final ChargeResponse response =
-                                    await flutterwave.charge();
+                                final ChargeResponse response = await flutterwave.charge();
                                 // ignore: unnecessary_null_comparison
                                 if (response != null) {
                                   if (response.status == 'success') {
                                     setState(() {
                                       _isLoading = true;
                                     });
-                                    var val = await addMoneyFlutterwave(
-                                        addMoney, response.transactionId);
+                                    var val = await addMoneyFlutterwave(addMoney, response.transactionId);
                                     if (val == 'success') {
                                       setState(() {
                                         _success = true;
@@ -193,14 +178,11 @@ class _FlutterWavePageState extends State<FlutterWavePage> {
                                   Container(
                                     padding: EdgeInsets.all(media.width * 0.05),
                                     width: media.width * 0.9,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(12),
-                                        color: page),
+                                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: page),
                                     child: Column(
                                       children: [
                                         Text(
-                                          languages[choosenLanguage]
-                                              ['text_somethingwentwrong'],
+                                          languages[choosenLanguage]['text_somethingwentwrong'],
                                           textAlign: TextAlign.center,
                                           style: GoogleFonts.roboto(
                                               fontSize: media.width * sixteen,
@@ -216,8 +198,7 @@ class _FlutterWavePageState extends State<FlutterWavePage> {
                                                 _failed = false;
                                               });
                                             },
-                                            text: languages[choosenLanguage]
-                                                ['text_ok'])
+                                            text: languages[choosenLanguage]['text_ok'])
                                       ],
                                     ),
                                   )
@@ -240,14 +221,11 @@ class _FlutterWavePageState extends State<FlutterWavePage> {
                                   Container(
                                     padding: EdgeInsets.all(media.width * 0.05),
                                     width: media.width * 0.9,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(12),
-                                        color: page),
+                                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: page),
                                     child: Column(
                                       children: [
                                         Text(
-                                          languages[choosenLanguage]
-                                              ['text_paymentsuccess'],
+                                          languages[choosenLanguage]['text_paymentsuccess'],
                                           textAlign: TextAlign.center,
                                           style: GoogleFonts.roboto(
                                               fontSize: media.width * sixteen,
@@ -265,8 +243,7 @@ class _FlutterWavePageState extends State<FlutterWavePage> {
                                                 Navigator.pop(context, true);
                                               });
                                             },
-                                            text: languages[choosenLanguage]
-                                                ['text_ok'])
+                                            text: languages[choosenLanguage]['text_ok'])
                                       ],
                                     ),
                                   )
@@ -290,9 +267,7 @@ class _FlutterWavePageState extends State<FlutterWavePage> {
                         : Container(),
 
                     //loader
-                    (_isLoading == true)
-                        ? const Positioned(top: 0, child: Loading())
-                        : Container()
+                    (_isLoading == true) ? const Positioned(top: 0, child: Loading()) : Container()
                   ],
                 ),
               );

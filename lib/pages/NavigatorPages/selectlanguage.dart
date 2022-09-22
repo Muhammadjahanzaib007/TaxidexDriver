@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/styles/styles.dart';
+import 'package:taxidex_driver/translation/translation.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 
 class SelectLanguage extends StatefulWidget {
   const SelectLanguage({Key? key}) : super(key: key);
@@ -30,14 +30,12 @@ class _SelectLanguageState extends State<SelectLanguage> {
       },
       child: Material(
         child: Directionality(
-          textDirection: (languageDirection == 'rtl')
-              ? TextDirection.rtl
-              : TextDirection.ltr,
+          textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
           child: Container(
             height: media.height * 1,
             width: media.width * 1,
-            padding: EdgeInsets.fromLTRB(media.width * 0.05, media.width * 0.05,
-                media.width * 0.05, media.width * 0.05),
+            padding:
+                EdgeInsets.fromLTRB(media.width * 0.05, media.width * 0.05, media.width * 0.05, media.width * 0.05),
             color: page,
             child: Column(
               children: [
@@ -51,9 +49,7 @@ class _SelectLanguageState extends State<SelectLanguage> {
                       child: Text(
                         languages[choosenLanguage]['text_change_language'],
                         style: GoogleFonts.roboto(
-                            fontSize: media.width * twenty,
-                            fontWeight: FontWeight.w600,
-                            color: textColor),
+                            fontSize: media.width * twenty, fontWeight: FontWeight.w600, color: textColor),
                       ),
                     ),
                     Positioned(
@@ -95,41 +91,28 @@ class _SelectLanguageState extends State<SelectLanguage> {
                                       });
                                     },
                                     child: Container(
-                                      padding:
-                                          EdgeInsets.all(media.width * 0.025),
+                                      padding: EdgeInsets.all(media.width * 0.025),
                                       child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
                                           Text(
-                                            languagesCode
-                                                .firstWhere((e) =>
-                                                    e['code'] == i)['name']
-                                                .toString(),
-                                            style: GoogleFonts.roboto(
-                                                fontSize: media.width * sixteen,
-                                                color: textColor),
+                                            languagesCode.firstWhere((e) => e['code'] == i)['name'].toString(),
+                                            style:
+                                                GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
                                           ),
                                           Container(
                                             height: media.width * 0.05,
                                             width: media.width * 0.05,
                                             decoration: BoxDecoration(
                                                 shape: BoxShape.circle,
-                                                border: Border.all(
-                                                    color:
-                                                        const Color(0xff222222),
-                                                    width: 1.2)),
+                                                border: Border.all(color: const Color(0xff222222), width: 1.2)),
                                             alignment: Alignment.center,
                                             child: (_choosenLanguage == i)
                                                 ? Container(
                                                     height: media.width * 0.03,
                                                     width: media.width * 0.03,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                            shape:
-                                                                BoxShape.circle,
-                                                            color: Color(
-                                                                0xff222222)),
+                                                    decoration: const BoxDecoration(
+                                                        shape: BoxShape.circle, color: Color(0xff222222)),
                                                   )
                                                 : Container(),
                                           )
@@ -147,9 +130,7 @@ class _SelectLanguageState extends State<SelectLanguage> {
                 Button(
                     onTap: () async {
                       choosenLanguage = _choosenLanguage;
-                      if (choosenLanguage == 'ar' ||
-                          choosenLanguage == 'ur' ||
-                          choosenLanguage == 'iw') {
+                      if (choosenLanguage == 'ar' || choosenLanguage == 'ur' || choosenLanguage == 'iw') {
                         languageDirection = 'rtl';
                       } else {
                         languageDirection = 'ltr';

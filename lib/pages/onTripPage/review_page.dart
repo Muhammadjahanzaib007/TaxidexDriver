@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/loadingPage/loading.dart';
-import 'package:tagyourtaxi_driver/pages/onTripPage/map_page.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/loadingPage/loading.dart';
+import 'package:taxidex_driver/pages/onTripPage/map_page.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/styles/styles.dart';
+import 'package:taxidex_driver/translation/translation.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 
 class Review extends StatefulWidget {
   const Review({Key? key}) : super(key: key);
@@ -29,10 +29,7 @@ class _ReviewState extends State<Review> {
 
 //navigate
   navigate() {
-    Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(builder: (context) => const Maps()),
-        (route) => false);
+    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => const Maps()), (route) => false);
   }
 
   @override
@@ -43,9 +40,7 @@ class _ReviewState extends State<Review> {
           valueListenable: valueNotifierHome.value,
           builder: (context, value, child) {
             return Directionality(
-              textDirection: (languageDirection == 'rtl')
-                  ? TextDirection.rtl
-                  : TextDirection.ltr,
+              textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
               child: Stack(
                 children: [
                   Container(
@@ -63,9 +58,7 @@ class _ReviewState extends State<Review> {
                                 decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     image: DecorationImage(
-                                        image: NetworkImage(
-                                            driverReq['userDetail']['data']
-                                                ['profile_picture']),
+                                        image: NetworkImage(driverReq['userDetail']['data']['profile_picture']),
                                         fit: BoxFit.cover)),
                               )
                             : Container(),
@@ -73,11 +66,8 @@ class _ReviewState extends State<Review> {
                           height: media.height * 0.02,
                         ),
                         Text(
-                          (driverReq.isNotEmpty)
-                              ? driverReq['userDetail']['data']['name']
-                              : '',
-                          style: GoogleFonts.roboto(
-                              fontSize: media.width * twenty, color: textColor),
+                          (driverReq.isNotEmpty) ? driverReq['userDetail']['data']['name'] : '',
+                          style: GoogleFonts.roboto(fontSize: media.width * twenty, color: textColor),
                         ),
                         SizedBox(
                           height: media.height * 0.02,
@@ -96,8 +86,7 @@ class _ReviewState extends State<Review> {
                                 child: Icon(
                                   Icons.star,
                                   size: media.width * 0.1,
-                                  color:
-                                      (review >= 1) ? buttonColor : Colors.grey,
+                                  color: (review >= 1) ? buttonColor : Colors.grey,
                                 )),
                             SizedBox(
                               width: media.width * 0.02,
@@ -111,8 +100,7 @@ class _ReviewState extends State<Review> {
                                 child: Icon(
                                   Icons.star,
                                   size: media.width * 0.1,
-                                  color:
-                                      (review >= 2) ? buttonColor : Colors.grey,
+                                  color: (review >= 2) ? buttonColor : Colors.grey,
                                 )),
                             SizedBox(
                               width: media.width * 0.02,
@@ -126,8 +114,7 @@ class _ReviewState extends State<Review> {
                                 child: Icon(
                                   Icons.star,
                                   size: media.width * 0.1,
-                                  color:
-                                      (review >= 3) ? buttonColor : Colors.grey,
+                                  color: (review >= 3) ? buttonColor : Colors.grey,
                                 )),
                             SizedBox(
                               width: media.width * 0.02,
@@ -141,8 +128,7 @@ class _ReviewState extends State<Review> {
                                 child: Icon(
                                   Icons.star,
                                   size: media.width * 0.1,
-                                  color:
-                                      (review >= 4) ? buttonColor : Colors.grey,
+                                  color: (review >= 4) ? buttonColor : Colors.grey,
                                 )),
                             SizedBox(
                               width: media.width * 0.02,
@@ -156,8 +142,7 @@ class _ReviewState extends State<Review> {
                                 child: Icon(
                                   Icons.star,
                                   size: media.width * 0.1,
-                                  color:
-                                      (review == 5) ? buttonColor : Colors.grey,
+                                  color: (review == 5) ? buttonColor : Colors.grey,
                                 ))
                           ],
                         ),
@@ -171,8 +156,7 @@ class _ReviewState extends State<Review> {
                           width: media.width * 0.9,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              border:
-                                  Border.all(width: 1.5, color: Colors.grey)),
+                              border: Border.all(width: 1.5, color: Colors.grey)),
                           child: TextField(
                             maxLines: 4,
                             onChanged: (val) {
@@ -181,9 +165,7 @@ class _ReviewState extends State<Review> {
                               });
                             },
                             decoration: InputDecoration(
-                                hintText: languages[choosenLanguage]
-                                    ['text_feedback'],
-                                border: InputBorder.none),
+                                hintText: languages[choosenLanguage]['text_feedback'], border: InputBorder.none),
                           ),
                         ),
                         SizedBox(
@@ -226,9 +208,7 @@ class _ReviewState extends State<Review> {
                       : Container(),
 
                   //loader
-                  (_loading == true)
-                      ? const Positioned(child: Loading())
-                      : Container()
+                  (_loading == true) ? const Positioned(child: Loading()) : Container()
                 ],
               ),
             );

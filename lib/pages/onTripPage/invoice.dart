@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/onTripPage/review_page.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/onTripPage/review_page.dart';
+import 'package:taxidex_driver/styles/styles.dart';
+import 'package:taxidex_driver/translation/translation.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 
 class Invoice extends StatefulWidget {
   const Invoice({Key? key}) : super(key: key);
@@ -19,15 +19,10 @@ class _InvoiceState extends State<Invoice> {
     var media = MediaQuery.of(context).size;
     return Material(
       child: Directionality(
-        textDirection: (languageDirection == 'rtl')
-            ? TextDirection.rtl
-            : TextDirection.ltr,
+        textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
         child: Container(
-          padding: EdgeInsets.fromLTRB(
-              media.width * 0.05,
-              MediaQuery.of(context).padding.top + media.width * 0.05,
-              media.width * 0.05,
-              media.width * 0.05),
+          padding: EdgeInsets.fromLTRB(media.width * 0.05, MediaQuery.of(context).padding.top + media.width * 0.05,
+              media.width * 0.05, media.width * 0.05),
           height: media.height * 1,
           width: media.width * 1,
           color: page,
@@ -42,9 +37,7 @@ class _InvoiceState extends State<Invoice> {
                     children: [
                       Text(
                         languages[choosenLanguage]['text_tripsummary'],
-                        style: GoogleFonts.roboto(
-                            fontSize: media.width * sixteen,
-                            fontWeight: FontWeight.bold),
+                        style: GoogleFonts.roboto(fontSize: media.width * sixteen, fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: media.height * 0.04,
@@ -58,8 +51,7 @@ class _InvoiceState extends State<Invoice> {
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 image: DecorationImage(
-                                    image: NetworkImage(driverReq['userDetail']
-                                        ['data']['profile_picture']),
+                                    image: NetworkImage(driverReq['userDetail']['data']['profile_picture']),
                                     fit: BoxFit.contain)),
                           ),
                           SizedBox(
@@ -86,44 +78,34 @@ class _InvoiceState extends State<Invoice> {
                                 Column(
                                   children: [
                                     Text(
-                                      languages[choosenLanguage]
-                                          ['text_reference'],
+                                      languages[choosenLanguage]['text_reference'],
                                       style: GoogleFonts.roboto(
-                                          fontSize: media.width * twelve,
-                                          color: const Color(0xff898989)),
+                                          fontSize: media.width * twelve, color: const Color(0xff898989)),
                                     ),
                                     SizedBox(
                                       height: media.width * 0.02,
                                     ),
                                     Text(
                                       driverReq['request_number'],
-                                      style: GoogleFonts.roboto(
-                                          fontSize: media.width * fourteen,
-                                          color: textColor),
+                                      style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor),
                                     )
                                   ],
                                 ),
                                 Column(
                                   children: [
                                     Text(
-                                      languages[choosenLanguage]
-                                          ['text_rideType'],
+                                      languages[choosenLanguage]['text_rideType'],
                                       style: GoogleFonts.roboto(
-                                          fontSize: media.width * twelve,
-                                          color: const Color(0xff898989)),
+                                          fontSize: media.width * twelve, color: const Color(0xff898989)),
                                     ),
                                     SizedBox(
                                       height: media.width * 0.02,
                                     ),
                                     Text(
                                       (driverReq['is_rental'] == false)
-                                          ? languages[choosenLanguage]
-                                              ['text_regular']
-                                          : languages[choosenLanguage]
-                                              ['text_rental'],
-                                      style: GoogleFonts.roboto(
-                                          fontSize: media.width * fourteen,
-                                          color: textColor),
+                                          ? languages[choosenLanguage]['text_regular']
+                                          : languages[choosenLanguage]['text_rental'],
+                                      style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor),
                                     )
                                   ],
                                 ),
@@ -145,42 +127,32 @@ class _InvoiceState extends State<Invoice> {
                                 Column(
                                   children: [
                                     Text(
-                                      languages[choosenLanguage]
-                                          ['text_distance'],
+                                      languages[choosenLanguage]['text_distance'],
                                       style: GoogleFonts.roboto(
-                                          fontSize: media.width * twelve,
-                                          color: const Color(0xff898989)),
+                                          fontSize: media.width * twelve, color: const Color(0xff898989)),
                                     ),
                                     SizedBox(
                                       height: media.width * 0.02,
                                     ),
                                     Text(
-                                      driverReq['total_distance'] +
-                                          ' ' +
-                                          driverReq['unit'],
-                                      style: GoogleFonts.roboto(
-                                          fontSize: media.width * fourteen,
-                                          color: textColor),
+                                      driverReq['total_distance'] + ' ' + driverReq['unit'],
+                                      style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor),
                                     )
                                   ],
                                 ),
                                 Column(
                                   children: [
                                     Text(
-                                      languages[choosenLanguage]
-                                          ['text_duration'],
+                                      languages[choosenLanguage]['text_duration'],
                                       style: GoogleFonts.roboto(
-                                          fontSize: media.width * twelve,
-                                          color: const Color(0xff898989)),
+                                          fontSize: media.width * twelve, color: const Color(0xff898989)),
                                     ),
                                     SizedBox(
                                       height: media.width * 0.02,
                                     ),
                                     Text(
                                       '${driverReq['total_time']} mins',
-                                      style: GoogleFonts.roboto(
-                                          fontSize: media.width * fourteen,
-                                          color: textColor),
+                                      style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor),
                                     )
                                   ],
                                 ),
@@ -201,9 +173,7 @@ class _InvoiceState extends State<Invoice> {
                           ),
                           Text(
                             languages[choosenLanguage]['text_tripfare'],
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * fourteen,
-                                color: textColor),
+                            style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor),
                           )
                         ],
                       ),
@@ -212,24 +182,17 @@ class _InvoiceState extends State<Invoice> {
                       ),
                       (driverReq['is_rental'] == true)
                           ? Container(
-                              padding:
-                                  EdgeInsets.only(bottom: media.width * 0.05),
+                              padding: EdgeInsets.only(bottom: media.width * 0.05),
                               child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    languages[choosenLanguage]
-                                        ['text_ride_type'],
-                                    style: GoogleFonts.roboto(
-                                        fontSize: media.width * fourteen,
-                                        color: textColor),
+                                    languages[choosenLanguage]['text_ride_type'],
+                                    style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor),
                                   ),
                                   Text(
                                     driverReq['rental_package_name'],
-                                    style: GoogleFonts.roboto(
-                                        fontSize: media.width * fourteen,
-                                        color: textColor),
+                                    style: GoogleFonts.roboto(fontSize: media.width * fourteen, color: textColor),
                                   ),
                                 ],
                               ),
@@ -240,19 +203,13 @@ class _InvoiceState extends State<Invoice> {
                         children: [
                           Text(
                             languages[choosenLanguage]['text_baseprice'],
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * twelve,
-                                color: textColor),
+                            style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                           ),
                           Text(
-                            driverReq['requestBill']['data']
-                                    ['requested_currency_symbol'] +
+                            driverReq['requestBill']['data']['requested_currency_symbol'] +
                                 ' ' +
-                                driverReq['requestBill']['data']['base_price']
-                                    .toString(),
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * twelve,
-                                color: textColor),
+                                driverReq['requestBill']['data']['base_price'].toString(),
+                            style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                           ),
                         ],
                       ),
@@ -264,20 +221,13 @@ class _InvoiceState extends State<Invoice> {
                         children: [
                           Text(
                             languages[choosenLanguage]['text_distprice'],
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * twelve,
-                                color: textColor),
+                            style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                           ),
                           Text(
-                            driverReq['requestBill']['data']
-                                    ['requested_currency_symbol'] +
+                            driverReq['requestBill']['data']['requested_currency_symbol'] +
                                 ' ' +
-                                driverReq['requestBill']['data']
-                                        ['distance_price']
-                                    .toString(),
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * twelve,
-                                color: textColor),
+                                driverReq['requestBill']['data']['distance_price'].toString(),
+                            style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                           ),
                         ],
                       ),
@@ -289,19 +239,13 @@ class _InvoiceState extends State<Invoice> {
                         children: [
                           Text(
                             languages[choosenLanguage]['text_timeprice'],
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * twelve,
-                                color: textColor),
+                            style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                           ),
                           Text(
-                            driverReq['requestBill']['data']
-                                    ['requested_currency_symbol'] +
+                            driverReq['requestBill']['data']['requested_currency_symbol'] +
                                 ' ' +
-                                driverReq['requestBill']['data']['time_price']
-                                    .toString(),
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * twelve,
-                                color: textColor),
+                                driverReq['requestBill']['data']['time_price'].toString(),
+                            style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                           ),
                         ],
                       ),
@@ -314,93 +258,63 @@ class _InvoiceState extends State<Invoice> {
                           Text(
                             languages[choosenLanguage]['text_waiting_price'] +
                                 ' (' +
-                                driverReq['requestBill']['data']
-                                    ['requested_currency_symbol'] +
+                                driverReq['requestBill']['data']['requested_currency_symbol'] +
                                 ' ' +
-                                driverReq['requestBill']['data']
-                                        ['waiting_charge_per_min']
-                                    .toString() +
+                                driverReq['requestBill']['data']['waiting_charge_per_min'].toString() +
                                 ' x ' +
-                                driverReq['requestBill']['data']
-                                        ['calculated_waiting_time']
-                                    .toString() +
+                                driverReq['requestBill']['data']['calculated_waiting_time'].toString() +
                                 ' mins' +
                                 ')',
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * twelve,
-                                color: textColor),
+                            style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                           ),
                           Text(
-                            driverReq['requestBill']['data']
-                                    ['requested_currency_symbol'] +
+                            driverReq['requestBill']['data']['requested_currency_symbol'] +
                                 ' ' +
-                                driverReq['requestBill']['data']
-                                        ['waiting_charge']
-                                    .toString(),
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * twelve,
-                                color: textColor),
+                                driverReq['requestBill']['data']['waiting_charge'].toString(),
+                            style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                           ),
                         ],
                       ),
-                      (driverReq['requestBill']['data']['cancellation_fee'] !=
-                              0)
+                      (driverReq['requestBill']['data']['cancellation_fee'] != 0)
                           ? SizedBox(
                               height: media.height * 0.02,
                             )
                           : Container(),
-                      (driverReq['requestBill']['data']['cancellation_fee'] !=
-                              0)
+                      (driverReq['requestBill']['data']['cancellation_fee'] != 0)
                           ? Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
                                   languages[choosenLanguage]['text_cancelfee'],
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * twelve,
-                                      color: textColor),
+                                  style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                                 ),
                                 Text(
-                                  driverReq['requestBill']['data']
-                                          ['requested_currency_symbol'] +
+                                  driverReq['requestBill']['data']['requested_currency_symbol'] +
                                       ' ' +
-                                      driverReq['requestBill']['data']
-                                              ['cancellation_fee']
-                                          .toString(),
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * twelve,
-                                      color: textColor),
+                                      driverReq['requestBill']['data']['cancellation_fee'].toString(),
+                                  style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                                 ),
                               ],
                             )
                           : Container(),
-                      (driverReq['requestBill']['data']['airport_surge_fee'] !=
-                              0)
+                      (driverReq['requestBill']['data']['airport_surge_fee'] != 0)
                           ? SizedBox(
                               height: media.height * 0.02,
                             )
                           : Container(),
-                      (driverReq['requestBill']['data']['airport_surge_fee'] !=
-                              0)
+                      (driverReq['requestBill']['data']['airport_surge_fee'] != 0)
                           ? Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
                                   languages[choosenLanguage]['text_surge_fee'],
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * twelve,
-                                      color: textColor),
+                                  style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                                 ),
                                 Text(
-                                  driverReq['requestBill']['data']
-                                          ['requested_currency_symbol'] +
+                                  driverReq['requestBill']['data']['requested_currency_symbol'] +
                                       ' ' +
-                                      driverReq['requestBill']['data']
-                                              ['airport_surge_fee']
-                                          .toString(),
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * twelve,
-                                      color: textColor),
+                                      driverReq['requestBill']['data']['airport_surge_fee'].toString(),
+                                  style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                                 ),
                               ],
                             )
@@ -413,50 +327,34 @@ class _InvoiceState extends State<Invoice> {
                         children: [
                           Text(
                             languages[choosenLanguage]['text_convfee'],
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * twelve,
-                                color: textColor),
+                            style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                           ),
                           Text(
-                            driverReq['requestBill']['data']
-                                    ['requested_currency_symbol'] +
+                            driverReq['requestBill']['data']['requested_currency_symbol'] +
                                 ' ' +
-                                driverReq['requestBill']['data']
-                                        ['admin_commision']
-                                    .toString(),
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * twelve,
-                                color: textColor),
+                                driverReq['requestBill']['data']['admin_commision'].toString(),
+                            style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                           ),
                         ],
                       ),
-                      (driverReq['requestBill']['data']['promo_discount'] !=
-                              null)
+                      (driverReq['requestBill']['data']['promo_discount'] != null)
                           ? SizedBox(
                               height: media.height * 0.02,
                             )
                           : Container(),
-                      (driverReq['requestBill']['data']['promo_discount'] !=
-                              null)
+                      (driverReq['requestBill']['data']['promo_discount'] != null)
                           ? Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
                                   languages[choosenLanguage]['text_discount'],
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * twelve,
-                                      color: Colors.red),
+                                  style: GoogleFonts.roboto(fontSize: media.width * twelve, color: Colors.red),
                                 ),
                                 Text(
-                                  driverReq['requestBill']['data']
-                                          ['requested_currency_symbol'] +
+                                  driverReq['requestBill']['data']['requested_currency_symbol'] +
                                       ' ' +
-                                      driverReq['requestBill']['data']
-                                              ['promo_discount']
-                                          .toString(),
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * twelve,
-                                      color: Colors.red),
+                                      driverReq['requestBill']['data']['promo_discount'].toString(),
+                                  style: GoogleFonts.roboto(fontSize: media.width * twelve, color: Colors.red),
                                 ),
                               ],
                             )
@@ -469,19 +367,13 @@ class _InvoiceState extends State<Invoice> {
                         children: [
                           Text(
                             languages[choosenLanguage]['text_taxes'],
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * twelve,
-                                color: textColor),
+                            style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                           ),
                           Text(
-                            driverReq['requestBill']['data']
-                                    ['requested_currency_symbol'] +
+                            driverReq['requestBill']['data']['requested_currency_symbol'] +
                                 ' ' +
-                                driverReq['requestBill']['data']['service_tax']
-                                    .toString(),
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * twelve,
-                                color: textColor),
+                                driverReq['requestBill']['data']['service_tax'].toString(),
+                            style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                           ),
                         ],
                       ),
@@ -500,19 +392,13 @@ class _InvoiceState extends State<Invoice> {
                         children: [
                           Text(
                             languages[choosenLanguage]['text_totalfare'],
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * twelve,
-                                color: textColor),
+                            style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                           ),
                           Text(
-                            driverReq['requestBill']['data']
-                                    ['requested_currency_symbol'] +
+                            driverReq['requestBill']['data']['requested_currency_symbol'] +
                                 ' ' +
-                                driverReq['requestBill']['data']['total_amount']
-                                    .toString(),
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * twelve,
-                                color: textColor),
+                                driverReq['requestBill']['data']['total_amount'].toString(),
+                            style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                           ),
                         ],
                       ),
@@ -535,20 +421,14 @@ class _InvoiceState extends State<Invoice> {
                                 : (driverReq['payment_opt'] == '2')
                                     ? languages[choosenLanguage]['text_wallet']
                                     : 'Card',
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * sixteen,
-                                color: buttonColor),
+                            style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: buttonColor),
                           ),
                           Text(
-                            driverReq['requestBill']['data']
-                                    ['requested_currency_symbol'] +
+                            driverReq['requestBill']['data']['requested_currency_symbol'] +
                                 ' ' +
-                                driverReq['requestBill']['data']['total_amount']
-                                    .toString(),
+                                driverReq['requestBill']['data']['total_amount'].toString(),
                             style: GoogleFonts.roboto(
-                                fontSize: media.width * twentysix,
-                                color: textColor,
-                                fontWeight: FontWeight.bold),
+                                fontSize: media.width * twentysix, color: textColor, fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
@@ -558,10 +438,7 @@ class _InvoiceState extends State<Invoice> {
               ),
               Button(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Review()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Review()));
                   },
                   text: languages[choosenLanguage]['text_confirm'])
             ],

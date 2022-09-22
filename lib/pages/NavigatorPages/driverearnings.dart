@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/loadingPage/loading.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/loadingPage/loading.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/styles/styles.dart';
+import 'package:taxidex_driver/translation/translation.dart';
 
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 
 class DriverEarnings extends StatefulWidget {
   const DriverEarnings({Key? key}) : super(key: key);
@@ -64,14 +64,11 @@ class _DriverEarningsState extends State<DriverEarnings> {
     var media = MediaQuery.of(context).size;
     return Material(
       child: Directionality(
-        textDirection: (languageDirection == 'rtl')
-            ? TextDirection.rtl
-            : TextDirection.ltr,
+        textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
         child: Stack(
           children: [
             Container(
-              padding: EdgeInsets.fromLTRB(media.width * 0.05,
-                  media.width * 0.05, media.width * 0.05, 0),
+              padding: EdgeInsets.fromLTRB(media.width * 0.05, media.width * 0.05, media.width * 0.05, 0),
               height: media.height * 1,
               width: media.width * 1,
               color: page,
@@ -87,9 +84,7 @@ class _DriverEarningsState extends State<DriverEarnings> {
                         child: Text(
                           languages[choosenLanguage]['text_earnings'],
                           style: GoogleFonts.roboto(
-                              fontSize: media.width * twenty,
-                              fontWeight: FontWeight.w600,
-                              color: textColor),
+                              fontSize: media.width * twenty, fontWeight: FontWeight.w600, color: textColor),
                         ),
                       ),
                       Positioned(
@@ -109,12 +104,7 @@ class _DriverEarningsState extends State<DriverEarnings> {
                     decoration: BoxDecoration(
                         color: page,
                         borderRadius: BorderRadius.circular(12),
-                        boxShadow: [
-                          BoxShadow(
-                              blurRadius: 2,
-                              spreadRadius: 2,
-                              color: Colors.black.withOpacity(0.2))
-                        ]),
+                        boxShadow: [BoxShadow(blurRadius: 2, spreadRadius: 2, color: Colors.black.withOpacity(0.2))]),
                     child: Row(
                       children: [
                         InkWell(
@@ -135,17 +125,13 @@ class _DriverEarningsState extends State<DriverEarnings> {
                               width: media.width * 0.3,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(12),
-                                  color: (_showEarning == 0)
-                                      ? const Color(0xff222222)
-                                      : page),
+                                  color: (_showEarning == 0) ? const Color(0xff222222) : page),
                               child: Text(
                                 languages[choosenLanguage]['text_today'],
                                 style: GoogleFonts.roboto(
                                     fontSize: media.width * fifteen,
                                     fontWeight: FontWeight.w600,
-                                    color: (_showEarning == 0)
-                                        ? Colors.white
-                                        : textColor),
+                                    color: (_showEarning == 0) ? Colors.white : textColor),
                               )),
                         ),
                         InkWell(
@@ -166,17 +152,13 @@ class _DriverEarningsState extends State<DriverEarnings> {
                               width: media.width * 0.3,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(12),
-                                  color: (_showEarning == 1)
-                                      ? const Color(0xff222222)
-                                      : page),
+                                  color: (_showEarning == 1) ? const Color(0xff222222) : page),
                               child: Text(
                                 languages[choosenLanguage]['text_weekly'],
                                 style: GoogleFonts.roboto(
                                     fontSize: media.width * fifteen,
                                     fontWeight: FontWeight.w600,
-                                    color: (_showEarning == 1)
-                                        ? Colors.white
-                                        : textColor),
+                                    color: (_showEarning == 1) ? Colors.white : textColor),
                               )),
                         ),
                         InkWell(
@@ -192,17 +174,13 @@ class _DriverEarningsState extends State<DriverEarnings> {
                               width: media.width * 0.3,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(12),
-                                  color: (_showEarning == 2)
-                                      ? const Color(0xff222222)
-                                      : page),
+                                  color: (_showEarning == 2) ? const Color(0xff222222) : page),
                               child: Text(
                                 languages[choosenLanguage]['text_report'],
                                 style: GoogleFonts.roboto(
                                     fontSize: media.width * fifteen,
                                     fontWeight: FontWeight.w600,
-                                    color: (_showEarning == 2)
-                                        ? Colors.white
-                                        : textColor),
+                                    color: (_showEarning == 2) ? Colors.white : textColor),
                               )),
                         )
                       ],
@@ -220,9 +198,7 @@ class _DriverEarningsState extends State<DriverEarnings> {
                         Column(children: [
                             Text(
                               driverTodayEarnings['current_date'],
-                              style: GoogleFonts.roboto(
-                                  fontSize: media.width * fifteen,
-                                  color: hintColor),
+                              style: GoogleFonts.roboto(fontSize: media.width * fifteen, color: hintColor),
                             ),
                             SizedBox(
                               height: media.width * 0.025,
@@ -232,16 +208,11 @@ class _DriverEarningsState extends State<DriverEarnings> {
                               children: [
                                 Text(
                                   driverTodayEarnings['currency_symbol'],
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * eighteen,
-                                      color: textColor),
+                                  style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: textColor),
                                 ),
                                 Text(
-                                  driverTodayEarnings['total_earnings']
-                                      .toStringAsFixed(2),
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * eighteen,
-                                      color: textColor),
+                                  driverTodayEarnings['total_earnings'].toStringAsFixed(2),
+                                  style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: textColor),
                                 ),
                               ],
                             ),
@@ -253,11 +224,9 @@ class _DriverEarningsState extends State<DriverEarnings> {
                               width: media.width * 0.9,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(12),
-                                  border: Border.all(
-                                      color: borderLines, width: 1.2)),
+                                  border: Border.all(color: borderLines, width: 1.2)),
                               child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Column(
                                     children: [
@@ -265,11 +234,8 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                         width: media.width * 0.17,
                                         alignment: Alignment.center,
                                         child: Text(
-                                          languages[choosenLanguage]
-                                              ['text_trips'],
-                                          style: GoogleFonts.roboto(
-                                              fontSize: media.width * sixteen,
-                                              color: hintColor),
+                                          languages[choosenLanguage]['text_trips'],
+                                          style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: hintColor),
                                         ),
                                       ),
                                       SizedBox(
@@ -279,12 +245,8 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                         width: media.width * 0.17,
                                         alignment: Alignment.center,
                                         child: Text(
-                                          driverTodayEarnings[
-                                                  'total_trips_count']
-                                              .toString(),
-                                          style: GoogleFonts.roboto(
-                                              fontSize: media.width * sixteen,
-                                              color: textColor),
+                                          driverTodayEarnings['total_trips_count'].toString(),
+                                          style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
                                         ),
                                       ),
                                     ],
@@ -300,11 +262,8 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                         width: media.width * 0.17,
                                         alignment: Alignment.center,
                                         child: Text(
-                                          languages[choosenLanguage]
-                                              ['text_enable_wallet'],
-                                          style: GoogleFonts.roboto(
-                                              fontSize: media.width * sixteen,
-                                              color: hintColor),
+                                          languages[choosenLanguage]['text_enable_wallet'],
+                                          style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: hintColor),
                                         ),
                                       ),
                                       SizedBox(
@@ -314,12 +273,8 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                         width: media.width * 0.17,
                                         alignment: Alignment.center,
                                         child: Text(
-                                          driverTodayEarnings[
-                                                  'total_wallet_trip_count']
-                                              .toString(),
-                                          style: GoogleFonts.roboto(
-                                              fontSize: media.width * sixteen,
-                                              color: textColor),
+                                          driverTodayEarnings['total_wallet_trip_count'].toString(),
+                                          style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
                                         ),
                                       ),
                                     ],
@@ -335,11 +290,8 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                         width: media.width * 0.17,
                                         alignment: Alignment.center,
                                         child: Text(
-                                          languages[choosenLanguage]
-                                              ['text_cash'],
-                                          style: GoogleFonts.roboto(
-                                              fontSize: media.width * sixteen,
-                                              color: hintColor),
+                                          languages[choosenLanguage]['text_cash'],
+                                          style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: hintColor),
                                         ),
                                       ),
                                       SizedBox(
@@ -349,12 +301,8 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                         width: media.width * 0.17,
                                         alignment: Alignment.center,
                                         child: Text(
-                                          driverTodayEarnings[
-                                                  'total_cash_trip_count']
-                                              .toString(),
-                                          style: GoogleFonts.roboto(
-                                              fontSize: media.width * sixteen,
-                                              color: textColor),
+                                          driverTodayEarnings['total_cash_trip_count'].toString(),
+                                          style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
                                         ),
                                       ),
                                     ],
@@ -370,16 +318,11 @@ class _DriverEarningsState extends State<DriverEarnings> {
                               children: [
                                 Text(
                                   languages[choosenLanguage]['text_tripkm'],
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * eighteen,
-                                      color: textColor),
+                                  style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: textColor),
                                 ),
                                 Text(
-                                  driverTodayEarnings['total_trip_kms']
-                                      .toString(),
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * eighteen,
-                                      color: textColor),
+                                  driverTodayEarnings['total_trip_kms'].toString(),
+                                  style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: textColor),
                                 )
                               ],
                             ),
@@ -390,20 +333,13 @@ class _DriverEarningsState extends State<DriverEarnings> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  languages[choosenLanguage]
-                                      ['text_walletpayment'],
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * eighteen,
-                                      color: textColor),
+                                  languages[choosenLanguage]['text_walletpayment'],
+                                  style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: textColor),
                                 ),
                                 Text(
                                   driverTodayEarnings['currency_symbol'] +
-                                      driverTodayEarnings[
-                                              'total_wallet_trip_amount']
-                                          .toStringAsFixed(2),
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * eighteen,
-                                      color: textColor),
+                                      driverTodayEarnings['total_wallet_trip_amount'].toStringAsFixed(2),
+                                  style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: textColor),
                                 )
                               ],
                             ),
@@ -414,20 +350,13 @@ class _DriverEarningsState extends State<DriverEarnings> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  languages[choosenLanguage]
-                                      ['text_cashpayment'],
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * eighteen,
-                                      color: textColor),
+                                  languages[choosenLanguage]['text_cashpayment'],
+                                  style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: textColor),
                                 ),
                                 Text(
                                   driverTodayEarnings['currency_symbol'] +
-                                      driverTodayEarnings[
-                                              'total_cash_trip_amount']
-                                          .toStringAsFixed(2),
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * eighteen,
-                                      color: textColor),
+                                      driverTodayEarnings['total_cash_trip_amount'].toStringAsFixed(2),
+                                  style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: textColor),
                                 ),
                               ],
                             ),
@@ -446,19 +375,13 @@ class _DriverEarningsState extends State<DriverEarnings> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  languages[choosenLanguage]
-                                      ['text_totalearnings'],
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * eighteen,
-                                      color: buttonColor),
+                                  languages[choosenLanguage]['text_totalearnings'],
+                                  style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: buttonColor),
                                 ),
                                 Text(
                                   driverTodayEarnings['currency_symbol'] +
-                                      driverTodayEarnings['total_earnings']
-                                          .toStringAsFixed(2),
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * eighteen,
-                                      color: buttonColor),
+                                      driverTodayEarnings['total_earnings'].toStringAsFixed(2),
+                                  style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: buttonColor),
                                 ),
                               ],
                             ),
@@ -468,12 +391,8 @@ class _DriverEarningsState extends State<DriverEarnings> {
                         (driverWeeklyEarnings.isNotEmpty && _showEarning == 1)
                             ? Column(children: [
                                 Text(
-                                  driverWeeklyEarnings['start_of_week'] +
-                                      ' - ' +
-                                      driverWeeklyEarnings['end_of_week'],
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * fifteen,
-                                      color: hintColor),
+                                  driverWeeklyEarnings['start_of_week'] + ' - ' + driverWeeklyEarnings['end_of_week'],
+                                  style: GoogleFonts.roboto(fontSize: media.width * fifteen, color: hintColor),
                                 ),
                                 SizedBox(
                                   height: media.width * 0.025,
@@ -483,16 +402,11 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                   children: [
                                     Text(
                                       driverWeeklyEarnings['currency_symbol'],
-                                      style: GoogleFonts.roboto(
-                                          fontSize: media.width * eighteen,
-                                          color: textColor),
+                                      style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: textColor),
                                     ),
                                     Text(
-                                      driverWeeklyEarnings['total_earnings']
-                                          .toStringAsFixed(2),
-                                      style: GoogleFonts.roboto(
-                                          fontSize: media.width * eighteen,
-                                          color: textColor),
+                                      driverWeeklyEarnings['total_earnings'].toStringAsFixed(2),
+                                      style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: textColor),
                                     ),
                                   ],
                                 ),
@@ -502,28 +416,23 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                 SizedBox(
                                   height: media.width * 0.5,
                                   child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: weekDays
                                         .map((i, value) {
                                           List val = [];
                                           weekDays.forEach((i, value) {
-                                            val.add(double.parse(
-                                                weekDays[i].toString()));
+                                            val.add(double.parse(weekDays[i].toString()));
                                           });
                                           val.sort();
                                           return MapEntry(
                                               i,
                                               Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.end,
+                                                mainAxisAlignment: MainAxisAlignment.end,
                                                 children: [
                                                   Text(
                                                     weekDays[i].toString(),
                                                     style: GoogleFonts.roboto(
-                                                        fontSize: media.width *
-                                                            twelve,
-                                                        color: hintColor),
+                                                        fontSize: media.width * twelve, color: hintColor),
                                                   ),
                                                   SizedBox(
                                                     height: media.width * 0.01,
@@ -532,10 +441,7 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                                     width: media.width * 0.1,
                                                     height: (val.last > 0)
                                                         ? (media.width * 0.35) /
-                                                            (val.last /
-                                                                double.parse(
-                                                                    weekDays[i]
-                                                                        .toString()))
+                                                            (val.last / double.parse(weekDays[i].toString()))
                                                         : 1,
                                                     color: buttonColor,
                                                   ),
@@ -545,9 +451,7 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                                   Text(
                                                     i,
                                                     style: GoogleFonts.roboto(
-                                                        fontSize: media.width *
-                                                            twelve,
-                                                        color: hintColor),
+                                                        fontSize: media.width * twelve, color: hintColor),
                                                   )
                                                 ],
                                               ));
@@ -564,11 +468,9 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                   width: media.width * 0.9,
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(12),
-                                      border: Border.all(
-                                          color: borderLines, width: 1.2)),
+                                      border: Border.all(color: borderLines, width: 1.2)),
                                   child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
                                       Column(
                                         children: [
@@ -576,12 +478,9 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                             width: media.width * 0.17,
                                             alignment: Alignment.center,
                                             child: Text(
-                                              languages[choosenLanguage]
-                                                  ['text_trips'],
-                                              style: GoogleFonts.roboto(
-                                                  fontSize:
-                                                      media.width * sixteen,
-                                                  color: hintColor),
+                                              languages[choosenLanguage]['text_trips'],
+                                              style:
+                                                  GoogleFonts.roboto(fontSize: media.width * sixteen, color: hintColor),
                                             ),
                                           ),
                                           SizedBox(
@@ -591,13 +490,9 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                             width: media.width * 0.17,
                                             alignment: Alignment.center,
                                             child: Text(
-                                              driverWeeklyEarnings[
-                                                      'total_trips_count']
-                                                  .toString(),
-                                              style: GoogleFonts.roboto(
-                                                  fontSize:
-                                                      media.width * sixteen,
-                                                  color: textColor),
+                                              driverWeeklyEarnings['total_trips_count'].toString(),
+                                              style:
+                                                  GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
                                             ),
                                           ),
                                         ],
@@ -650,12 +545,9 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                             width: media.width * 0.17,
                                             alignment: Alignment.center,
                                             child: Text(
-                                              languages[choosenLanguage]
-                                                  ['text_enable_wallet'],
-                                              style: GoogleFonts.roboto(
-                                                  fontSize:
-                                                      media.width * sixteen,
-                                                  color: hintColor),
+                                              languages[choosenLanguage]['text_enable_wallet'],
+                                              style:
+                                                  GoogleFonts.roboto(fontSize: media.width * sixteen, color: hintColor),
                                             ),
                                           ),
                                           SizedBox(
@@ -665,13 +557,9 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                             width: media.width * 0.17,
                                             alignment: Alignment.center,
                                             child: Text(
-                                              driverWeeklyEarnings[
-                                                      'total_wallet_trip_count']
-                                                  .toString(),
-                                              style: GoogleFonts.roboto(
-                                                  fontSize:
-                                                      media.width * sixteen,
-                                                  color: textColor),
+                                              driverWeeklyEarnings['total_wallet_trip_count'].toString(),
+                                              style:
+                                                  GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
                                             ),
                                           ),
                                         ],
@@ -687,12 +575,9 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                             width: media.width * 0.17,
                                             alignment: Alignment.center,
                                             child: Text(
-                                              languages[choosenLanguage]
-                                                  ['text_cash'],
-                                              style: GoogleFonts.roboto(
-                                                  fontSize:
-                                                      media.width * sixteen,
-                                                  color: hintColor),
+                                              languages[choosenLanguage]['text_cash'],
+                                              style:
+                                                  GoogleFonts.roboto(fontSize: media.width * sixteen, color: hintColor),
                                             ),
                                           ),
                                           SizedBox(
@@ -702,13 +587,9 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                             width: media.width * 0.17,
                                             alignment: Alignment.center,
                                             child: Text(
-                                              driverWeeklyEarnings[
-                                                      'total_cash_trip_count']
-                                                  .toString(),
-                                              style: GoogleFonts.roboto(
-                                                  fontSize:
-                                                      media.width * sixteen,
-                                                  color: textColor),
+                                              driverWeeklyEarnings['total_cash_trip_count'].toString(),
+                                              style:
+                                                  GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
                                             ),
                                           ),
                                         ],
@@ -720,21 +601,15 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                   height: media.width * 0.1,
                                 ),
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text(
                                       languages[choosenLanguage]['text_tripkm'],
-                                      style: GoogleFonts.roboto(
-                                          fontSize: media.width * eighteen,
-                                          color: textColor),
+                                      style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: textColor),
                                     ),
                                     Text(
-                                      driverWeeklyEarnings['total_trip_kms']
-                                          .toString(),
-                                      style: GoogleFonts.roboto(
-                                          fontSize: media.width * eighteen,
-                                          color: textColor),
+                                      driverWeeklyEarnings['total_trip_kms'].toString(),
+                                      style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: textColor),
                                     )
                                   ],
                                 ),
@@ -742,24 +617,16 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                   height: media.width * 0.05,
                                 ),
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text(
-                                      languages[choosenLanguage]
-                                          ['text_walletpayment'],
-                                      style: GoogleFonts.roboto(
-                                          fontSize: media.width * eighteen,
-                                          color: textColor),
+                                      languages[choosenLanguage]['text_walletpayment'],
+                                      style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: textColor),
                                     ),
                                     Text(
                                       driverWeeklyEarnings['currency_symbol'] +
-                                          driverWeeklyEarnings[
-                                                  'total_wallet_trip_amount']
-                                              .toStringAsFixed(2),
-                                      style: GoogleFonts.roboto(
-                                          fontSize: media.width * eighteen,
-                                          color: textColor),
+                                          driverWeeklyEarnings['total_wallet_trip_amount'].toStringAsFixed(2),
+                                      style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: textColor),
                                     )
                                   ],
                                 ),
@@ -767,24 +634,16 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                   height: media.width * 0.05,
                                 ),
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text(
-                                      languages[choosenLanguage]
-                                          ['text_cashpayment'],
-                                      style: GoogleFonts.roboto(
-                                          fontSize: media.width * eighteen,
-                                          color: textColor),
+                                      languages[choosenLanguage]['text_cashpayment'],
+                                      style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: textColor),
                                     ),
                                     Text(
                                       driverWeeklyEarnings['currency_symbol'] +
-                                          driverWeeklyEarnings[
-                                                  'total_cash_trip_amount']
-                                              .toStringAsFixed(2),
-                                      style: GoogleFonts.roboto(
-                                          fontSize: media.width * eighteen,
-                                          color: textColor),
+                                          driverWeeklyEarnings['total_cash_trip_amount'].toStringAsFixed(2),
+                                      style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: textColor),
                                     ),
                                   ],
                                 ),
@@ -800,23 +659,16 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                   height: media.width * 0.05,
                                 ),
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text(
-                                      languages[choosenLanguage]
-                                          ['text_totalearnings'],
-                                      style: GoogleFonts.roboto(
-                                          fontSize: media.width * eighteen,
-                                          color: buttonColor),
+                                      languages[choosenLanguage]['text_totalearnings'],
+                                      style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: buttonColor),
                                     ),
                                     Text(
                                       driverWeeklyEarnings['currency_symbol'] +
-                                          driverWeeklyEarnings['total_earnings']
-                                              .toStringAsFixed(2),
-                                      style: GoogleFonts.roboto(
-                                          fontSize: media.width * eighteen,
-                                          color: buttonColor),
+                                          driverWeeklyEarnings['total_earnings'].toStringAsFixed(2),
+                                      style: GoogleFonts.roboto(fontSize: media.width * eighteen, color: buttonColor),
                                     ),
                                   ],
                                 ),
@@ -840,38 +692,25 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                           _datePicker();
                                         },
                                         child: Container(
-                                          padding:
-                                              const EdgeInsets.only(bottom: 10),
+                                          padding: const EdgeInsets.only(bottom: 10),
                                           decoration: BoxDecoration(
-                                              border: Border(
-                                                  bottom: BorderSide(
-                                                      color: underline,
-                                                      width: 1.5))),
+                                              border: Border(bottom: BorderSide(color: underline, width: 1.5))),
                                           child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                             children: [
                                               (_fromDate == null)
                                                   ? Text(
-                                                      languages[choosenLanguage]
-                                                          ['text_fromDate'],
+                                                      languages[choosenLanguage]['text_fromDate'],
                                                       style: GoogleFonts.roboto(
-                                                          color: textColor,
-                                                          fontSize:
-                                                              media.width *
-                                                                  sixteen),
+                                                          color: textColor, fontSize: media.width * sixteen),
                                                     )
                                                   : Text(
                                                       _fromDate.toString(),
                                                       style: GoogleFonts.roboto(
-                                                          color: textColor
-                                                              .withOpacity(0.5),
-                                                          fontSize:
-                                                              media.width *
-                                                                  sixteen),
+                                                          color: textColor.withOpacity(0.5),
+                                                          fontSize: media.width * sixteen),
                                                     ),
-                                              const Icon(
-                                                  Icons.date_range_outlined)
+                                              const Icon(Icons.date_range_outlined)
                                             ],
                                           ),
                                         ),
@@ -889,38 +728,25 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                           }
                                         },
                                         child: Container(
-                                          padding:
-                                              const EdgeInsets.only(bottom: 10),
+                                          padding: const EdgeInsets.only(bottom: 10),
                                           decoration: BoxDecoration(
-                                              border: Border(
-                                                  bottom: BorderSide(
-                                                      color: underline,
-                                                      width: 1.5))),
+                                              border: Border(bottom: BorderSide(color: underline, width: 1.5))),
                                           child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                             children: [
                                               (_toDate == null)
                                                   ? Text(
-                                                      languages[choosenLanguage]
-                                                          ['text_toDate'],
+                                                      languages[choosenLanguage]['text_toDate'],
                                                       style: GoogleFonts.roboto(
-                                                          color: textColor,
-                                                          fontSize:
-                                                              media.width *
-                                                                  sixteen),
+                                                          color: textColor, fontSize: media.width * sixteen),
                                                     )
                                                   : Text(
                                                       _toDate.toString(),
                                                       style: GoogleFonts.roboto(
-                                                          color: textColor
-                                                              .withOpacity(0.5),
-                                                          fontSize:
-                                                              media.width *
-                                                                  sixteen),
+                                                          color: textColor.withOpacity(0.5),
+                                                          fontSize: media.width * sixteen),
                                                     ),
-                                              const Icon(
-                                                  Icons.date_range_outlined)
+                                              const Icon(Icons.date_range_outlined)
                                             ],
                                           ),
                                         ),
@@ -934,15 +760,13 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                               driverReportEarnings.clear();
                                               _isLoading = true;
                                             });
-                                            await driverEarningReport(
-                                                _fromDate, _toDate);
+                                            await driverEarningReport(_fromDate, _toDate);
                                             setState(() {
                                               _isLoading = false;
                                             });
                                           },
                                           width: media.width * 0.5,
-                                          text: languages[choosenLanguage]
-                                              ['text_confirm']),
+                                          text: languages[choosenLanguage]['text_confirm']),
                                       SizedBox(
                                         height: media.width * 0.05,
                                       ),
@@ -950,41 +774,27 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                           ? Column(
                                               children: [
                                                 Text(
-                                                  driverReportEarnings[
-                                                          'from_date'] +
+                                                  driverReportEarnings['from_date'] +
                                                       ' - ' +
-                                                      driverReportEarnings[
-                                                          'to_date'],
+                                                      driverReportEarnings['to_date'],
                                                   style: GoogleFonts.roboto(
-                                                      fontSize:
-                                                          media.width * fifteen,
-                                                      color: hintColor),
+                                                      fontSize: media.width * fifteen, color: hintColor),
                                                 ),
                                                 SizedBox(
                                                   height: media.width * 0.025,
                                                 ),
                                                 Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
+                                                  mainAxisAlignment: MainAxisAlignment.center,
                                                   children: [
                                                     Text(
-                                                      driverReportEarnings[
-                                                          'currency_symbol'],
+                                                      driverReportEarnings['currency_symbol'],
                                                       style: GoogleFonts.roboto(
-                                                          fontSize:
-                                                              media.width *
-                                                                  eighteen,
-                                                          color: textColor),
+                                                          fontSize: media.width * eighteen, color: textColor),
                                                     ),
                                                     Text(
-                                                      driverReportEarnings[
-                                                              'total_earnings']
-                                                          .toStringAsFixed(2),
+                                                      driverReportEarnings['total_earnings'].toStringAsFixed(2),
                                                       style: GoogleFonts.roboto(
-                                                          fontSize:
-                                                              media.width *
-                                                                  eighteen,
-                                                          color: textColor),
+                                                          fontSize: media.width * eighteen, color: textColor),
                                                     ),
                                                   ],
                                                 ),
@@ -992,69 +802,42 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                                   height: media.width * 0.05,
                                                 ),
                                                 Container(
-                                                  padding: EdgeInsets.all(
-                                                      media.width * 0.05),
+                                                  padding: EdgeInsets.all(media.width * 0.05),
                                                   width: media.width * 0.9,
                                                   decoration: BoxDecoration(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              12),
-                                                      border: Border.all(
-                                                          color: borderLines,
-                                                          width: 1.2)),
+                                                      borderRadius: BorderRadius.circular(12),
+                                                      border: Border.all(color: borderLines, width: 1.2)),
                                                   child: Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceBetween,
+                                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                     children: [
                                                       Column(
                                                         children: [
                                                           Container(
-                                                            width: media.width *
-                                                                0.17,
-                                                            alignment: Alignment
-                                                                .center,
+                                                            width: media.width * 0.17,
+                                                            alignment: Alignment.center,
                                                             child: Text(
-                                                              languages[
-                                                                      choosenLanguage]
-                                                                  [
-                                                                  'text_trips'],
+                                                              languages[choosenLanguage]['text_trips'],
                                                               style: GoogleFonts.roboto(
-                                                                  fontSize: media
-                                                                          .width *
-                                                                      sixteen,
-                                                                  color:
-                                                                      hintColor),
+                                                                  fontSize: media.width * sixteen, color: hintColor),
                                                             ),
                                                           ),
                                                           SizedBox(
-                                                            height:
-                                                                media.width *
-                                                                    0.015,
+                                                            height: media.width * 0.015,
                                                           ),
                                                           Container(
-                                                            width: media.width *
-                                                                0.17,
-                                                            alignment: Alignment
-                                                                .center,
+                                                            width: media.width * 0.17,
+                                                            alignment: Alignment.center,
                                                             child: Text(
-                                                              driverReportEarnings[
-                                                                      'total_trips_count']
-                                                                  .toString(),
+                                                              driverReportEarnings['total_trips_count'].toString(),
                                                               style: GoogleFonts.roboto(
-                                                                  fontSize: media
-                                                                          .width *
-                                                                      sixteen,
-                                                                  color:
-                                                                      textColor),
+                                                                  fontSize: media.width * sixteen, color: textColor),
                                                             ),
                                                           ),
                                                         ],
                                                       ),
                                                       Container(
                                                         width: 1,
-                                                        height:
-                                                            media.width * 0.1,
+                                                        height: media.width * 0.1,
                                                         color: borderLines,
                                                       ),
                                                       // Column(
@@ -1110,92 +893,55 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                                       Column(
                                                         children: [
                                                           Container(
-                                                            width: media.width *
-                                                                0.17,
-                                                            alignment: Alignment
-                                                                .center,
+                                                            width: media.width * 0.17,
+                                                            alignment: Alignment.center,
                                                             child: Text(
-                                                              languages[
-                                                                      choosenLanguage]
-                                                                  [
-                                                                  'text_enable_wallet'],
+                                                              languages[choosenLanguage]['text_enable_wallet'],
                                                               style: GoogleFonts.roboto(
-                                                                  fontSize: media
-                                                                          .width *
-                                                                      sixteen,
-                                                                  color:
-                                                                      hintColor),
+                                                                  fontSize: media.width * sixteen, color: hintColor),
                                                             ),
                                                           ),
                                                           SizedBox(
-                                                            height:
-                                                                media.width *
-                                                                    0.015,
+                                                            height: media.width * 0.015,
                                                           ),
                                                           Container(
-                                                            width: media.width *
-                                                                0.17,
-                                                            alignment: Alignment
-                                                                .center,
+                                                            width: media.width * 0.17,
+                                                            alignment: Alignment.center,
                                                             child: Text(
-                                                              driverReportEarnings[
-                                                                      'total_wallet_trip_count']
+                                                              driverReportEarnings['total_wallet_trip_count']
                                                                   .toString(),
                                                               style: GoogleFonts.roboto(
-                                                                  fontSize: media
-                                                                          .width *
-                                                                      sixteen,
-                                                                  color:
-                                                                      textColor),
+                                                                  fontSize: media.width * sixteen, color: textColor),
                                                             ),
                                                           ),
                                                         ],
                                                       ),
                                                       Container(
                                                         width: 1,
-                                                        height:
-                                                            media.width * 0.1,
+                                                        height: media.width * 0.1,
                                                         color: borderLines,
                                                       ),
                                                       Column(
                                                         children: [
                                                           Container(
-                                                            width: media.width *
-                                                                0.17,
-                                                            alignment: Alignment
-                                                                .center,
+                                                            width: media.width * 0.17,
+                                                            alignment: Alignment.center,
                                                             child: Text(
-                                                              languages[
-                                                                      choosenLanguage]
-                                                                  ['text_cash'],
+                                                              languages[choosenLanguage]['text_cash'],
                                                               style: GoogleFonts.roboto(
-                                                                  fontSize: media
-                                                                          .width *
-                                                                      sixteen,
-                                                                  color:
-                                                                      hintColor),
+                                                                  fontSize: media.width * sixteen, color: hintColor),
                                                             ),
                                                           ),
                                                           SizedBox(
-                                                            height:
-                                                                media.width *
-                                                                    0.015,
+                                                            height: media.width * 0.015,
                                                           ),
                                                           Container(
-                                                            width: media.width *
-                                                                0.17,
-                                                            alignment: Alignment
-                                                                .center,
+                                                            width: media.width * 0.17,
+                                                            alignment: Alignment.center,
                                                             child: Text(
-                                                              driverReportEarnings[
-                                                                      'total_cash_trip_count']
-                                                                  .toString(),
+                                                              driverReportEarnings['total_cash_trip_count'].toString(),
                                                               style: GoogleFonts.roboto(
-                                                                  fontSize: media
-                                                                          .width *
-                                                                      sixteen,
-                                                                  color:
-                                                                      textColor),
+                                                                  fontSize: media.width * sixteen, color: textColor),
                                                             ),
                                                           ),
                                                         ],
@@ -1207,28 +953,17 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                                   height: media.width * 0.1,
                                                 ),
                                                 Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
+                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                   children: [
                                                     Text(
-                                                      languages[choosenLanguage]
-                                                          ['text_tripkm'],
+                                                      languages[choosenLanguage]['text_tripkm'],
                                                       style: GoogleFonts.roboto(
-                                                          fontSize:
-                                                              media.width *
-                                                                  eighteen,
-                                                          color: textColor),
+                                                          fontSize: media.width * eighteen, color: textColor),
                                                     ),
                                                     Text(
-                                                      driverReportEarnings[
-                                                              'total_trip_kms']
-                                                          .toString(),
+                                                      driverReportEarnings['total_trip_kms'].toString(),
                                                       style: GoogleFonts.roboto(
-                                                          fontSize:
-                                                              media.width *
-                                                                  eighteen,
-                                                          color: textColor),
+                                                          fontSize: media.width * eighteen, color: textColor),
                                                     )
                                                   ],
                                                 ),
@@ -1236,32 +971,19 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                                   height: media.width * 0.05,
                                                 ),
                                                 Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
+                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                   children: [
                                                     Text(
-                                                      languages[choosenLanguage]
-                                                          [
-                                                          'text_walletpayment'],
+                                                      languages[choosenLanguage]['text_walletpayment'],
                                                       style: GoogleFonts.roboto(
-                                                          fontSize:
-                                                              media.width *
-                                                                  eighteen,
-                                                          color: textColor),
+                                                          fontSize: media.width * eighteen, color: textColor),
                                                     ),
                                                     Text(
-                                                      driverReportEarnings[
-                                                              'currency_symbol'] +
-                                                          driverReportEarnings[
-                                                                  'total_wallet_trip_amount']
-                                                              .toStringAsFixed(
-                                                                  2),
+                                                      driverReportEarnings['currency_symbol'] +
+                                                          driverReportEarnings['total_wallet_trip_amount']
+                                                              .toStringAsFixed(2),
                                                       style: GoogleFonts.roboto(
-                                                          fontSize:
-                                                              media.width *
-                                                                  eighteen,
-                                                          color: textColor),
+                                                          fontSize: media.width * eighteen, color: textColor),
                                                     )
                                                   ],
                                                 ),
@@ -1269,31 +991,19 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                                   height: media.width * 0.05,
                                                 ),
                                                 Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
+                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                   children: [
                                                     Text(
-                                                      languages[choosenLanguage]
-                                                          ['text_cashpayment'],
+                                                      languages[choosenLanguage]['text_cashpayment'],
                                                       style: GoogleFonts.roboto(
-                                                          fontSize:
-                                                              media.width *
-                                                                  eighteen,
-                                                          color: textColor),
+                                                          fontSize: media.width * eighteen, color: textColor),
                                                     ),
                                                     Text(
-                                                      driverReportEarnings[
-                                                              'currency_symbol'] +
-                                                          driverReportEarnings[
-                                                                  'total_cash_trip_amount']
-                                                              .toStringAsFixed(
-                                                                  2),
+                                                      driverReportEarnings['currency_symbol'] +
+                                                          driverReportEarnings['total_cash_trip_amount']
+                                                              .toStringAsFixed(2),
                                                       style: GoogleFonts.roboto(
-                                                          fontSize:
-                                                              media.width *
-                                                                  eighteen,
-                                                          color: textColor),
+                                                          fontSize: media.width * eighteen, color: textColor),
                                                     ),
                                                   ],
                                                 ),
@@ -1309,32 +1019,18 @@ class _DriverEarningsState extends State<DriverEarnings> {
                                                   height: media.width * 0.05,
                                                 ),
                                                 Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
+                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                   children: [
                                                     Text(
-                                                      languages[choosenLanguage]
-                                                          [
-                                                          'text_totalearnings'],
+                                                      languages[choosenLanguage]['text_totalearnings'],
                                                       style: GoogleFonts.roboto(
-                                                          fontSize:
-                                                              media.width *
-                                                                  eighteen,
-                                                          color: buttonColor),
+                                                          fontSize: media.width * eighteen, color: buttonColor),
                                                     ),
                                                     Text(
-                                                      driverReportEarnings[
-                                                              'currency_symbol'] +
-                                                          driverReportEarnings[
-                                                                  'total_earnings']
-                                                              .toStringAsFixed(
-                                                                  2),
+                                                      driverReportEarnings['currency_symbol'] +
+                                                          driverReportEarnings['total_earnings'].toStringAsFixed(2),
                                                       style: GoogleFonts.roboto(
-                                                          fontSize:
-                                                              media.width *
-                                                                  eighteen,
-                                                          color: buttonColor),
+                                                          fontSize: media.width * eighteen, color: buttonColor),
                                                     ),
                                                   ],
                                                 ),
@@ -1363,9 +1059,7 @@ class _DriverEarningsState extends State<DriverEarnings> {
                     }))
                 : Container(),
             //loader
-            (_isLoading == true)
-                ? const Positioned(child: Loading())
-                : Container()
+            (_isLoading == true) ? const Positioned(child: Loading()) : Container()
           ],
         ),
       ),

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/loadingPage/loading.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/pages/vehicleInformations/upload_docs.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/loadingPage/loading.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/pages/vehicleInformations/upload_docs.dart';
+import 'package:taxidex_driver/styles/styles.dart';
+import 'package:taxidex_driver/translation/translation.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 
 class Referral extends StatefulWidget {
   const Referral({Key? key}) : super(key: key);
@@ -23,8 +23,7 @@ class _ReferralState extends State<Referral> {
   TextEditingController controller = TextEditingController();
 
   navigate() {
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => Docs()));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Docs()));
   }
 
   @override
@@ -39,14 +38,11 @@ class _ReferralState extends State<Referral> {
 
     return Material(
       child: Directionality(
-        textDirection: (languageDirection == 'rtl')
-            ? TextDirection.rtl
-            : TextDirection.ltr,
+        textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
         child: Stack(
           children: [
             Container(
-              padding: EdgeInsets.only(
-                  left: media.width * 0.08, right: media.width * 0.08),
+              padding: EdgeInsets.only(left: media.width * 0.08, right: media.width * 0.08),
               height: media.height * 1,
               width: media.width * 1,
               color: page,
@@ -66,9 +62,7 @@ class _ReferralState extends State<Referral> {
                       child: Text(
                         languages[choosenLanguage]['text_apply_referral'],
                         style: GoogleFonts.roboto(
-                            fontSize: media.width * twenty,
-                            color: textColor,
-                            fontWeight: FontWeight.bold),
+                            fontSize: media.width * twenty, color: textColor, fontWeight: FontWeight.bold),
                       )),
                   const SizedBox(height: 10),
                   InputField(
@@ -86,9 +80,7 @@ class _ReferralState extends State<Referral> {
                           margin: EdgeInsets.only(top: media.height * 0.02),
                           child: Text(
                             _error,
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * sixteen,
-                                color: Colors.red),
+                            style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: Colors.red),
                           ),
                         )
                       : Container(),
@@ -104,10 +96,7 @@ class _ReferralState extends State<Referral> {
                             FocusManager.instance.primaryFocus?.unfocus();
                             _error = '';
 
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Docs()));
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Docs()));
                           },
                           text: languages[choosenLanguage]['text_skip']),
                       //apply button
@@ -124,8 +113,7 @@ class _ReferralState extends State<Referral> {
                               navigate();
                             } else {
                               setState(() {
-                                _error = languages[choosenLanguage]
-                                    ['text_referral_code'];
+                                _error = languages[choosenLanguage]['text_referral_code'];
                               });
                             }
                             setState(() {
@@ -134,9 +122,7 @@ class _ReferralState extends State<Referral> {
                           }
                         },
                         text: languages[choosenLanguage]['text_apply'],
-                        color: (controller.text.isNotEmpty)
-                            ? buttonColor
-                            : Colors.grey,
+                        color: (controller.text.isNotEmpty) ? buttonColor : Colors.grey,
                       )
                     ],
                   )
@@ -158,9 +144,7 @@ class _ReferralState extends State<Referral> {
                 : Container(),
 
             //loader
-            (_loading == true)
-                ? const Positioned(top: 0, child: Loading())
-                : Container()
+            (_loading == true) ? const Positioned(top: 0, child: Loading()) : Container()
           ],
         ),
       ),

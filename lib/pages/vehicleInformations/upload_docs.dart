@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/loadingPage/loading.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/pages/vehicleInformations/docs_onprocess.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/loadingPage/loading.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/pages/vehicleInformations/docs_onprocess.dart';
+import 'package:taxidex_driver/styles/styles.dart';
+import 'package:taxidex_driver/translation/translation.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -58,17 +58,14 @@ class _DocsState extends State<Docs> {
       },
       child: Material(
         child: Directionality(
-          textDirection: (languageDirection == 'rtl')
-              ? TextDirection.rtl
-              : TextDirection.ltr,
+          textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
           child: Stack(
             children: [
               Container(
                 padding: EdgeInsets.only(
                     left: media.width * 0.08,
                     right: media.width * 0.08,
-                    top: media.width * 0.05 +
-                        MediaQuery.of(context).padding.top),
+                    top: media.width * 0.05 + MediaQuery.of(context).padding.top),
                 height: media.height * 1,
                 width: media.width * 1,
                 color: page,
@@ -98,9 +95,7 @@ class _DocsState extends State<Docs> {
                         child: Text(
                           languages[choosenLanguage]['text_upload_docs'],
                           style: GoogleFonts.roboto(
-                              fontSize: media.width * twenty,
-                              color: textColor,
-                              fontWeight: FontWeight.bold),
+                              fontSize: media.width * twenty, color: textColor, fontWeight: FontWeight.bold),
                         )),
                     const SizedBox(height: 10),
                     (documentsNeeded.isNotEmpty)
@@ -113,217 +108,147 @@ class _DocsState extends State<Docs> {
                                       return MapEntry(
                                           i,
                                           Container(
-                                              margin: const EdgeInsets.only(
-                                                  top: 10),
+                                              margin: const EdgeInsets.only(top: 10),
                                               padding: const EdgeInsets.all(10),
                                               decoration: BoxDecoration(
-                                                  border: Border.all(
-                                                      color: underline,
-                                                      width: 1),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          12)),
+                                                  border: Border.all(color: underline, width: 1),
+                                                  borderRadius: BorderRadius.circular(12)),
                                               child: InkWell(
                                                 onTap: () async {
-                                                  docsId =
-                                                      documentsNeeded[i]['id'];
+                                                  docsId = documentsNeeded[i]['id'];
                                                   choosenDocs = i;
-                                                  await Navigator.push(
-                                                      context,
-                                                      MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              const UploadDocs()));
+                                                  await Navigator.push(context,
+                                                      MaterialPageRoute(builder: (context) => const UploadDocs()));
 
                                                   setState(() {});
                                                 },
-                                                child: (documentsNeeded[i]
-                                                            ['is_uploaded'] ==
-                                                        false)
+                                                child: (documentsNeeded[i]['is_uploaded'] == false)
                                                     ? Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
+                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                         children: [
                                                           Column(
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
+                                                            crossAxisAlignment: CrossAxisAlignment.start,
                                                             children: [
                                                               SizedBox(
-                                                                width: media
-                                                                        .width *
-                                                                    0.6,
+                                                                width: media.width * 0.6,
                                                                 child: Text(
-                                                                  (languages[choosenLanguage][documentsNeeded[i]['name']
-                                                                              .toString()] !=
+                                                                  (languages[choosenLanguage]
+                                                                              [documentsNeeded[i]['name'].toString()] !=
                                                                           null)
-                                                                      ? languages[
-                                                                          choosenLanguage][documentsNeeded[i]
-                                                                              [
-                                                                              'name']
-                                                                          .toString()]
-                                                                      : documentsNeeded[i]
-                                                                              [
-                                                                              'name']
-                                                                          .toString(),
+                                                                      ? languages[choosenLanguage]
+                                                                          [documentsNeeded[i]['name'].toString()]
+                                                                      : documentsNeeded[i]['name'].toString(),
                                                                   style: GoogleFonts.roboto(
-                                                                      fontSize:
-                                                                          media.width *
-                                                                              twenty,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .bold),
+                                                                      fontSize: media.width * twenty,
+                                                                      fontWeight: FontWeight.bold),
                                                                 ),
                                                               ),
-                                                              const SizedBox(
-                                                                  height: 10),
+                                                              const SizedBox(height: 10),
                                                               SizedBox(
-                                                                width: media
-                                                                        .width *
-                                                                    0.6,
+                                                                width: media.width * 0.6,
                                                                 child: Text(
-                                                                  (languages[choosenLanguage][documentsNeeded[i]['document_status_string']
+                                                                  (languages[choosenLanguage][documentsNeeded[i]
+                                                                                  ['document_status_string']
                                                                               .toString()] !=
                                                                           null)
-                                                                      ? languages[
-                                                                          choosenLanguage][documentsNeeded[i]
-                                                                              [
-                                                                              'document_status_string']
+                                                                      ? languages[choosenLanguage][documentsNeeded[i]
+                                                                              ['document_status_string']
                                                                           .toString()]
-                                                                      : documentsNeeded[i]
-                                                                              [
-                                                                              'document_status_string']
+                                                                      : documentsNeeded[i]['document_status_string']
                                                                           .toString(),
-                                                                  style:
-                                                                      GoogleFonts
-                                                                          .roboto(
-                                                                    fontSize: media
-                                                                            .width *
-                                                                        sixteen,
-                                                                    color:
-                                                                        notUploadedColor,
+                                                                  style: GoogleFonts.roboto(
+                                                                    fontSize: media.width * sixteen,
+                                                                    color: notUploadedColor,
                                                                   ),
                                                                 ),
                                                               ),
                                                             ],
                                                           ),
                                                           RotatedBox(
-                                                            quarterTurns:
-                                                                (languageDirection ==
-                                                                        'rtl')
-                                                                    ? 2
-                                                                    : 0,
+                                                            quarterTurns: (languageDirection == 'rtl') ? 2 : 0,
                                                             child: Image.asset(
                                                               'assets/images/chevronLeft.png',
-                                                              width:
-                                                                  media.width *
-                                                                      0.075,
+                                                              width: media.width * 0.075,
                                                             ),
                                                           )
                                                         ],
                                                       )
                                                     : Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
+                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                         children: [
                                                           Row(
                                                             children: [
                                                               Container(
-                                                                height: media
-                                                                        .width *
-                                                                    0.12,
-                                                                width: media
-                                                                        .width *
-                                                                    0.12,
+                                                                height: media.width * 0.12,
+                                                                width: media.width * 0.12,
                                                                 decoration: BoxDecoration(
-                                                                    shape: BoxShape
-                                                                        .circle,
+                                                                    shape: BoxShape.circle,
                                                                     image: DecorationImage(
-                                                                        image: NetworkImage(documentsNeeded[i]['driver_document']['data']
-                                                                            [
-                                                                            'document']),
-                                                                        fit: BoxFit
-                                                                            .cover)),
-                                                                margin: EdgeInsets.only(
-                                                                    bottom: media
-                                                                            .width *
-                                                                        0.02),
+                                                                        image: NetworkImage(documentsNeeded[i]
+                                                                            ['driver_document']['data']['document']),
+                                                                        fit: BoxFit.cover)),
+                                                                margin: EdgeInsets.only(bottom: media.width * 0.02),
                                                               ),
                                                               SizedBox(
-                                                                width: media
-                                                                        .width *
-                                                                    0.01,
+                                                                width: media.width * 0.01,
                                                               ),
                                                               Column(
-                                                                crossAxisAlignment:
-                                                                    CrossAxisAlignment
-                                                                        .start,
+                                                                crossAxisAlignment: CrossAxisAlignment.start,
                                                                 children: [
                                                                   SizedBox(
-                                                                    width: media
-                                                                            .width *
-                                                                        0.57,
+                                                                    width: media.width * 0.57,
                                                                     child: Text(
-                                                                      (languages[choosenLanguage][documentsNeeded[i]['name'].toString()] !=
+                                                                      (languages[choosenLanguage][documentsNeeded[i]
+                                                                                      ['name']
+                                                                                  .toString()] !=
                                                                               null)
-                                                                          ? languages[choosenLanguage][documentsNeeded[i]['name']
-                                                                              .toString()]
-                                                                          : documentsNeeded[i]['name']
-                                                                              .toString(),
+                                                                          ? languages[choosenLanguage]
+                                                                              [documentsNeeded[i]['name'].toString()]
+                                                                          : documentsNeeded[i]['name'].toString(),
                                                                       style: GoogleFonts.roboto(
-                                                                          fontSize: media.width *
-                                                                              sixteen,
-                                                                          fontWeight:
-                                                                              FontWeight.bold),
+                                                                          fontSize: media.width * sixteen,
+                                                                          fontWeight: FontWeight.bold),
                                                                     ),
                                                                   ),
-                                                                  const SizedBox(
-                                                                      height:
-                                                                          10),
+                                                                  const SizedBox(height: 10),
                                                                   SizedBox(
-                                                                    width: media
-                                                                            .width *
-                                                                        0.57,
+                                                                    width: media.width * 0.57,
                                                                     child: Text(
-                                                                      (languages[choosenLanguage][documentsNeeded[i]['document_status_string'].toString()] !=
+                                                                      (languages[choosenLanguage][documentsNeeded[i]
+                                                                                      ['document_status_string']
+                                                                                  .toString()] !=
                                                                               null)
-                                                                          ? languages[choosenLanguage][documentsNeeded[i]['document_status_string']
-                                                                              .toString()]
+                                                                          ? languages[choosenLanguage][
+                                                                              documentsNeeded[i]
+                                                                                      ['document_status_string']
+                                                                                  .toString()]
                                                                           : documentsNeeded[i]['document_status_string']
                                                                               .toString(),
-                                                                      style: GoogleFonts
-                                                                          .roboto(
-                                                                        fontSize:
-                                                                            media.width *
-                                                                                twelve,
-                                                                        color: (documentsNeeded[i]['driver_document']['data']['comment'] ==
+                                                                      style: GoogleFonts.roboto(
+                                                                        fontSize: media.width * twelve,
+                                                                        color: (documentsNeeded[i]['driver_document']
+                                                                                    ['data']['comment'] ==
                                                                                 null)
                                                                             ? notUploadedColor
                                                                             : verifyDeclined,
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                  (documentsNeeded[i]['driver_document']['data'][
-                                                                              'comment'] !=
+                                                                  (documentsNeeded[i]['driver_document']['data']
+                                                                              ['comment'] !=
                                                                           null)
                                                                       ? Container(
-                                                                          width: media.width *
-                                                                              0.57,
-                                                                          padding: EdgeInsets.only(
-                                                                              top: media.width *
-                                                                                  0.025),
-                                                                          child:
-                                                                              Text(
-                                                                            documentsNeeded[i]['driver_document']['data']['comment'],
-                                                                            style:
-                                                                                GoogleFonts.roboto(
+                                                                          width: media.width * 0.57,
+                                                                          padding:
+                                                                              EdgeInsets.only(top: media.width * 0.025),
+                                                                          child: Text(
+                                                                            documentsNeeded[i]['driver_document']
+                                                                                ['data']['comment'],
+                                                                            style: GoogleFonts.roboto(
                                                                               fontSize: media.width * twelve,
                                                                             ),
-                                                                            maxLines:
-                                                                                4,
-                                                                            overflow:
-                                                                                TextOverflow.ellipsis,
+                                                                            maxLines: 4,
+                                                                            overflow: TextOverflow.ellipsis,
                                                                           ))
                                                                       : Container()
                                                                 ],
@@ -331,16 +256,10 @@ class _DocsState extends State<Docs> {
                                                             ],
                                                           ),
                                                           RotatedBox(
-                                                            quarterTurns:
-                                                                (languageDirection ==
-                                                                        'rtl')
-                                                                    ? 2
-                                                                    : 0,
+                                                            quarterTurns: (languageDirection == 'rtl') ? 2 : 0,
                                                             child: Image.asset(
                                                               'assets/images/chevronLeft.png',
-                                                              width:
-                                                                  media.width *
-                                                                      0.075,
+                                                              width: media.width * 0.075,
                                                             ),
                                                           )
                                                         ],
@@ -368,12 +287,8 @@ class _DocsState extends State<Docs> {
                                     await getUserDetails();
                                     pop();
                                   } else {
-                                    Navigator.pushAndRemoveUntil(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const DocsProcess()),
-                                        (route) => false);
+                                    Navigator.pushAndRemoveUntil(context,
+                                        MaterialPageRoute(builder: (context) => const DocsProcess()), (route) => false);
                                   }
                                 },
                                 text: languages[choosenLanguage]['text_submit'])
@@ -396,9 +311,7 @@ class _DocsState extends State<Docs> {
                         },
                       ))
                   : Container(),
-              (_loaded == false)
-                  ? const Positioned(top: 0, child: Loading())
-                  : Container()
+              (_loaded == false) ? const Positioned(top: 0, child: Loading()) : Container()
             ],
           ),
         ),
@@ -432,11 +345,8 @@ class _UploadDocsState extends State<UploadDocs> {
 
 //date picker
   _datePicker() async {
-    DateTime? picker = await showDatePicker(
-        context: context,
-        initialDate: current,
-        firstDate: current,
-        lastDate: DateTime(2100));
+    DateTime? picker =
+        await showDatePicker(context: context, initialDate: current, firstDate: current, lastDate: DateTime(2100));
     if (picker != null) {
       setState(() {
         expDate = picker;
@@ -512,9 +422,7 @@ class _UploadDocsState extends State<UploadDocs> {
     var media = MediaQuery.of(context).size;
     return Material(
       child: Directionality(
-        textDirection: (languageDirection == 'rtl')
-            ? TextDirection.rtl
-            : TextDirection.ltr,
+        textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
         child: Stack(
           children: [
             Container(
@@ -553,19 +461,15 @@ class _UploadDocsState extends State<UploadDocs> {
                       height: media.width * 0.5,
                       width: media.width * 0.5,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          border: Border.all(color: buttonColor, width: 1.2)),
+                          borderRadius: BorderRadius.circular(12), border: Border.all(color: buttonColor, width: 1.2)),
                       child: (imageFile == null)
                           ? Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  languages[choosenLanguage]
-                                      ['text_upload_docs'],
+                                  languages[choosenLanguage]['text_upload_docs'],
                                   style: GoogleFonts.roboto(
-                                      fontSize: media.width * fifteen,
-                                      fontWeight: FontWeight.w600,
-                                      color: textColor),
+                                      fontSize: media.width * fifteen, fontWeight: FontWeight.w600, color: textColor),
                                   textAlign: TextAlign.center,
                                 ),
                                 SizedBox(
@@ -597,26 +501,20 @@ class _UploadDocsState extends State<UploadDocs> {
                             },
                             child: Container(
                               padding: const EdgeInsets.only(bottom: 10),
-                              decoration: BoxDecoration(
-                                  border: Border(
-                                      bottom: BorderSide(
-                                          color: underline, width: 1.5))),
+                              decoration:
+                                  BoxDecoration(border: Border(bottom: BorderSide(color: underline, width: 1.5))),
                               child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   (date != '')
                                       ? Text(
                                           date,
-                                          style: GoogleFonts.roboto(
-                                              color: textColor,
-                                              fontSize: media.width * sixteen),
+                                          style: GoogleFonts.roboto(color: textColor, fontSize: media.width * sixteen),
                                         )
                                       : Text(
                                           'Select Date',
                                           style: GoogleFonts.roboto(
-                                              color: textColor.withOpacity(0.5),
-                                              fontSize: media.width * sixteen),
+                                              color: textColor.withOpacity(0.5), fontSize: media.width * sixteen),
                                         ),
                                   const Icon(Icons.date_range_outlined)
                                 ],
@@ -630,16 +528,11 @@ class _UploadDocsState extends State<UploadDocs> {
                           padding: EdgeInsets.only(top: media.height * 0.02),
                           child: InputField(
                             text: (languages[choosenLanguage][documentsNeeded
-                                        .firstWhere(
-                                            (element) =>
-                                                element['id'] == docsId)[
-                                            'identify_number_locale_key']
+                                        .firstWhere((element) => element['id'] == docsId)['identify_number_locale_key']
                                         .toString()] !=
                                     null)
-                                ? languages[choosenLanguage][
-                                    documentsNeeded[docsId]
-                                            ['identify_number_locale_key']
-                                        .toString()]
+                                ? languages[choosenLanguage]
+                                    [documentsNeeded[docsId]['identify_number_locale_key'].toString()]
                                 : 'Identification Number',
                             textController: idNumber,
                             onTap: (val) {
@@ -660,20 +553,12 @@ class _UploadDocsState extends State<UploadDocs> {
                           margin: const EdgeInsets.only(top: 20),
                           child: Text(
                             _error,
-                            style: GoogleFonts.roboto(
-                                fontSize: media.width * sixteen,
-                                color: Colors.red),
+                            style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: Colors.red),
                           )),
                   SizedBox(height: media.height * 0.04),
-                  (imageFile != null &&
-                              (documentsNeeded[choosenDocs]
-                                      ['has_identify_number'] ==
-                                  true)
+                  (imageFile != null && (documentsNeeded[choosenDocs]['has_identify_number'] == true)
                           ? idNumber.text.isNotEmpty
-                          : 1 + 1 == 2 &&
-                                  (documentsNeeded[choosenDocs]
-                                          ['has_expiry_date'] ==
-                                      true)
+                          : 1 + 1 == 2 && (documentsNeeded[choosenDocs]['has_expiry_date'] == true)
                               ? date != ''
                               : 1 + 1 == 2)
                       ? Button(
@@ -726,8 +611,7 @@ class _UploadDocsState extends State<UploadDocs> {
                               width: media.width * 1,
                               decoration: BoxDecoration(
                                   borderRadius: const BorderRadius.only(
-                                      topLeft: Radius.circular(25),
-                                      topRight: Radius.circular(25)),
+                                      topLeft: Radius.circular(25), topRight: Radius.circular(25)),
                                   border: Border.all(
                                     color: borderLines,
                                     width: 1.2,
@@ -739,8 +623,7 @@ class _UploadDocsState extends State<UploadDocs> {
                                     height: media.width * 0.02,
                                     width: media.width * 0.15,
                                     decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(
-                                          media.width * 0.01),
+                                      borderRadius: BorderRadius.circular(media.width * 0.01),
                                       color: Colors.grey,
                                     ),
                                   ),
@@ -748,8 +631,7 @@ class _UploadDocsState extends State<UploadDocs> {
                                     height: media.width * 0.05,
                                   ),
                                   Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                     children: [
                                       Column(
                                         children: [
@@ -761,12 +643,8 @@ class _UploadDocsState extends State<UploadDocs> {
                                                 height: media.width * 0.171,
                                                 width: media.width * 0.171,
                                                 decoration: BoxDecoration(
-                                                    border: Border.all(
-                                                        color: borderLines,
-                                                        width: 1.2),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            12)),
+                                                    border: Border.all(color: borderLines, width: 1.2),
+                                                    borderRadius: BorderRadius.circular(12)),
                                                 child: Icon(
                                                   Icons.camera_alt_outlined,
                                                   size: media.width * 0.064,
@@ -776,11 +654,9 @@ class _UploadDocsState extends State<UploadDocs> {
                                             height: media.width * 0.01,
                                           ),
                                           Text(
-                                            languages[choosenLanguage]
-                                                ['text_camera'],
+                                            languages[choosenLanguage]['text_camera'],
                                             style: GoogleFonts.roboto(
-                                                fontSize: media.width * ten,
-                                                color: const Color(0xff666666)),
+                                                fontSize: media.width * ten, color: const Color(0xff666666)),
                                           )
                                         ],
                                       ),
@@ -794,12 +670,8 @@ class _UploadDocsState extends State<UploadDocs> {
                                                 height: media.width * 0.171,
                                                 width: media.width * 0.171,
                                                 decoration: BoxDecoration(
-                                                    border: Border.all(
-                                                        color: borderLines,
-                                                        width: 1.2),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            12)),
+                                                    border: Border.all(color: borderLines, width: 1.2),
+                                                    borderRadius: BorderRadius.circular(12)),
                                                 child: Icon(
                                                   Icons.image_outlined,
                                                   size: media.width * 0.064,
@@ -809,11 +681,9 @@ class _UploadDocsState extends State<UploadDocs> {
                                             height: media.width * 0.01,
                                           ),
                                           Text(
-                                            languages[choosenLanguage]
-                                                ['text_gallery'],
+                                            languages[choosenLanguage]['text_gallery'],
                                             style: GoogleFonts.roboto(
-                                                fontSize: media.width * ten,
-                                                color: const Color(0xff666666)),
+                                                fontSize: media.width * ten, color: const Color(0xff666666)),
                                           )
                                         ],
                                       ),
@@ -853,8 +723,7 @@ class _UploadDocsState extends State<UploadDocs> {
                                 child: Container(
                                   height: media.width * 0.1,
                                   width: media.width * 0.1,
-                                  decoration: BoxDecoration(
-                                      shape: BoxShape.circle, color: page),
+                                  decoration: BoxDecoration(shape: BoxShape.circle, color: page),
                                   child: const Icon(Icons.cancel_outlined),
                                 ),
                               ),
@@ -867,42 +736,30 @@ class _UploadDocsState extends State<UploadDocs> {
                         Container(
                           padding: EdgeInsets.all(media.width * 0.05),
                           width: media.width * 0.9,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
-                              color: page,
-                              boxShadow: [
-                                BoxShadow(
-                                    blurRadius: 2.0,
-                                    spreadRadius: 2.0,
-                                    color: Colors.black.withOpacity(0.2))
-                              ]),
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: page, boxShadow: [
+                            BoxShadow(blurRadius: 2.0, spreadRadius: 2.0, color: Colors.black.withOpacity(0.2))
+                          ]),
                           child: Column(
                             children: [
                               SizedBox(
                                   width: media.width * 0.8,
                                   child: Text(
                                     (_permission == 'noPhotos')
-                                        ? languages[choosenLanguage]
-                                            ['text_open_photos_setting']
-                                        : languages[choosenLanguage]
-                                            ['text_open_camera_setting'],
+                                        ? languages[choosenLanguage]['text_open_photos_setting']
+                                        : languages[choosenLanguage]['text_open_camera_setting'],
                                     style: GoogleFonts.roboto(
-                                        fontSize: media.width * sixteen,
-                                        color: textColor,
-                                        fontWeight: FontWeight.w600),
+                                        fontSize: media.width * sixteen, color: textColor, fontWeight: FontWeight.w600),
                                   )),
                               SizedBox(height: media.width * 0.05),
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   InkWell(
                                       onTap: () async {
                                         await openAppSettings();
                                       },
                                       child: Text(
-                                        languages[choosenLanguage]
-                                            ['text_open_settings'],
+                                        languages[choosenLanguage]['text_open_settings'],
                                         style: GoogleFonts.roboto(
                                             fontSize: media.width * sixteen,
                                             color: buttonColor,
@@ -910,9 +767,7 @@ class _UploadDocsState extends State<UploadDocs> {
                                       )),
                                   InkWell(
                                       onTap: () async {
-                                        (_permission == 'noCamera')
-                                            ? cameraPick()
-                                            : imagePick();
+                                        (_permission == 'noCamera') ? cameraPick() : imagePick();
                                         setState(() {
                                           _permission = '';
                                         });

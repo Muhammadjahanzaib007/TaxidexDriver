@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/pages/vehicleInformations/vehicle_color.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/pages/vehicleInformations/vehicle_color.dart';
+import 'package:taxidex_driver/styles/styles.dart';
+import 'package:taxidex_driver/translation/translation.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 
 class VehicleNumber extends StatefulWidget {
   const VehicleNumber({Key? key}) : super(key: key);
@@ -24,8 +24,7 @@ class _VehicleNumberState extends State<VehicleNumber> {
     var media = MediaQuery.of(context).size;
     return Material(
         child: Directionality(
-      textDirection:
-          (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
+      textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
       child: Stack(
         children: [
           Container(
@@ -37,8 +36,7 @@ class _VehicleNumberState extends State<VehicleNumber> {
                   padding: EdgeInsets.only(
                       left: media.width * 0.08,
                       right: media.width * 0.08,
-                      top: media.width * 0.05 +
-                          MediaQuery.of(context).padding.top),
+                      top: media.width * 0.05 + MediaQuery.of(context).padding.top),
                   color: page,
                   height: media.height * 1,
                   width: media.width * 1,
@@ -65,9 +63,7 @@ class _VehicleNumberState extends State<VehicleNumber> {
                           child: Text(
                             languages[choosenLanguage]['text_license'],
                             style: GoogleFonts.roboto(
-                                fontSize: media.width * twenty,
-                                color: textColor,
-                                fontWeight: FontWeight.bold),
+                                fontSize: media.width * twenty, color: textColor, fontWeight: FontWeight.bold),
                           )),
                       const SizedBox(
                         height: 10,
@@ -85,16 +81,11 @@ class _VehicleNumberState extends State<VehicleNumber> {
                       const SizedBox(
                         height: 40,
                       ),
-                      (controller.text.length > 4 &&
-                              controller.text.length < 21)
+                      (controller.text.length > 4 && controller.text.length < 21)
                           ? Button(
                               onTap: () {
                                 FocusManager.instance.primaryFocus?.unfocus();
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const VehicleColor()));
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => const VehicleColor()));
                               },
                               text: languages[choosenLanguage]['text_next'])
                           : Container()

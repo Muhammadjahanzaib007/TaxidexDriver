@@ -6,13 +6,13 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:tagyourtaxi_driver/pages/language/languages.dart';
-import 'package:tagyourtaxi_driver/pages/loadingPage/loading.dart';
-import 'package:tagyourtaxi_driver/pages/onTripPage/map_page.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/pages/vehicleInformations/docs_onprocess.dart';
-import 'package:tagyourtaxi_driver/pages/vehicleInformations/upload_docs.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/pages/language/languages.dart';
+import 'package:taxidex_driver/pages/loadingPage/loading.dart';
+import 'package:taxidex_driver/pages/onTripPage/map_page.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/pages/vehicleInformations/docs_onprocess.dart';
+import 'package:taxidex_driver/pages/vehicleInformations/upload_docs.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 import '../../styles/styles.dart';
 import '../../functions/functions.dart';
 import 'package:http/http.dart' as http;
@@ -38,22 +38,16 @@ class _LoadingPageState extends State<LoadingPage> {
   //navigate
   navigate() {
     if (userDetails['uploaded_document'] == false) {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Docs()));
-    } else if (userDetails['uploaded_document'] == true &&
-        userDetails['approve'] == false) {
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Docs()));
+    } else if (userDetails['uploaded_document'] == true && userDetails['approve'] == false) {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
             builder: (context) => const DocsProcess(),
           ));
-    } else if (userDetails['uploaded_document'] == true &&
-        userDetails['approve'] == true) {
+    } else if (userDetails['uploaded_document'] == true && userDetails['approve'] == true) {
       //status approved
-      Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(builder: (context) => const Maps()),
-          (route) => false);
+      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => const Maps()), (route) => false);
     }
   }
 
@@ -76,15 +70,9 @@ class _LoadingPageState extends State<LoadingPage> {
     });
     _package = await PackageInfo.fromPlatform();
     if (platform == TargetPlatform.android) {
-      _version = await FirebaseDatabase.instance
-          .ref()
-          .child('driver_android_version')
-          .get();
+      _version = await FirebaseDatabase.instance.ref().child('driver_android_version').get();
     } else {
-      _version = await FirebaseDatabase.instance
-          .ref()
-          .child('driver_ios_version')
-          .get();
+      _version = await FirebaseDatabase.instance.ref().child('driver_ios_version').get();
     }
     if (_version.value != null) {
       var version = _version.value.toString().split('.');
@@ -129,14 +117,12 @@ class _LoadingPageState extends State<LoadingPage> {
         //if user is not login in this device
         else if (val == '2') {
           Future.delayed(const Duration(seconds: 2), () {
-            Navigator.pushReplacement(context,
-                MaterialPageRoute(builder: (context) => const SignupMethod()));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const SignupMethod()));
           });
         } else {
           //user installing first time and didnt yet choosen language
           Future.delayed(const Duration(seconds: 2), () {
-            Navigator.pushReplacement(context,
-                MaterialPageRoute(builder: (context) => const Languages()));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Languages()));
           });
         }
       } else {
@@ -167,9 +153,7 @@ class _LoadingPageState extends State<LoadingPage> {
                     width: media.width * 0.429,
                     height: media.width * 0.429,
                     decoration: const BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage('assets/images/logo.png'),
-                            fit: BoxFit.contain)),
+                        image: DecorationImage(image: AssetImage('assets/images/logo.png'), fit: BoxFit.contain)),
                   ),
                 ],
               ),
@@ -201,16 +185,14 @@ class _LoadingPageState extends State<LoadingPage> {
                                       child: Text(
                                         'New version of this app is available in store, please update the app for continue using',
                                         style: GoogleFonts.roboto(
-                                            fontSize: media.width * sixteen,
-                                            fontWeight: FontWeight.w600),
+                                            fontSize: media.width * sixteen, fontWeight: FontWeight.w600),
                                       )),
                                   SizedBox(
                                     height: media.width * 0.05,
                                   ),
                                   Button(
                                       onTap: () async {
-                                        if (platform ==
-                                            TargetPlatform.android) {
+                                        if (platform == TargetPlatform.android) {
                                           openBrowser(
                                               'https://play.google.com/store/apps/details?id=${_package.packageName}');
                                         } else {
@@ -220,9 +202,7 @@ class _LoadingPageState extends State<LoadingPage> {
                                           var response = await http.get(Uri.parse(
                                               'http://itunes.apple.com/lookup?bundleId=${_package.packageName}'));
                                           if (response.statusCode == 200) {
-                                            openBrowser(jsonDecode(
-                                                    response.body)['results'][0]
-                                                ['trackViewUrl']);
+                                            openBrowser(jsonDecode(response.body)['results'][0]['trackViewUrl']);
                                           }
 
                                           setState(() {
@@ -239,9 +219,7 @@ class _LoadingPageState extends State<LoadingPage> {
                 : Container(),
 
             //loader
-            (_isLoading == true && internet == true)
-                ? const Positioned(top: 0, child: Loading())
-                : Container(),
+            (_isLoading == true && internet == true) ? const Positioned(top: 0, child: Loading()) : Container(),
 
             //internet is not connected
             (internet == false)

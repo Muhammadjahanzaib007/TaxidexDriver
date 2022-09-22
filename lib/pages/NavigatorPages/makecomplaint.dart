@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/loadingPage/loading.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/loadingPage/loading.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/styles/styles.dart';
+import 'package:taxidex_driver/translation/translation.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 
 class MakeComplaint extends StatefulWidget {
   final int fromPage;
@@ -61,22 +61,17 @@ class _MakeComplaintState extends State<MakeComplaint> {
       },
       child: Material(
         child: Directionality(
-          textDirection: (languageDirection == 'rtl')
-              ? TextDirection.rtl
-              : TextDirection.ltr,
+          textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
           child: Stack(
             children: [
               Container(
                 height: media.height * 1,
                 width: media.width * 1,
                 color: page,
-                padding: EdgeInsets.only(
-                    left: media.width * 0.05, right: media.width * 0.05),
+                padding: EdgeInsets.only(left: media.width * 0.05, right: media.width * 0.05),
                 child: Column(
                   children: [
-                    SizedBox(
-                        height: MediaQuery.of(context).padding.top +
-                            media.width * 0.05),
+                    SizedBox(height: MediaQuery.of(context).padding.top + media.width * 0.05),
                     Stack(
                       children: [
                         Container(
@@ -86,9 +81,7 @@ class _MakeComplaintState extends State<MakeComplaint> {
                           child: Text(
                             languages[choosenLanguage]['text_make_complaints'],
                             style: GoogleFonts.roboto(
-                                fontSize: media.width * twenty,
-                                fontWeight: FontWeight.w600,
-                                color: textColor),
+                                fontSize: media.width * twenty, fontWeight: FontWeight.w600, color: textColor),
                           ),
                         ),
                         Positioned(
@@ -116,31 +109,24 @@ class _MakeComplaintState extends State<MakeComplaint> {
                                 });
                               },
                               child: Container(
-                                padding: EdgeInsets.only(
-                                    left: media.width * 0.05,
-                                    right: media.width * 0.05),
+                                padding: EdgeInsets.only(left: media.width * 0.05, right: media.width * 0.05),
                                 height: media.width * 0.12,
                                 width: media.width * 0.8,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(12),
-                                    border: Border.all(
-                                        color: borderLines, width: 1.2)),
+                                    border: Border.all(color: borderLines, width: 1.2)),
                                 child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text(generalComplaintList[complaintType]
-                                        ['title']),
+                                    Text(generalComplaintList[complaintType]['title']),
                                     RotatedBox(
-                                      quarterTurns:
-                                          (_showOptions == true) ? 2 : 0,
+                                      quarterTurns: (_showOptions == true) ? 2 : 0,
                                       child: Container(
                                         height: media.width * 0.08,
                                         width: media.width * 0.08,
                                         decoration: const BoxDecoration(
                                             image: DecorationImage(
-                                                image: AssetImage(
-                                                    'assets/images/chevron-down.png'),
+                                                image: AssetImage('assets/images/chevron-down.png'),
                                                 fit: BoxFit.contain)),
                                       ),
                                     )
@@ -156,21 +142,17 @@ class _MakeComplaintState extends State<MakeComplaint> {
                               width: media.width * 0.8,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(12),
-                                  border: Border.all(
-                                      color: borderLines, width: 1.2)),
+                                  border: Border.all(color: borderLines, width: 1.2)),
                               child: TextField(
                                 controller: complaintText,
                                 minLines: 5,
                                 maxLines: 5,
                                 decoration: InputDecoration(
                                   border: InputBorder.none,
-                                  hintStyle: GoogleFonts.roboto(
-                                      fontSize: media.width * fourteen),
-                                  hintText: languages[choosenLanguage]
-                                          ['text_complaint_2'] +
+                                  hintStyle: GoogleFonts.roboto(fontSize: media.width * fourteen),
+                                  hintText: languages[choosenLanguage]['text_complaint_2'] +
                                       ' (' +
-                                      languages[choosenLanguage]
-                                          ['text_complaint_3'] +
+                                      languages[choosenLanguage]['text_complaint_3'] +
                                       ')',
                                 ),
                               ),
@@ -202,8 +184,7 @@ class _MakeComplaintState extends State<MakeComplaint> {
                                     });
                                   }
                                 },
-                                text: languages[choosenLanguage]
-                                    ['text_submit']),
+                                text: languages[choosenLanguage]['text_submit']),
                           )
                         : Container()
                   ],
@@ -214,12 +195,10 @@ class _MakeComplaintState extends State<MakeComplaint> {
 
               (_showOptions == true)
                   ? Positioned(
-                      top: media.width * 0.35 +
-                          MediaQuery.of(context).padding.top,
+                      top: media.width * 0.35 + MediaQuery.of(context).padding.top,
                       child: Container(
                         padding: EdgeInsets.all(media.width * 0.025),
-                        margin: EdgeInsets.only(
-                            left: media.width * 0.1, right: media.width * 0.05),
+                        margin: EdgeInsets.only(left: media.width * 0.1, right: media.width * 0.05),
                         height: media.width * 0.3,
                         width: media.width * 0.8,
                         decoration: BoxDecoration(
@@ -244,21 +223,16 @@ class _MakeComplaintState extends State<MakeComplaint> {
                                         },
                                         child: Container(
                                           width: media.width * 0.7,
-                                          padding: EdgeInsets.only(
-                                              top: media.width * 0.025,
-                                              bottom: media.width * 0.025),
+                                          padding:
+                                              EdgeInsets.only(top: media.width * 0.025, bottom: media.width * 0.025),
                                           decoration: BoxDecoration(
                                               border: Border(
                                                   bottom: BorderSide(
                                                       width: 1.1,
-                                                      color: (i ==
-                                                              generalComplaintList
-                                                                      .length -
-                                                                  1)
+                                                      color: (i == generalComplaintList.length - 1)
                                                           ? Colors.transparent
                                                           : borderLines))),
-                                          child: Text(
-                                              generalComplaintList[i]['title']),
+                                          child: Text(generalComplaintList[i]['title']),
                                         ),
                                       ));
                                 })
@@ -284,8 +258,7 @@ class _MakeComplaintState extends State<MakeComplaint> {
                             width: media.width * 0.9,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
-                              border:
-                                  Border.all(width: 1.2, color: borderLines),
+                              border: Border.all(width: 1.2, color: borderLines),
                               color: page,
                             ),
                             child: Column(
@@ -294,12 +267,9 @@ class _MakeComplaintState extends State<MakeComplaint> {
                                   alignment: Alignment.center,
                                   width: media.width * 0.7,
                                   child: Text(
-                                    languages[choosenLanguage]
-                                        ['text_complaint_success'],
+                                    languages[choosenLanguage]['text_complaint_success'],
                                     style: GoogleFonts.roboto(
-                                        fontSize: media.width * sixteen,
-                                        fontWeight: FontWeight.w600,
-                                        color: textColor),
+                                        fontSize: media.width * sixteen, fontWeight: FontWeight.w600, color: textColor),
                                   ),
                                 ),
                                 SizedBox(
@@ -309,12 +279,9 @@ class _MakeComplaintState extends State<MakeComplaint> {
                                   alignment: Alignment.center,
                                   width: media.width * 0.7,
                                   child: Text(
-                                    languages[choosenLanguage]
-                                        ['text_complaint_success_2'],
+                                    languages[choosenLanguage]['text_complaint_success_2'],
                                     style: GoogleFonts.roboto(
-                                        fontSize: media.width * sixteen,
-                                        fontWeight: FontWeight.w600,
-                                        color: textColor),
+                                        fontSize: media.width * sixteen, fontWeight: FontWeight.w600, color: textColor),
                                   ),
                                 ),
                                 SizedBox(
@@ -324,8 +291,7 @@ class _MakeComplaintState extends State<MakeComplaint> {
                                     onTap: () {
                                       Navigator.pop(context, true);
                                     },
-                                    text: languages[choosenLanguage]
-                                        ['text_thankyou'])
+                                    text: languages[choosenLanguage]['text_thankyou'])
                               ],
                             ),
                           )
@@ -334,9 +300,7 @@ class _MakeComplaintState extends State<MakeComplaint> {
                     ))
                   : Container(),
               //loader
-              (_isLoading == true)
-                  ? const Positioned(top: 0, child: Loading())
-                  : Container(),
+              (_isLoading == true) ? const Positioned(top: 0, child: Loading()) : Container(),
 
               //no internet
               (internet == false)

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/NavigatorPages/bankdetails.dart';
-import 'package:tagyourtaxi_driver/pages/loadingPage/loading.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/NavigatorPages/bankdetails.dart';
+import 'package:taxidex_driver/pages/loadingPage/loading.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/styles/styles.dart';
+import 'package:taxidex_driver/translation/translation.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 
 class Withdraw extends StatefulWidget {
   const Withdraw({Key? key}) : super(key: key);
@@ -52,8 +52,7 @@ class _WithdrawState extends State<Withdraw> {
 
   //navigate
   navigate() async {
-    var nav = await Navigator.push(
-        context, MaterialPageRoute(builder: (context) => const BankDetails()));
+    var nav = await Navigator.push(context, MaterialPageRoute(builder: (context) => const BankDetails()));
     if (nav) {
       setState(() {
         addMoneyController.text = withDrawMoney;
@@ -67,9 +66,7 @@ class _WithdrawState extends State<Withdraw> {
     var media = MediaQuery.of(context).size;
     return Material(
       child: Directionality(
-        textDirection: (languageDirection == 'rtl')
-            ? TextDirection.rtl
-            : TextDirection.ltr,
+        textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
         child: Scaffold(
           body: Stack(
             children: [
@@ -90,9 +87,7 @@ class _WithdrawState extends State<Withdraw> {
                           child: Text(
                             languages[choosenLanguage]['text_withdraw'],
                             style: GoogleFonts.roboto(
-                                fontSize: media.width * twenty,
-                                fontWeight: FontWeight.w600,
-                                color: textColor),
+                                fontSize: media.width * twenty, fontWeight: FontWeight.w600, color: textColor),
                           ),
                         ),
                         Positioned(
@@ -109,21 +104,15 @@ class _WithdrawState extends State<Withdraw> {
                     (withDrawList.isNotEmpty)
                         ? Column(children: [
                             Text(
-                              languages[choosenLanguage]
-                                  ['text_availablebalance'],
-                              style: GoogleFonts.roboto(
-                                  fontSize: media.width * twelve,
-                                  color: textColor),
+                              languages[choosenLanguage]['text_availablebalance'],
+                              style: GoogleFonts.roboto(fontSize: media.width * twelve, color: textColor),
                             ),
                             SizedBox(
                               height: media.width * 0.01,
                             ),
                             Text(
-                              walletBalance['currency_symbol'] +
-                                  withDrawList['wallet_balance'].toString(),
-                              style: GoogleFonts.roboto(
-                                  fontSize: media.width * fourty,
-                                  fontWeight: FontWeight.w600),
+                              walletBalance['currency_symbol'] + withDrawList['wallet_balance'].toString(),
+                              style: GoogleFonts.roboto(fontSize: media.width * fourty, fontWeight: FontWeight.w600),
                             ),
                             SizedBox(
                               height: media.width * 0.1,
@@ -131,12 +120,9 @@ class _WithdrawState extends State<Withdraw> {
                             SizedBox(
                               width: media.width * 0.9,
                               child: Text(
-                                languages[choosenLanguage]
-                                    ['text_withdrawHistory'],
+                                languages[choosenLanguage]['text_withdrawHistory'],
                                 style: GoogleFonts.roboto(
-                                    fontSize: media.width * twenty,
-                                    fontWeight: FontWeight.w600,
-                                    color: textColor),
+                                    fontSize: media.width * twenty, fontWeight: FontWeight.w600, color: textColor),
                               ),
                             )
                           ])
@@ -161,89 +147,47 @@ class _WithdrawState extends State<Withdraw> {
                                                     i,
                                                     Container(
                                                       padding: EdgeInsets.only(
-                                                          top: media.width *
-                                                              0.025,
-                                                          bottom: media.width *
-                                                              0.025),
+                                                          top: media.width * 0.025, bottom: media.width * 0.025),
                                                       width: media.width * 0.9,
                                                       child: Row(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
+                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                         children: [
                                                           Column(
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
+                                                            crossAxisAlignment: CrossAxisAlignment.start,
                                                             children: [
                                                               Text(
-                                                                languages[
-                                                                        choosenLanguage]
-                                                                    [
-                                                                    'text_withdrawReqAt'],
+                                                                languages[choosenLanguage]['text_withdrawReqAt'],
                                                                 style: GoogleFonts.roboto(
-                                                                    fontSize: media
-                                                                            .width *
-                                                                        fourteen,
-                                                                    color:
-                                                                        hintColor),
+                                                                    fontSize: media.width * fourteen, color: hintColor),
                                                               ),
                                                               SizedBox(
-                                                                height: media
-                                                                        .width *
-                                                                    0.02,
+                                                                height: media.width * 0.02,
                                                               ),
                                                               Text(
-                                                                withDrawHistory[
-                                                                            i][
-                                                                        'created_at']
-                                                                    .toString(),
+                                                                withDrawHistory[i]['created_at'].toString(),
                                                                 style: GoogleFonts.roboto(
-                                                                    fontSize: media
-                                                                            .width *
-                                                                        fourteen,
-                                                                    color:
-                                                                        textColor),
+                                                                    fontSize: media.width * fourteen, color: textColor),
                                                               ),
                                                             ],
                                                           ),
                                                           Column(
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .center,
+                                                            crossAxisAlignment: CrossAxisAlignment.center,
                                                             children: [
                                                               Text(
-                                                                withDrawHistory[
-                                                                            i][
-                                                                        'status']
-                                                                    .toString(),
+                                                                withDrawHistory[i]['status'].toString(),
                                                                 style: GoogleFonts.roboto(
-                                                                    fontSize: media
-                                                                            .width *
-                                                                        fourteen,
-                                                                    color:
-                                                                        buttonColor),
+                                                                    fontSize: media.width * fourteen,
+                                                                    color: buttonColor),
                                                               ),
                                                               SizedBox(
-                                                                height: media
-                                                                        .width *
-                                                                    0.02,
+                                                                height: media.width * 0.02,
                                                               ),
                                                               Text(
-                                                                withDrawHistory[
-                                                                            i][
-                                                                        'requested_currency'] +
+                                                                withDrawHistory[i]['requested_currency'] +
                                                                     ' ' +
-                                                                    withDrawHistory[i]
-                                                                            [
-                                                                            'requested_amount']
-                                                                        .toString(),
+                                                                    withDrawHistory[i]['requested_amount'].toString(),
                                                                 style: GoogleFonts.roboto(
-                                                                    fontSize: media
-                                                                            .width *
-                                                                        fourteen,
-                                                                    color:
-                                                                        textColor),
+                                                                    fontSize: media.width * fourteen, color: textColor),
                                                               ),
                                                             ],
                                                           )
@@ -254,15 +198,11 @@ class _WithdrawState extends State<Withdraw> {
                                               .values
                                               .toList(),
                                         )
-                                      : (_isLoading == false &&
-                                              withDrawHistory.isEmpty)
-                                          ? Text(languages[choosenLanguage]
-                                              ['text_noDataFound'])
+                                      : (_isLoading == false && withDrawHistory.isEmpty)
+                                          ? Text(languages[choosenLanguage]['text_noDataFound'])
                                           : Container(),
                                   (withDrawHistoryPages.isNotEmpty)
-                                      ? (withDrawHistoryPages['current_page'] <
-                                              withDrawHistoryPages[
-                                                  'total_pages'])
+                                      ? (withDrawHistoryPages['current_page'] < withDrawHistoryPages['total_pages'])
                                           ? InkWell(
                                               onTap: () async {
                                                 setState(() {
@@ -270,35 +210,23 @@ class _WithdrawState extends State<Withdraw> {
                                                 });
 
                                                 await getWithdrawListPages(
-                                                    (withDrawHistoryPages[
-                                                                'current_page'] +
-                                                            1)
-                                                        .toString());
+                                                    (withDrawHistoryPages['current_page'] + 1).toString());
 
                                                 setState(() {
                                                   _isLoading = false;
                                                 });
                                               },
                                               child: Container(
-                                                padding: EdgeInsets.all(
-                                                    media.width * 0.025),
-                                                margin: EdgeInsets.only(
-                                                    bottom: media.width * 0.05),
+                                                padding: EdgeInsets.all(media.width * 0.025),
+                                                margin: EdgeInsets.only(bottom: media.width * 0.05),
                                                 decoration: BoxDecoration(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            10),
+                                                    borderRadius: BorderRadius.circular(10),
                                                     color: page,
-                                                    border: Border.all(
-                                                        color: borderLines,
-                                                        width: 1.2)),
+                                                    border: Border.all(color: borderLines, width: 1.2)),
                                                 child: Text(
-                                                  languages[choosenLanguage]
-                                                      ['text_loadmore'],
+                                                  languages[choosenLanguage]['text_loadmore'],
                                                   style: GoogleFonts.roboto(
-                                                      fontSize:
-                                                          media.width * sixteen,
-                                                      color: textColor),
+                                                      fontSize: media.width * sixteen, color: textColor),
                                                 ),
                                               ),
                                             )
@@ -333,22 +261,19 @@ class _WithdrawState extends State<Withdraw> {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Container(
-                              margin:
-                                  EdgeInsets.only(bottom: media.width * 0.05),
+                              margin: EdgeInsets.only(bottom: media.width * 0.05),
                               width: media.width * 0.9,
                               padding: EdgeInsets.all(media.width * 0.025),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(12),
-                                  border: Border.all(
-                                      color: borderLines, width: 1.2),
+                                  border: Border.all(color: borderLines, width: 1.2),
                                   color: page),
                               child: Column(children: [
                                 Container(
                                   height: media.width * 0.128,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(12),
-                                    border: Border.all(
-                                        color: borderLines, width: 1.2),
+                                    border: Border.all(color: borderLines, width: 1.2),
                                   ),
                                   child: Row(
                                     children: [
@@ -356,24 +281,15 @@ class _WithdrawState extends State<Withdraw> {
                                           width: media.width * 0.1,
                                           height: media.width * 0.128,
                                           decoration: BoxDecoration(
-                                              borderRadius:
-                                                  (languageDirection == 'ltr')
-                                                      ? const BorderRadius.only(
-                                                          topLeft:
-                                                              Radius.circular(
-                                                                  12),
-                                                          bottomLeft:
-                                                              Radius.circular(
-                                                                  12),
-                                                        )
-                                                      : const BorderRadius.only(
-                                                          topRight:
-                                                              Radius.circular(
-                                                                  12),
-                                                          bottomRight:
-                                                              Radius.circular(
-                                                                  12),
-                                                        ),
+                                              borderRadius: (languageDirection == 'ltr')
+                                                  ? const BorderRadius.only(
+                                                      topLeft: Radius.circular(12),
+                                                      bottomLeft: Radius.circular(12),
+                                                    )
+                                                  : const BorderRadius.only(
+                                                      topRight: Radius.circular(12),
+                                                      bottomRight: Radius.circular(12),
+                                                    ),
                                               color: const Color(0xffF0F0F0)),
                                           alignment: Alignment.center,
                                           child: Text(
@@ -394,30 +310,21 @@ class _WithdrawState extends State<Withdraw> {
                                           controller: addMoneyController,
                                           onChanged: (val) {
                                             setState(() {
-                                              if (double.parse(withDrawList[
-                                                          'wallet_balance']
-                                                      .toString()) >=
+                                              if (double.parse(withDrawList['wallet_balance'].toString()) >=
                                                   double.parse(val)) {
-                                                withDrawMoney =
-                                                    double.parse(val);
+                                                withDrawMoney = double.parse(val);
                                               } else {
-                                                addMoneyController.text =
-                                                    withDrawList[
-                                                            'wallet_balance']
-                                                        .toString();
-                                                withDrawMoney = withDrawList[
-                                                    'wallet_balance'];
+                                                addMoneyController.text = withDrawList['wallet_balance'].toString();
+                                                withDrawMoney = withDrawList['wallet_balance'];
                                               }
                                             });
                                           },
                                           keyboardType: TextInputType.number,
                                           decoration: InputDecoration(
                                             border: InputBorder.none,
-                                            hintText: languages[choosenLanguage]
-                                                ['text_enteramount'],
-                                            hintStyle: GoogleFonts.roboto(
-                                                fontSize: media.width * twelve,
-                                                color: hintColor),
+                                            hintText: languages[choosenLanguage]['text_enteramount'],
+                                            hintStyle:
+                                                GoogleFonts.roboto(fontSize: media.width * twelve, color: hintColor),
                                           ),
                                           maxLines: 1,
                                         ),
@@ -434,16 +341,12 @@ class _WithdrawState extends State<Withdraw> {
                                     InkWell(
                                       onTap: () {
                                         setState(() {
-                                          if (withDrawList['wallet_balance'] >=
-                                              100.0) {
+                                          if (withDrawList['wallet_balance'] >= 100.0) {
                                             addMoneyController.text = '100';
                                             withDrawMoney = 100;
                                           } else {
-                                            addMoneyController.text =
-                                                withDrawList['wallet_balance']
-                                                    .toString();
-                                            withDrawMoney =
-                                                withDrawList['wallet_balance'];
+                                            addMoneyController.text = withDrawList['wallet_balance'].toString();
+                                            withDrawMoney = withDrawList['wallet_balance'];
                                           }
                                         });
                                       },
@@ -451,15 +354,12 @@ class _WithdrawState extends State<Withdraw> {
                                         height: media.width * 0.11,
                                         width: media.width * 0.17,
                                         decoration: BoxDecoration(
-                                            border: Border.all(
-                                                color: borderLines, width: 1.2),
+                                            border: Border.all(color: borderLines, width: 1.2),
                                             color: page,
-                                            borderRadius:
-                                                BorderRadius.circular(6)),
+                                            borderRadius: BorderRadius.circular(6)),
                                         alignment: Alignment.center,
                                         child: Text(
-                                          walletBalance['currency_symbol'] +
-                                              '100',
+                                          walletBalance['currency_symbol'] + '100',
                                           style: GoogleFonts.roboto(
                                               fontSize: media.width * twelve,
                                               color: textColor,
@@ -473,16 +373,12 @@ class _WithdrawState extends State<Withdraw> {
                                     InkWell(
                                       onTap: () {
                                         setState(() {
-                                          if (withDrawList['wallet_balance'] >=
-                                              500.0) {
+                                          if (withDrawList['wallet_balance'] >= 500.0) {
                                             addMoneyController.text = '500';
                                             withDrawMoney = 500;
                                           } else {
-                                            addMoneyController.text =
-                                                withDrawList['wallet_balance']
-                                                    .toString();
-                                            withDrawMoney =
-                                                withDrawList['wallet_balance'];
+                                            addMoneyController.text = withDrawList['wallet_balance'].toString();
+                                            withDrawMoney = withDrawList['wallet_balance'];
                                           }
                                         });
                                       },
@@ -490,15 +386,12 @@ class _WithdrawState extends State<Withdraw> {
                                         height: media.width * 0.11,
                                         width: media.width * 0.17,
                                         decoration: BoxDecoration(
-                                            border: Border.all(
-                                                color: borderLines, width: 1.2),
+                                            border: Border.all(color: borderLines, width: 1.2),
                                             color: page,
-                                            borderRadius:
-                                                BorderRadius.circular(6)),
+                                            borderRadius: BorderRadius.circular(6)),
                                         alignment: Alignment.center,
                                         child: Text(
-                                          walletBalance['currency_symbol'] +
-                                              '500',
+                                          walletBalance['currency_symbol'] + '500',
                                           style: GoogleFonts.roboto(
                                               fontSize: media.width * twelve,
                                               color: textColor,
@@ -512,16 +405,12 @@ class _WithdrawState extends State<Withdraw> {
                                     InkWell(
                                       onTap: () {
                                         setState(() {
-                                          if (withDrawList['wallet_balance'] >=
-                                              1000.0) {
+                                          if (withDrawList['wallet_balance'] >= 1000.0) {
                                             addMoneyController.text = '1000';
                                             withDrawMoney = 1000;
                                           } else {
-                                            addMoneyController.text =
-                                                withDrawList['wallet_balance']
-                                                    .toString();
-                                            withDrawMoney =
-                                                withDrawList['wallet_balance'];
+                                            addMoneyController.text = withDrawList['wallet_balance'].toString();
+                                            withDrawMoney = withDrawList['wallet_balance'];
                                           }
                                         });
                                       },
@@ -529,15 +418,12 @@ class _WithdrawState extends State<Withdraw> {
                                         height: media.width * 0.11,
                                         width: media.width * 0.17,
                                         decoration: BoxDecoration(
-                                            border: Border.all(
-                                                color: borderLines, width: 1.2),
+                                            border: Border.all(color: borderLines, width: 1.2),
                                             color: page,
-                                            borderRadius:
-                                                BorderRadius.circular(6)),
+                                            borderRadius: BorderRadius.circular(6)),
                                         alignment: Alignment.center,
                                         child: Text(
-                                          walletBalance['currency_symbol'] +
-                                              '1000',
+                                          walletBalance['currency_symbol'] + '1000',
                                           style: GoogleFonts.roboto(
                                               fontSize: media.width * twelve,
                                               color: textColor,
@@ -551,27 +437,23 @@ class _WithdrawState extends State<Withdraw> {
                                   height: media.width * 0.1,
                                 ),
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Button(
                                       onTap: () async {
                                         setState(() {
                                           _addPayment = false;
                                           withDrawMoney = null;
-                                          FocusManager.instance.primaryFocus
-                                              ?.unfocus();
+                                          FocusManager.instance.primaryFocus?.unfocus();
                                           addMoneyController.clear();
                                         });
                                       },
-                                      text: languages[choosenLanguage]
-                                          ['text_cancel'],
+                                      text: languages[choosenLanguage]['text_cancel'],
                                       width: media.width * 0.4,
                                     ),
                                     Button(
                                       onTap: () async {
-                                        FocusManager.instance.primaryFocus
-                                            ?.unfocus();
+                                        FocusManager.instance.primaryFocus?.unfocus();
                                         setState(() {
                                           _isLoading = true;
                                         });
@@ -581,10 +463,8 @@ class _WithdrawState extends State<Withdraw> {
                                             _addPayment = false;
                                           });
                                           //withdraw request
-                                          var val = await requestWithdraw(
-                                              withDrawMoney);
-                                          if (val != 'success' &&
-                                              val != 'no internet') {
+                                          var val = await requestWithdraw(withDrawMoney);
+                                          if (val != 'success' && val != 'no internet') {
                                             setState(() {
                                               _error = val;
                                               _showError = true;
@@ -605,8 +485,7 @@ class _WithdrawState extends State<Withdraw> {
                                           _isLoading = false;
                                         });
                                       },
-                                      text: languages[choosenLanguage]
-                                          ['text_withdraw'],
+                                      text: languages[choosenLanguage]['text_withdraw'],
                                       width: media.width * 0.4,
                                     ),
                                   ],
@@ -641,38 +520,26 @@ class _WithdrawState extends State<Withdraw> {
                         height: media.height * 1,
                         width: media.width * 1,
                         color: Colors.transparent.withOpacity(0.6),
-                        child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                alignment: Alignment.center,
-                                width: media.width * 0.8,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(12),
-                                    color: page,
-                                    boxShadow: [
-                                      BoxShadow(
-                                          color: Colors.black.withOpacity(0.2),
-                                          spreadRadius: 2,
-                                          blurRadius: 2)
-                                    ]),
-                                padding: EdgeInsets.all(media.width * 0.05),
-                                child: Text(
-                                  _error,
-                                  style: GoogleFonts.roboto(
-                                      fontSize: media.width * sixteen,
-                                      color: textColor),
-                                  textAlign: TextAlign.center,
-                                ),
-                              )
+                        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                          Container(
+                            alignment: Alignment.center,
+                            width: media.width * 0.8,
+                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: page, boxShadow: [
+                              BoxShadow(color: Colors.black.withOpacity(0.2), spreadRadius: 2, blurRadius: 2)
                             ]),
+                            padding: EdgeInsets.all(media.width * 0.05),
+                            child: Text(
+                              _error,
+                              style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
+                              textAlign: TextAlign.center,
+                            ),
+                          )
+                        ]),
                       ))
                   : Container(),
 
               //loader
-              (_isLoading == true)
-                  ? const Positioned(top: 0, child: Loading())
-                  : Container()
+              (_isLoading == true) ? const Positioned(top: 0, child: Loading()) : Container()
             ],
           ),
         ),

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/loadingPage/loading.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/loadingPage/loading.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/styles/styles.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
+import 'package:taxidex_driver/translation/translation.dart';
 import 'dart:io';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 
 class EditProfile extends StatefulWidget {
   const EditProfile({Key? key}) : super(key: key);
@@ -96,9 +96,7 @@ class _EditProfileState extends State<EditProfile> {
     var media = MediaQuery.of(context).size;
     return Material(
       child: Directionality(
-        textDirection: (languageDirection == 'rtl')
-            ? TextDirection.rtl
-            : TextDirection.ltr,
+        textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
         child: Stack(
           children: [
             Container(
@@ -115,16 +113,13 @@ class _EditProfileState extends State<EditProfile> {
                         Stack(
                           children: [
                             Container(
-                              padding:
-                                  EdgeInsets.only(bottom: media.width * 0.05),
+                              padding: EdgeInsets.only(bottom: media.width * 0.05),
                               width: media.width * 1,
                               alignment: Alignment.center,
                               child: Text(
                                 languages[choosenLanguage]['text_editprofile'],
                                 style: GoogleFonts.roboto(
-                                    fontSize: media.width * twenty,
-                                    fontWeight: FontWeight.w600,
-                                    color: textColor),
+                                    fontSize: media.width * twenty, fontWeight: FontWeight.w600, color: textColor),
                               ),
                             ),
                             Positioned(
@@ -148,9 +143,7 @@ class _EditProfileState extends State<EditProfile> {
                                         userDetails['profile_picture'],
                                       ),
                                       fit: BoxFit.cover)
-                                  : DecorationImage(
-                                      image: FileImage(File(proImageFile)),
-                                      fit: BoxFit.cover)),
+                                  : DecorationImage(image: FileImage(File(proImageFile)), fit: BoxFit.cover)),
                         ),
                         SizedBox(
                           height: media.width * 0.04,
@@ -161,11 +154,8 @@ class _EditProfileState extends State<EditProfile> {
                               _pickImage = true;
                             });
                           },
-                          child: Text(
-                              languages[choosenLanguage]['text_editimage'],
-                              style: GoogleFonts.roboto(
-                                  fontSize: media.width * sixteen,
-                                  color: buttonColor)),
+                          child: Text(languages[choosenLanguage]['text_editimage'],
+                              style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: buttonColor)),
                         ),
                         SizedBox(
                           height: media.width * 0.1,
@@ -174,18 +164,14 @@ class _EditProfileState extends State<EditProfile> {
                         SizedBox(
                           width: media.width * 0.8,
                           child: TextField(
-                            textDirection: (choosenLanguage == 'iw' ||
-                                    choosenLanguage == 'ur' ||
-                                    choosenLanguage == 'ar')
-                                ? TextDirection.rtl
-                                : TextDirection.ltr,
+                            textDirection:
+                                (choosenLanguage == 'iw' || choosenLanguage == 'ur' || choosenLanguage == 'ar')
+                                    ? TextDirection.rtl
+                                    : TextDirection.ltr,
                             controller: name,
                             decoration: InputDecoration(
-                                labelText: languages[choosenLanguage]
-                                    ['text_name'],
-                                border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(12),
-                                    gapPadding: 1),
+                                labelText: languages[choosenLanguage]['text_name'],
+                                border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), gapPadding: 1),
                                 isDense: true),
                           ),
                         ),
@@ -197,17 +183,13 @@ class _EditProfileState extends State<EditProfile> {
                           width: media.width * 0.8,
                           child: TextField(
                             controller: email,
-                            textDirection: (choosenLanguage == 'iw' ||
-                                    choosenLanguage == 'ur' ||
-                                    choosenLanguage == 'ar')
-                                ? TextDirection.rtl
-                                : TextDirection.ltr,
+                            textDirection:
+                                (choosenLanguage == 'iw' || choosenLanguage == 'ur' || choosenLanguage == 'ar')
+                                    ? TextDirection.rtl
+                                    : TextDirection.ltr,
                             decoration: InputDecoration(
-                                labelText: languages[choosenLanguage]
-                                    ['text_email'],
-                                border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(12),
-                                    gapPadding: 1),
+                                labelText: languages[choosenLanguage]['text_email'],
+                                border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), gapPadding: 1),
                                 isDense: true),
                           ),
                         )
@@ -224,8 +206,7 @@ class _EditProfileState extends State<EditProfile> {
                             dynamic val;
 
                             if (proImageFile == null) {
-                              val = await updateProfileWithoutImage(
-                                  name.text, email.text);
+                              val = await updateProfileWithoutImage(name.text, email.text);
                             } else {
                               val = await updateProfile(name.text, email.text);
                             }
@@ -267,8 +248,7 @@ class _EditProfileState extends State<EditProfile> {
                               width: media.width * 1,
                               decoration: BoxDecoration(
                                   borderRadius: const BorderRadius.only(
-                                      topLeft: Radius.circular(25),
-                                      topRight: Radius.circular(25)),
+                                      topLeft: Radius.circular(25), topRight: Radius.circular(25)),
                                   border: Border.all(
                                     color: borderLines,
                                     width: 1.2,
@@ -280,8 +260,7 @@ class _EditProfileState extends State<EditProfile> {
                                     height: media.width * 0.02,
                                     width: media.width * 0.15,
                                     decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(
-                                          media.width * 0.01),
+                                      borderRadius: BorderRadius.circular(media.width * 0.01),
                                       color: Colors.grey,
                                     ),
                                   ),
@@ -289,8 +268,7 @@ class _EditProfileState extends State<EditProfile> {
                                     height: media.width * 0.05,
                                   ),
                                   Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                     children: [
                                       Column(
                                         children: [
@@ -302,12 +280,8 @@ class _EditProfileState extends State<EditProfile> {
                                                 height: media.width * 0.171,
                                                 width: media.width * 0.171,
                                                 decoration: BoxDecoration(
-                                                    border: Border.all(
-                                                        color: borderLines,
-                                                        width: 1.2),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            12)),
+                                                    border: Border.all(color: borderLines, width: 1.2),
+                                                    borderRadius: BorderRadius.circular(12)),
                                                 child: Icon(
                                                   Icons.camera_alt_outlined,
                                                   size: media.width * 0.064,
@@ -317,11 +291,9 @@ class _EditProfileState extends State<EditProfile> {
                                             height: media.width * 0.01,
                                           ),
                                           Text(
-                                            languages[choosenLanguage]
-                                                ['text_camera'],
+                                            languages[choosenLanguage]['text_camera'],
                                             style: GoogleFonts.roboto(
-                                                fontSize: media.width * ten,
-                                                color: const Color(0xff666666)),
+                                                fontSize: media.width * ten, color: const Color(0xff666666)),
                                           )
                                         ],
                                       ),
@@ -335,12 +307,8 @@ class _EditProfileState extends State<EditProfile> {
                                                 height: media.width * 0.171,
                                                 width: media.width * 0.171,
                                                 decoration: BoxDecoration(
-                                                    border: Border.all(
-                                                        color: borderLines,
-                                                        width: 1.2),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            12)),
+                                                    border: Border.all(color: borderLines, width: 1.2),
+                                                    borderRadius: BorderRadius.circular(12)),
                                                 child: Icon(
                                                   Icons.image_outlined,
                                                   size: media.width * 0.064,
@@ -350,11 +318,9 @@ class _EditProfileState extends State<EditProfile> {
                                             height: media.width * 0.01,
                                           ),
                                           Text(
-                                            languages[choosenLanguage]
-                                                ['text_gallery'],
+                                            languages[choosenLanguage]['text_gallery'],
                                             style: GoogleFonts.roboto(
-                                                fontSize: media.width * ten,
-                                                color: const Color(0xff666666)),
+                                                fontSize: media.width * ten, color: const Color(0xff666666)),
                                           )
                                         ],
                                       ),
@@ -394,8 +360,7 @@ class _EditProfileState extends State<EditProfile> {
                                 child: Container(
                                   height: media.width * 0.1,
                                   width: media.width * 0.1,
-                                  decoration: BoxDecoration(
-                                      shape: BoxShape.circle, color: page),
+                                  decoration: BoxDecoration(shape: BoxShape.circle, color: page),
                                   child: const Icon(Icons.cancel_outlined),
                                 ),
                               ),
@@ -408,42 +373,30 @@ class _EditProfileState extends State<EditProfile> {
                         Container(
                           padding: EdgeInsets.all(media.width * 0.05),
                           width: media.width * 0.9,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
-                              color: page,
-                              boxShadow: [
-                                BoxShadow(
-                                    blurRadius: 2.0,
-                                    spreadRadius: 2.0,
-                                    color: Colors.black.withOpacity(0.2))
-                              ]),
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: page, boxShadow: [
+                            BoxShadow(blurRadius: 2.0, spreadRadius: 2.0, color: Colors.black.withOpacity(0.2))
+                          ]),
                           child: Column(
                             children: [
                               SizedBox(
                                   width: media.width * 0.8,
                                   child: Text(
                                     (_permission == 'noPhotos')
-                                        ? languages[choosenLanguage]
-                                            ['text_open_photos_setting']
-                                        : languages[choosenLanguage]
-                                            ['text_open_camera_setting'],
+                                        ? languages[choosenLanguage]['text_open_photos_setting']
+                                        : languages[choosenLanguage]['text_open_camera_setting'],
                                     style: GoogleFonts.roboto(
-                                        fontSize: media.width * sixteen,
-                                        color: textColor,
-                                        fontWeight: FontWeight.w600),
+                                        fontSize: media.width * sixteen, color: textColor, fontWeight: FontWeight.w600),
                                   )),
                               SizedBox(height: media.width * 0.05),
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   InkWell(
                                       onTap: () async {
                                         await openAppSettings();
                                       },
                                       child: Text(
-                                        languages[choosenLanguage]
-                                            ['text_open_settings'],
+                                        languages[choosenLanguage]['text_open_settings'],
                                         style: GoogleFonts.roboto(
                                             fontSize: media.width * sixteen,
                                             color: buttonColor,
@@ -451,9 +404,7 @@ class _EditProfileState extends State<EditProfile> {
                                       )),
                                   InkWell(
                                       onTap: () async {
-                                        (_permission == 'noCamera')
-                                            ? pickImageFromCamera()
-                                            : pickImageFromGallery();
+                                        (_permission == 'noCamera') ? pickImageFromCamera() : pickImageFromGallery();
                                         setState(() {
                                           _permission = '';
                                         });
@@ -475,9 +426,7 @@ class _EditProfileState extends State<EditProfile> {
                   ))
                 : Container(),
             //loader
-            (_isLoading == true)
-                ? const Positioned(top: 0, child: Loading())
-                : Container(),
+            (_isLoading == true) ? const Positioned(top: 0, child: Loading()) : Container(),
 
             //error
             (_error != '')
@@ -492,9 +441,7 @@ class _EditProfileState extends State<EditProfile> {
                         Container(
                           padding: EdgeInsets.all(media.width * 0.05),
                           width: media.width * 0.9,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
-                              color: page),
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: page),
                           child: Column(
                             children: [
                               SizedBox(
@@ -503,9 +450,7 @@ class _EditProfileState extends State<EditProfile> {
                                   _error.toString(),
                                   textAlign: TextAlign.center,
                                   style: GoogleFonts.roboto(
-                                      fontSize: media.width * sixteen,
-                                      color: textColor,
-                                      fontWeight: FontWeight.w600),
+                                      fontSize: media.width * sixteen, color: textColor, fontWeight: FontWeight.w600),
                                 ),
                               ),
                               SizedBox(

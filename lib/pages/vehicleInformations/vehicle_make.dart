@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tagyourtaxi_driver/functions/functions.dart';
-import 'package:tagyourtaxi_driver/pages/loadingPage/loading.dart';
-import 'package:tagyourtaxi_driver/pages/noInternet/nointernet.dart';
-import 'package:tagyourtaxi_driver/pages/vehicleInformations/vehicle_model.dart';
-import 'package:tagyourtaxi_driver/styles/styles.dart';
-import 'package:tagyourtaxi_driver/translation/translation.dart';
-import 'package:tagyourtaxi_driver/widgets/widgets.dart';
+import 'package:taxidex_driver/functions/functions.dart';
+import 'package:taxidex_driver/pages/loadingPage/loading.dart';
+import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
+import 'package:taxidex_driver/pages/vehicleInformations/vehicle_model.dart';
+import 'package:taxidex_driver/styles/styles.dart';
+import 'package:taxidex_driver/translation/translation.dart';
+import 'package:taxidex_driver/widgets/widgets.dart';
 
 class VehicleMake extends StatefulWidget {
   const VehicleMake({Key? key}) : super(key: key);
@@ -43,9 +43,7 @@ class _VehicleMakeState extends State<VehicleMake> {
     var media = MediaQuery.of(context).size;
     return Material(
       child: Directionality(
-        textDirection: (languageDirection == 'rtl')
-            ? TextDirection.rtl
-            : TextDirection.ltr,
+        textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
         child: Stack(
           children: [
             Container(
@@ -80,9 +78,7 @@ class _VehicleMakeState extends State<VehicleMake> {
                       child: Text(
                         languages[choosenLanguage]['text_vehicle_make'],
                         style: GoogleFonts.roboto(
-                            fontSize: media.width * twenty,
-                            color: textColor,
-                            fontWeight: FontWeight.bold),
+                            fontSize: media.width * twenty, color: textColor, fontWeight: FontWeight.bold),
                       )),
                   const SizedBox(
                     height: 10,
@@ -97,30 +93,24 @@ class _VehicleMakeState extends State<VehicleMake> {
                                 .map((i, value) => MapEntry(
                                     i,
                                     Container(
-                                      padding: const EdgeInsets.only(
-                                          top: 10, bottom: 10),
+                                      padding: const EdgeInsets.only(top: 10, bottom: 10),
                                       width: media.width * 1,
                                       alignment: Alignment.centerLeft,
                                       child: InkWell(
                                         onTap: () {
                                           setState(() {
-                                            vehicleMakeId =
-                                                vehicleMake[i]['id'];
+                                            vehicleMakeId = vehicleMake[i]['id'];
                                           });
                                         },
                                         child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                           children: [
                                             Text(
                                               vehicleMake[i]['name'],
-                                              style: GoogleFonts.roboto(
-                                                  fontSize:
-                                                      media.width * twenty,
-                                                  color: textColor),
+                                              style:
+                                                  GoogleFonts.roboto(fontSize: media.width * twenty, color: textColor),
                                             ),
-                                            (vehicleMakeId ==
-                                                    vehicleMake[i]['id'])
+                                            (vehicleMakeId == vehicleMake[i]['id'])
                                                 ? Icon(
                                                     Icons.done,
                                                     color: buttonColor,
@@ -140,11 +130,7 @@ class _VehicleMakeState extends State<VehicleMake> {
                           padding: const EdgeInsets.only(top: 10, bottom: 10),
                           child: Button(
                               onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const VehicleModel()));
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => const VehicleModel()));
                               },
                               text: languages[choosenLanguage]['text_next']),
                         )
@@ -167,9 +153,7 @@ class _VehicleMakeState extends State<VehicleMake> {
                 : Container(),
 
             //loader
-            (_loaded == false)
-                ? const Positioned(top: 0, child: Loading())
-                : Container()
+            (_loaded == false) ? const Positioned(top: 0, child: Loading()) : Container()
           ],
         ),
       ),

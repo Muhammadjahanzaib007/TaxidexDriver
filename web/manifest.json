@@ -1,6 +1,6 @@
 {
-    "name": "tagyourtaxi_driver",
-    "short_name": "tagyourtaxi_driver",
+    "name": "taxidex_driver",
+    "short_name": "taxidex_driver",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
