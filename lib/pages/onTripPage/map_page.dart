@@ -2269,25 +2269,23 @@ class _MapsState extends State<Maps> with WidgetsBindingObserver, TickerProvider
                                                                                                   ],
                                                                                                 ),
                                                                                               ),
-                                                                                              Expanded(
-                                                                                                child: FittedBox(
-                                                                                                  child: Text(
-                                                                                                    (duration != 0)
-                                                                                                        ? duration
-                                                                                                            .toString()
-                                                                                                            .split(
-                                                                                                                '.')[0]
-                                                                                                        : '',
-                                                                                                    style: GoogleFonts.roboto(
-                                                                                                        fontSize: media
-                                                                                                                .width *
-                                                                                                            twenty,
-                                                                                                        fontWeight:
-                                                                                                            FontWeight
-                                                                                                                .bold),
-                                                                                                    textAlign:
-                                                                                                        TextAlign.end,
-                                                                                                  ),
+                                                                                              Container(
+                                                                                                height: 50,
+                                                                                                child: Text(
+                                                                                                  (duration != 0)
+                                                                                                      ? duration
+                                                                                                          .toString()
+                                                                                                          .split('.')[0]
+                                                                                                      : '',
+                                                                                                  style: GoogleFonts.roboto(
+                                                                                                      fontSize:
+                                                                                                          media.width *
+                                                                                                              twenty,
+                                                                                                      fontWeight:
+                                                                                                          FontWeight
+                                                                                                              .bold),
+                                                                                                  textAlign:
+                                                                                                      TextAlign.end,
                                                                                                 ),
                                                                                               )
                                                                                             ],

@@ -53,7 +53,7 @@ class _OtpState extends State<Otp> {
 
 //navigate
   navigate(verify) {
-    if (verify == false || verify == null) {
+    if (verify == true) {
       if (userDetails['uploaded_document'] == false) {
         Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => Docs()), (route) => false);
       } else if (userDetails['uploaded_document'] == true && userDetails['approve'] == false) {

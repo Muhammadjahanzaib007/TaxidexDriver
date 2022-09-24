@@ -927,13 +927,17 @@ getUserDetails() async {
     );
     if (response.statusCode == 200) {
       printWrapped(response.body);
+
       userDetails = jsonDecode(response.body)['data'];
       if (userDetails['role'] != 'owner') {
         if (userDetails['sos']['data'] != null) {
           sosData = userDetails['sos']['data'];
         }
-
-        if (userDetails['onTripRequest'] != null) {
+        List tripReq = [];
+        List metaReq = [];
+        tripReq = userDetails['onTripRequest']['data'];
+        metaReq = userDetails['metaRequest']['data'];
+        if (tripReq.isNotEmpty) {
           driverReq = userDetails['onTripRequest']['data'];
 
           if (driverReq['is_driver_arrived'] == 1 &&
@@ -953,7 +957,7 @@ getUserDetails() async {
             getCurrentMessages();
           }
           valueNotifierHome.incrementNotifier();
-        } else if (userDetails['metaRequest'] != null) {
+        } else if (metaReq.isNotEmpty) {
           driverReject = false;
           userReject = false;
           driverReq = userDetails['metaRequest']['data'];
