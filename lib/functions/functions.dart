@@ -51,10 +51,8 @@ AudioPlayer audioPlayers = AudioPlayer();
 String audio = 'audio/notification_sound.mp3';
 bool internet = true;
 dynamic centerCheck;
-
 String ischeckownerordriver = '';
 
-//base url http://192.168.0.183:81
 // String url = 'https://tagxi-server.ondemandappz.com/';
 String url = 'http://192.168.0.183:81/';
 String mapkey = 'AIzaSyCWY5OkDhEfGsaxFWhRs5VB-qRGG0-bLmw';

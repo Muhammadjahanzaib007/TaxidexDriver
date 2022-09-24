@@ -40,8 +40,7 @@ class _ButtonState extends State<Button> {
       child: Container(
         height: widget.height ?? media.width * 0.12,
         width: (widget.width != null) ? widget.width : null,
-        padding: EdgeInsets.only(
-            left: media.width * twenty, right: media.width * twenty),
+        padding: EdgeInsets.only(left: media.width * twenty, right: media.width * twenty),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             color: (widget.color != null) ? widget.color : buttonColor,
@@ -98,9 +97,7 @@ class _InputFieldState extends State<InputField> {
     var media = MediaQuery.of(context).size;
     return TextFormField(
       maxLength: (widget.maxLength == null) ? null : widget.maxLength,
-      keyboardType: (widget.inputType == null)
-          ? TextInputType.emailAddress
-          : widget.inputType,
+      keyboardType: (widget.inputType == null) ? TextInputType.emailAddress : widget.inputType,
       controller: widget.textController,
       decoration: InputDecoration(
           counterText: '',
@@ -133,15 +130,27 @@ class _InputFieldState extends State<InputField> {
   }
 }
 
-PreferredSizeWidget myAppBar(Size size, String text) {
+PreferredSizeWidget myAppBar(BuildContext context, Size size, String text) {
   return AppBar(
     toolbarHeight: 70,
     backgroundColor: Colors.transparent,
     elevation: 0,
     centerTitle: true,
     title: Text(
-      (choosenLanguage.isEmpty) ? text : languages[choosenLanguage][text],
+      text.isNotEmpty
+          ? (choosenLanguage.isEmpty)
+              ? text
+              : languages[choosenLanguage][text]
+          : '',
       style: GoogleFonts.roboto(color: Colors.white, fontSize: size.width * sixteen, fontWeight: FontWeight.w600),
     ),
+    leading: IconButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        icon: Icon(
+          Icons.arrow_back,
+          color: primary,
+        )),
   );
 }

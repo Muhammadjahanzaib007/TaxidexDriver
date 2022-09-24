@@ -53,16 +53,12 @@ class _OtpState extends State<Otp> {
 
 //navigate
   navigate(verify) {
-    if (verify == true) {
+    if (verify == false || verify == null) {
       if (userDetails['uploaded_document'] == false) {
         Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => Docs()), (route) => false);
       } else if (userDetails['uploaded_document'] == true && userDetails['approve'] == false) {
         Navigator.pushAndRemoveUntil(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const DocsProcess(),
-            ),
-            (route) => false);
+            context, MaterialPageRoute(builder: (context) => const DocsProcess()), (route) => false);
       } else if (userDetails['uploaded_document'] == true && userDetails['approve'] == true) {
         Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => const Maps()), (route) => false);
       }
@@ -128,8 +124,8 @@ class _OtpState extends State<Otp> {
     var media = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: primary,
-      appBar: myAppBar(media, 'text_phone_verify'),
+      backgroundColor: page,
+      appBar: myAppBar(context, media, ''),
       body: Directionality(
         textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
         child: ValueListenableBuilder(
@@ -146,11 +142,6 @@ class _OtpState extends State<Otp> {
                         left: media.width * 0.08,
                         right: media.width * 0.08,
                         top: media.width * 0.05 + MediaQuery.of(context).padding.top),
-                    decoration: BoxDecoration(
-                        color: page,
-                        borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(70),
-                        )),
                     height: media.height * 1,
                     width: media.width * 1,
                     child: SingleChildScrollView(

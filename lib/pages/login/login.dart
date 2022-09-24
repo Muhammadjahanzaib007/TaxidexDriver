@@ -50,8 +50,8 @@ class _LoginState extends State<Login> {
     var media = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: primary,
-      appBar: myAppBar(media, 'text_login'),
+      backgroundColor: page,
+      appBar: myAppBar(context, media, 'text_login'),
       body: Directionality(
         textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
         child: Stack(
@@ -62,13 +62,11 @@ class _LoginState extends State<Login> {
                         top: MediaQuery.of(context).padding.top, left: media.width * 0.08, right: media.width * 0.08),
                     height: media.height * 1,
                     width: media.width * 1,
-                    decoration: BoxDecoration(
-                        color: page, borderRadius: const BorderRadius.only(topLeft: Radius.circular(70.0))),
                     child: SingleChildScrollView(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(height: media.height * 0.100),
+                          SizedBox(height: media.height * 0.04),
                           Align(
                             alignment: Alignment.center,
                             child: Text(
@@ -78,7 +76,7 @@ class _LoginState extends State<Login> {
                             ),
                           ),
                           SizedBox(
-                            height: media.height * 0.120,
+                            height: media.height * 0.150,
                           ),
                           Container(
                             padding: const EdgeInsets.all(10),

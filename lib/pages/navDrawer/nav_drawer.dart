@@ -455,11 +455,14 @@ class _NavDrawerState extends State<NavDrawer> {
                               Navigator.pop(context);
                             },
                             minLeadingWidth: 25,
-                            leading: Image.asset(
-                              'assets/images/logout.png',
-                              fit: BoxFit.contain,
-                              width: media.width * 0.055,
-                              color: primary,
+                            leading: Padding(
+                              padding: const EdgeInsets.only(left: 3),
+                              child: Image.asset(
+                                'assets/images/logout.png',
+                                fit: BoxFit.contain,
+                                width: media.width * 0.052,
+                                color: primary,
+                              ),
                             ),
                             title: SizedBox(
                               width: media.width * 0.55,
