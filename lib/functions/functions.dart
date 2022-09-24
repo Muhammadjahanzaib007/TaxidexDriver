@@ -933,11 +933,8 @@ getUserDetails() async {
         if (userDetails['sos']['data'] != null) {
           sosData = userDetails['sos']['data'];
         }
-        List tripReq = [];
-        List metaReq = [];
-        tripReq = userDetails['onTripRequest']['data'];
-        metaReq = userDetails['metaRequest']['data'];
-        if (tripReq.isNotEmpty) {
+
+        if (userDetails['onTripRequest']['data'].isNotEmpty || !(userDetails['onTripRequest']['data'] is List)) {
           driverReq = userDetails['onTripRequest']['data'];
 
           if (driverReq['is_driver_arrived'] == 1 &&
@@ -957,7 +954,7 @@ getUserDetails() async {
             getCurrentMessages();
           }
           valueNotifierHome.incrementNotifier();
-        } else if (metaReq.isNotEmpty) {
+        } else if (userDetails['metaRequest']['data'].isNotEmpty || !(userDetails['metaRequest']['data'] is List)) {
           driverReject = false;
           userReject = false;
           driverReq = userDetails['metaRequest']['data'];
@@ -3156,7 +3153,7 @@ geolocs.LocationSettings locationSettings = (platform == TargetPlatform.android)
         accuracy: geolocs.LocationAccuracy.high,
         distanceFilter: 50,
         foregroundNotificationConfig: const geolocs.ForegroundNotificationConfig(
-          notificationText: "product name will continue to receive your location in background",
+          notificationText: "Taxidex will continue to receive your location in background",
           notificationTitle: "Location background service running",
           enableWakeLock: true,
         ))

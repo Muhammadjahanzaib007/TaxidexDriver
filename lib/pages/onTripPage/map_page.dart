@@ -2142,6 +2142,7 @@ class _MapsState extends State<Maps> with WidgetsBindingObserver, TickerProvider
                                                                                                           )),
                                                                                           )
                                                                                         : Container(),
+                                                                                    // Ride Request Card
                                                                                     Container(
                                                                                       padding: EdgeInsets.fromLTRB(
                                                                                           media.width * 0.05,
@@ -2480,7 +2481,7 @@ class _MapsState extends State<Maps> with WidgetsBindingObserver, TickerProvider
                                                             ],
                                                           )),
 
-                                                      //on ride bottom sheet
+                                                      //on ride accepted bottom sheet
                                                       (driverReq['accepted_at'] != null)
                                                           ? Positioned(
                                                               bottom: 0,

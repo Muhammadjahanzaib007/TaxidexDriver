@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         },
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'product name',
+            title: 'Taxidex Driver',
             theme: ThemeData(primarySwatch: primarySwatch),
             home: const LoadingPage()));
   }
