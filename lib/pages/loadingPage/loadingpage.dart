@@ -8,6 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:taxidex_driver/pages/language/languages.dart';
 import 'package:taxidex_driver/pages/loadingPage/loading.dart';
+import 'package:taxidex_driver/pages/login/login.dart';
 import 'package:taxidex_driver/pages/onTripPage/map_page.dart';
 import 'package:taxidex_driver/pages/noInternet/nointernet.dart';
 import 'package:taxidex_driver/pages/vehicleInformations/docs_onprocess.dart';
@@ -117,7 +118,7 @@ class _LoadingPageState extends State<LoadingPage> {
         //if user is not login in this device
         else if (val == '2') {
           Future.delayed(const Duration(seconds: 2), () {
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const SignupMethod()));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Login()));
           });
         } else {
           //user installing first time and didnt yet choosen language

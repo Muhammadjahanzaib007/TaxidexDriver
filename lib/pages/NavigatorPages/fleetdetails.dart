@@ -173,11 +173,13 @@ class _FleetDetailsState extends State<FleetDetails> {
                                   height: media.width * 0.3,
                                 ),
                                 Container(
-                                  height: media.width * 0.7,
-                                  width: media.width * 0.7,
-                                  decoration: const BoxDecoration(
-                                      image: DecorationImage(
-                                          image: AssetImage('assets/images/nodatafound.gif'), fit: BoxFit.contain)),
+                                  height: media.width * 0.5,
+                                  width: media.width * 0.5,
+                                  child: Image.asset(
+                                    'assets/images/nodatafound.png',
+                                    color: primary,
+                                    fit: BoxFit.contain,
+                                  ),
                                 ),
                                 SizedBox(
                                   height: media.width * 0.02,
@@ -187,7 +189,10 @@ class _FleetDetailsState extends State<FleetDetails> {
                                   child: Text(
                                     languages[choosenLanguage]['text_no_fleet_assigned'],
                                     style: GoogleFonts.roboto(
-                                        fontSize: media.width * sixteen, fontWeight: FontWeight.bold, color: textColor),
+                                      fontSize: media.width * sixteen,
+                                      fontWeight: FontWeight.bold,
+                                      color: primary,
+                                    ),
                                     textAlign: TextAlign.center,
                                   ),
                                 )

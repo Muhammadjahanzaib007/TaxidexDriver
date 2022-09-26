@@ -106,10 +106,13 @@ class _DocsProcessState extends State<DocsProcess> {
                                             fontWeight: FontWeight.bold),
                                       ),
                                       SizedBox(height: media.height * 0.02),
-                                      Text(
-                                        languages[choosenLanguage]['text_document_rejected'],
-                                        style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
-                                        textAlign: TextAlign.center,
+                                      SizedBox(
+                                        width: media.width * 0.7,
+                                        child: Text(
+                                          languages[choosenLanguage]['text_document_rejected'],
+                                          style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
+                                          textAlign: TextAlign.center,
+                                        ),
                                       ),
                                       SizedBox(height: media.height * 0.02),
                                       Text(
@@ -127,11 +130,13 @@ class _DocsProcessState extends State<DocsProcess> {
                         Button(
                             onTap: () {
                               Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Docs(
-                                            fromPage: '1',
-                                          )));
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Docs(
+                                    fromPage: '1',
+                                  ),
+                                ),
+                              );
                             },
                             text: languages[choosenLanguage]['text_edit_docs'])
                       ],

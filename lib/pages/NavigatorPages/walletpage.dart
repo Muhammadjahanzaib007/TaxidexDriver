@@ -218,12 +218,13 @@ class _WalletPageState extends State<WalletPage> {
                                                 height: media.width * 0.05,
                                               ),
                                               Container(
-                                                height: media.width * 0.7,
-                                                width: media.width * 0.7,
-                                                decoration: const BoxDecoration(
-                                                    image: DecorationImage(
-                                                        image: AssetImage('assets/images/nodatafound.gif'),
-                                                        fit: BoxFit.contain)),
+                                                height: media.width * 0.5,
+                                                width: media.width * 0.5,
+                                                child: Image.asset(
+                                                   'assets/images/nodatafound.png',
+                                                  color: primary,
+                                                  fit: BoxFit.contain,
+                                                ),
                                               ),
                                               SizedBox(
                                                 height: media.width * 0.02,
@@ -235,7 +236,7 @@ class _WalletPageState extends State<WalletPage> {
                                                   style: GoogleFonts.roboto(
                                                       fontSize: media.width * sixteen,
                                                       fontWeight: FontWeight.bold,
-                                                      color: textColor),
+                                                      color: primary),
                                                   textAlign: TextAlign.center,
                                                 ),
                                               )

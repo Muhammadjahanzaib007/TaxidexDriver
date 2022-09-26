@@ -96,11 +96,11 @@ class _NavDrawerState extends State<NavDrawer> {
                               //edit profile
                               InkWell(
                                 onTap: () async {
-                                  // var val = await Navigator.push(
-                                  //     context, MaterialPageRoute(builder: (context) => const EditProfile()));
-                                  // if (val) {
-                                  //   setState(() {});
-                                  // }
+                                  var val = await Navigator.push(
+                                      context, MaterialPageRoute(builder: (context) => const EditProfile()));
+                                  if (val) {
+                                    setState(() {});
+                                  }
                                 },
                                 child: Icon(
                                   Icons.edit,
@@ -126,14 +126,22 @@ class _NavDrawerState extends State<NavDrawer> {
                       ],
                     ),
                   ),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Container(
+                      width: media.width * 0.7,
+                      height: 0.7,
+                      margin: EdgeInsets.symmetric(vertical: media.width * 0.1),
+                      color: Colors.black12,
+                    ),
+                  ),
                   Container(
-                    padding: EdgeInsets.only(top: media.width * 0.1),
                     width: media.width * 1,
                     child: Column(
                       children: [
                         //history
                         SizedBox(
-                          height: media.height * 0.055,
+                          height: media.height * 0.065,
                           child: ListTile(
                             minLeadingWidth: 25,
                             onTap: () {
@@ -157,33 +165,33 @@ class _NavDrawerState extends State<NavDrawer> {
                         ),
 
                         //wallet
-                        SizedBox(
-                          height: media.height * 0.055,
-                          child: ListTile(
-                            minLeadingWidth: 25,
-                            onTap: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => const WalletPage()));
-                            },
-                            leading: Image.asset(
-                              'assets/images/walletImage.png',
-                              fit: BoxFit.contain,
-                              width: media.width * 0.055,
-                              color: primary,
-                            ),
-                            title: SizedBox(
-                              width: media.width * 0.55,
-                              child: Text(
-                                languages[choosenLanguage]['text_enable_wallet'],
-                                overflow: TextOverflow.ellipsis,
-                                style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
-                              ),
-                            ),
-                          ),
-                        ),
+                        // SizedBox(
+                        //   height: media.height * 0.055,
+                        //   child: ListTile(
+                        //     minLeadingWidth: 25,
+                        //     onTap: () {
+                        //       Navigator.push(context, MaterialPageRoute(builder: (context) => const WalletPage()));
+                        //     },
+                        //     leading: Image.asset(
+                        //       'assets/images/walletImage.png',
+                        //       fit: BoxFit.contain,
+                        //       width: media.width * 0.055,
+                        //       color: primary,
+                        //     ),
+                        //     title: SizedBox(
+                        //       width: media.width * 0.55,
+                        //       child: Text(
+                        //         languages[choosenLanguage]['text_enable_wallet'],
+                        //         overflow: TextOverflow.ellipsis,
+                        //         style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
 
                         //referral
                         SizedBox(
-                          height: media.height * 0.055,
+                          height: media.height * 0.065,
                           child: ListTile(
                             minLeadingWidth: 25,
                             onTap: () {
@@ -208,7 +216,7 @@ class _NavDrawerState extends State<NavDrawer> {
 
                         //vehicle
                         SizedBox(
-                          height: media.height * 0.055,
+                          height: media.height * 0.065,
                           child: ListTile(
                             onTap: () {
                               Navigator.push(context, MaterialPageRoute(builder: (context) => const UpdateVehicle()));
@@ -232,33 +240,33 @@ class _NavDrawerState extends State<NavDrawer> {
                         ),
 
                         //earnings
-                        SizedBox(
-                          height: media.height * 0.055,
-                          child: ListTile(
-                            onTap: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => const DriverEarnings()));
-                            },
-                            minLeadingWidth: 25,
-                            leading: Image.asset(
-                              'assets/images/Earnings.png',
-                              fit: BoxFit.contain,
-                              width: media.width * 0.068,
-                              color: primary,
-                            ),
-                            title: SizedBox(
-                              width: media.width * 0.55,
-                              child: Text(
-                                languages[choosenLanguage]['text_earnings'],
-                                overflow: TextOverflow.ellipsis,
-                                style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
-                              ),
-                            ),
-                          ),
-                        ),
+                        // SizedBox(
+                        //   height: media.height * 0.055,
+                        //   child: ListTile(
+                        //     onTap: () {
+                        //       Navigator.push(context, MaterialPageRoute(builder: (context) => const DriverEarnings()));
+                        //     },
+                        //     minLeadingWidth: 25,
+                        //     leading: Image.asset(
+                        //       'assets/images/Earnings.png',
+                        //       fit: BoxFit.contain,
+                        //       width: media.width * 0.068,
+                        //       color: primary,
+                        //     ),
+                        //     title: SizedBox(
+                        //       width: media.width * 0.55,
+                        //       child: Text(
+                        //         languages[choosenLanguage]['text_earnings'],
+                        //         overflow: TextOverflow.ellipsis,
+                        //         style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
 
                         //documents
                         SizedBox(
-                          height: media.height * 0.055,
+                          height: media.height * 0.065,
                           child: ListTile(
                             onTap: () async {
                               var nav = await Navigator.push(
@@ -287,7 +295,7 @@ class _NavDrawerState extends State<NavDrawer> {
 
                         // faq
                         SizedBox(
-                          height: media.height * 0.055,
+                          height: media.height * 0.065,
                           child: ListTile(
                             onTap: () {
                               Navigator.push(context, MaterialPageRoute(builder: (context) => const Faq()));
@@ -340,7 +348,7 @@ class _NavDrawerState extends State<NavDrawer> {
 
                         //language
                         SizedBox(
-                          height: media.height * 0.055,
+                          height: media.height * 0.065,
                           child: ListTile(
                             onTap: () async {
                               var nav = await Navigator.push(
@@ -445,7 +453,7 @@ class _NavDrawerState extends State<NavDrawer> {
 
                         //logout
                         SizedBox(
-                          height: media.height * 0.055,
+                          height: media.height * 0.065,
                           child: ListTile(
                             onTap: () {
                               setState(() {

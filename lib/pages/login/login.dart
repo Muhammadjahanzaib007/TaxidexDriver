@@ -50,7 +50,6 @@ class _LoginState extends State<Login> {
     var media = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: page,
       appBar: myAppBar(context, media, 'text_login'),
       body: Directionality(
         textDirection: (languageDirection == 'rtl') ? TextDirection.rtl : TextDirection.ltr,
