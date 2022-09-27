@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:taxidex_driver/pages/login/login.dart';
 import 'package:taxidex_driver/styles/styles.dart';
 import 'package:taxidex_driver/translation/translation.dart';
 import '../../functions/functions.dart';
@@ -22,7 +23,7 @@ class _LanguagesState extends State<Languages> {
   }
 
   navigate() {
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const SignupMethod()));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Login()));
   }
 
   @override

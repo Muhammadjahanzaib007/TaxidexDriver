@@ -3861,8 +3861,7 @@ class _MapsState extends State<Maps> with WidgetsBindingObserver, TickerProvider
                                                         setState(() {
                                                           Navigator.pushAndRemoveUntil(
                                                               context,
-                                                              MaterialPageRoute(
-                                                                  builder: (context) => const SignupMethod()),
+                                                              MaterialPageRoute(builder: (context) => const Login()),
                                                               (route) => false);
                                                           userDetails.clear();
                                                         });

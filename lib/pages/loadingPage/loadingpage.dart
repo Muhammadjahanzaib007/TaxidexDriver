@@ -147,80 +147,42 @@ class _LoadingPageState extends State<LoadingPage> {
                 color: page,
               ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Container(
+                    height: media.height * 0.165,
+                    width: 150,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: primary,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Text(
+                      'TECH 1',
+                      style: GoogleFonts.manrope(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: media.width * thirty,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: media.height * 0.15,
+                  ),
+                  Container(
                     padding: EdgeInsets.all(media.width * 0.01),
-                    width: media.width * 0.429,
-                    height: media.width * 0.429,
+                    width: media.width * 0.9,
+                    height: media.width * 0.9,
                     decoration: const BoxDecoration(
-                        image: DecorationImage(image: AssetImage('assets/images/logo.png'), fit: BoxFit.contain)),
+                        image:
+                            DecorationImage(image: AssetImage('assets/images/splash_image.png'), fit: BoxFit.contain)),
+                  ),
+                  SizedBox(
+                    height: media.height * 0.04,
                   ),
                 ],
               ),
             ),
-
-            //update available
-
-            (updateAvailable == true)
-                ? Positioned(
-                    top: 0,
-                    child: Container(
-                      height: media.height * 1,
-                      width: media.width * 1,
-                      color: Colors.transparent.withOpacity(0.6),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                              width: media.width * 0.9,
-                              padding: EdgeInsets.all(media.width * 0.05),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                color: page,
-                              ),
-                              child: Column(
-                                children: [
-                                  SizedBox(
-                                      width: media.width * 0.8,
-                                      child: Text(
-                                        'New version of this app is available in store, please update the app for continue using',
-                                        style: GoogleFonts.roboto(
-                                            fontSize: media.width * sixteen, fontWeight: FontWeight.w600),
-                                      )),
-                                  SizedBox(
-                                    height: media.width * 0.05,
-                                  ),
-                                  Button(
-                                      onTap: () async {
-                                        if (platform == TargetPlatform.android) {
-                                          openBrowser(
-                                              'https://play.google.com/store/apps/details?id=${_package.packageName}');
-                                        } else {
-                                          setState(() {
-                                            _isLoading = true;
-                                          });
-                                          var response = await http.get(Uri.parse(
-                                              'http://itunes.apple.com/lookup?bundleId=${_package.packageName}'));
-                                          if (response.statusCode == 200) {
-                                            openBrowser(jsonDecode(response.body)['results'][0]['trackViewUrl']);
-                                          }
-
-                                          setState(() {
-                                            _isLoading = false;
-                                          });
-                                        }
-                                      },
-                                      text: 'Update')
-                                ],
-                              ))
-                        ],
-                      ),
-                    ))
-                : Container(),
-
-            //loader
-            (_isLoading == true && internet == true) ? const Positioned(top: 0, child: Loading()) : Container(),
 
             //internet is not connected
             (internet == false)
