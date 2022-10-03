@@ -53,8 +53,8 @@ bool internet = true;
 dynamic centerCheck;
 String ischeckownerordriver = '';
 
-// String url = 'https://tagxi-server.ondemandappz.com/';
-String url = 'http://192.168.0.183:81/';
+String url = 'https://ukprivatetransfer.com/';
+// String url = 'http://192.168.0.183:81/';
 String mapkey = 'AIzaSyCWY5OkDhEfGsaxFWhRs5VB-qRGG0-bLmw';
 String mapStyle = '';
 

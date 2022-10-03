@@ -1865,14 +1865,15 @@ class _MapsState extends State<Maps> with WidgetsBindingObserver, TickerProvider
                                                                         });
                                                                       },
                                                                       child: Container(
-                                                                        height: media.width * 0.1,
+                                                                        height: media.width * 0.1, 
                                                                         width: media.width * 0.1,
                                                                         decoration: BoxDecoration(
                                                                             boxShadow: [
                                                                               BoxShadow(
-                                                                                  blurRadius: 2,
-                                                                                  color: Colors.black.withOpacity(0.2),
-                                                                                  spreadRadius: 2)
+                                                                                blurRadius: 2,
+                                                                                color: Colors.black.withOpacity(0.2),
+                                                                                spreadRadius: 2,
+                                                                              )
                                                                             ],
                                                                             color: buttonColor,
                                                                             borderRadius: BorderRadius.circular(
@@ -1884,7 +1885,8 @@ class _MapsState extends State<Maps> with WidgetsBindingObserver, TickerProvider
                                                                               fontSize: media.width * fourteen,
                                                                               color: page),
                                                                         ),
-                                                                      ))
+                                                                      ),
+                                                                    )
                                                                   : Container(),
                                                               const SizedBox(
                                                                 height: 20,

@@ -149,22 +149,9 @@ class _LoadingPageState extends State<LoadingPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Container(
-                    height: media.height * 0.165,
-                    width: 150,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: primary,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Text(
-                      'TECH 1',
-                      style: GoogleFonts.manrope(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: media.width * thirty,
-                      ),
-                    ),
+                  Image.asset(
+                    'assets/images/logo.png',
+                    width: media.height * 0.16,
                   ),
                   SizedBox(
                     height: media.height * 0.15,
