@@ -140,29 +140,29 @@ class _NavDrawerState extends State<NavDrawer> {
                     child: Column(
                       children: [
                         //history
-                        SizedBox(
-                          height: media.height * 0.065,
-                          child: ListTile(
-                            minLeadingWidth: 25,
-                            onTap: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => const History()));
-                            },
-                            leading: Image.asset(
-                              'assets/images/history.png',
-                              fit: BoxFit.contain,
-                              width: media.width * 0.055,
-                              color: primary,
-                            ),
-                            title: SizedBox(
-                              width: media.width * 0.55,
-                              child: Text(
-                                languages[choosenLanguage]['text_enable_history'],
-                                overflow: TextOverflow.ellipsis,
-                                style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
-                              ),
-                            ),
-                          ),
-                        ),
+                        // SizedBox(
+                        //   height: media.height * 0.065,
+                        //   child: ListTile(
+                        //     minLeadingWidth: 25,
+                        //     onTap: () {
+                        //       Navigator.push(context, MaterialPageRoute(builder: (context) => const History()));
+                        //     },
+                        //     leading: Image.asset(
+                        //       'assets/images/history.png',
+                        //       fit: BoxFit.contain,
+                        //       width: media.width * 0.055,
+                        //       color: primary,
+                        //     ),
+                        //     title: SizedBox(
+                        //       width: media.width * 0.55,
+                        //       child: Text(
+                        //         languages[choosenLanguage]['text_enable_history'],
+                        //         overflow: TextOverflow.ellipsis,
+                        //         style: GoogleFonts.roboto(fontSize: media.width * sixteen, color: textColor),
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
 
                         //wallet
                         // SizedBox(

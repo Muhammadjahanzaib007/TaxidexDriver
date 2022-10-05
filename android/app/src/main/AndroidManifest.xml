@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
    <application
-        android:label="Taxidex Driver"
+        android:label="MSS Driver"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity

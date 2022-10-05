@@ -51,7 +51,7 @@ AudioPlayer audioPlayers = AudioPlayer();
 String audio = 'audio/notification_sound.mp3';
 bool internet = true;
 dynamic centerCheck;
-String ischeckownerordriver = '';
+String ischeckownerordriver = 'driver';
 
 String url = 'https://ukprivatetransfer.com/';
 // String url = 'http://192.168.0.183:81/';
@@ -3153,7 +3153,7 @@ geolocs.LocationSettings locationSettings = (platform == TargetPlatform.android)
         accuracy: geolocs.LocationAccuracy.high,
         distanceFilter: 50,
         foregroundNotificationConfig: const geolocs.ForegroundNotificationConfig(
-          notificationText: "Taxidex will continue to receive your location in background",
+          notificationText: "MSS will continue to receive your location in background",
           notificationTitle: "Location background service running",
           enableWakeLock: true,
         ))
